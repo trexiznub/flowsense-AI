@@ -505,3 +505,41 @@ html.tt *,html.tt *::before,html.tt *::after{transition:background-color .6s,col
   .nav.scrolled .nav-in{max-width:calc(100% - 16px);border-radius:26px;padding:4px 12px 0}
   .links{gap:0}.links a{padding:7px 13px}
 }
+
+/* mobile pass */
+@media (max-width:640px){
+  .tabs{padding:5px;gap:2px}.tabs button{padding:9px 13px;font-size:14px}
+  .sim-bar{flex-wrap:wrap}.sim-bar input{order:5;flex:1 1 100%}.sim-bar .seg{margin-left:auto}
+  .mk{display:none}
+  .waffle{grid-template-columns:repeat(auto-fill,minmax(22px,1fr));gap:6px}
+  .tag.t-c{left:auto!important;right:8px;transform:none}
+  .tag.t-a{left:30%!important}
+  .step{padding:22px 18px}
+  .console{padding:20px 16px}
+  .pl-chips span{font-size:12.5px}
+  #btChart,#curveChart{overflow-x:auto}#btChart svg,#curveChart svg{min-width:520px}
+  .acc-in{padding:0 18px 22px}summary{padding:18px 18px}
+  .log-card>:not(summary){margin-left:14px;margin-right:14px}
+}
+@media (max-width:420px){.tabs button span{display:none}}
+@media (pointer:coarse){
+  .links a{padding:11px 14px}
+  .link{padding:12px 8px;min-height:44px}
+  .presets button,.rc{padding:11px 17px}
+  #rainSrc .rc{padding:9px 14px}
+  .seg button{padding:11px 15px}.seg.sm button{padding:11px 13px}
+  .pill.sm{padding:12px 20px}
+  .icon-btn{width:42px;height:42px}
+  .mk::before{content:"";position:absolute;inset:-14px}
+  td a{display:inline-block;padding:11px 6px}
+  .chip-btn{padding:13px 18px}
+  .hero-copy{padding-top:150px}
+}
+@media (max-height:520px) and (orientation:landscape){
+  .hero{min-height:auto}.hero-copy{padding:110px 22px 80px}.hero h1{font-size:clamp(40px,8vw,64px)}.scroll-cue{display:none}
+}
+
+@media (max-width:860px){
+  .nav.scrolled .nav-in{height:auto;padding:4px 12px 2px;border-radius:24px}
+  .nav.scrolled .links{padding-bottom:8px}
+}

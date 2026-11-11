@@ -103,7 +103,8 @@ function renderPlanner(rows) {
   const pumps = rows.slice(0, Math.min(n, P)), crews = rows.slice(pumps.length, k), cov = rows.slice(0, k).reduce((a, x) => a + x.p, 0);
   const left = rows.slice(k).filter((x) => x.cls === 'High' || x.cls === 'Severe').length;
   $('#plRes').innerHTML = `<div><b>${Math.round(cov / total * 100)}%</b><span>of expected flooding covered</span></div><div><b>${Math.round(k / n * 100)}%</b><span>covered if sent at random (${k} of ${n})</span></div><div><b>${left}</b><span>High/Severe locations left uncovered</span></div>`;
-  $('#plChips').innerHTML = pumps.map((x) => `<span><i>PUMP</i>${esc(x.loc.name)}</span>`).join('') + crews.map((x) => `<span><i>CREW</i>${esc(x.loc.name)}</span>`).join('') || '<span>Add pumps or crews above.</span>';
+  const all = pumps.map((x) => ['PUMP', x]).concat(crews.map((x) => ['CREW', x])), cap = 8;
+  $('#plChips').innerHTML = all.slice(0, cap).map(([t, x]) => `<span><i>${t}</i>${esc(x.loc.name)}</span>`).join('') + (all.length > cap ? `<span>+${all.length - cap} more (all listed in the officer brief)</span>` : '') || '<span>Add pumps or crews above.</span>';
   S.plan = { pumps, crews, cov: cov / total, rand: k / n, left };
 }
 function openBrief() {
@@ -129,7 +130,7 @@ function renderList(rows) {
   }).join('') || '<p class="hint" style="padding:14px">No locations match.</p>';
 }
 function renderScatter() {
-  const W = 560, H = 250, pl = 44, pb = 38, pt = 14, pr = 12, n = LOCS.length, ev = EVENTS.filter((e) => e.rain_mm);
+  const W = Math.max(300, Math.round($('#scatter').clientWidth || 560)), H = W < 460 ? 230 : 250, pl = 44, pb = 38, pt = 14, pr = 12, n = LOCS.length, ev = EVENTS.filter((e) => e.rain_mm);
   const ymax = Math.max(n * 0.5, ...ev.map((e) => e.n_reported)) * 1.1;
   const X = (r) => pl + r / 200 * (W - pl - pr), Y = (v) => H - pb - v / ymax * (H - pb - pt);
   let d = ''; for (let r = 5; r <= 200; r += 5) d += (d ? 'L' : 'M') + X(r).toFixed(1) + ' ' + Y(LOCS.reduce((a, l) => a + prob(l, r), 0)).toFixed(1);
@@ -213,13 +214,13 @@ function renderChips() {
   sel.disabled = S.places.length >= 3;
 }
 function dayChart(d) {
-  const W = 640, H = 190, pl = 30, pr = 8, pt = 14, pb = 28, h0 = 5, h1 = 24, bw = (W - pl - pr) / (h1 - h0);
+  const W = Math.max(300, Math.round(($('#dayChart').clientWidth || 660) - 20)), H = W < 460 ? 170 : 190, pl = 30, pr = 8, pt = 14, pb = 28, h0 = 5, h1 = 24, bw = (W - pl - pr) / (h1 - h0);
   const mx = Math.max(4, ...d.hr.slice(h0, h1)) * 1.15, X = (h) => pl + (h - h0) * bw, Y = (v) => H - pb - v / mx * (H - pb - pt);
   let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Hourly rain forecast with your two commute windows shaded">`;
   for (let i = 0; i <= 2; i++) { const v = mx * i / 2; s += `<line x1="${pl}" x2="${W - pr}" y1="${Y(v)}" y2="${Y(v)}" stroke="var(--line)"/><text x="${pl - 5}" y="${Y(v) + 4}" text-anchor="end" font-size="10" fill="var(--mut)">${v.toFixed(0)}</text>`; }
   [[S.dep, 'Leave'], [S.ret, 'Return']].forEach(([t, n]) => s += `<rect x="${X(t)}" y="${pt}" width="${bw}" height="${H - pb - pt}" rx="6" fill="var(--aqua)" opacity=".16"/><text x="${X(t) + bw / 2}" y="${pt + 11}" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--tealD)">${n}</text>`);
   for (let h = h0; h < h1; h++) { const v = d.hr[h], hh = Math.max(v > 0.05 ? 2 : 0, H - pb - Y(v)); s += `<rect x="${X(h) + 3}" y="${H - pb - hh}" width="${bw - 6}" height="${hh}" rx="4" fill="${v >= 5 ? 'var(--sev)' : v >= 1 ? 'var(--hi)' : 'var(--aqua)'}" opacity=".9"><title>${hShort(h)}: ${v.toFixed(1)} mm</title></rect>`; }
-  for (let h = h0; h <= h1 - 1; h += 3) s += `<text x="${X(h) + bw / 2}" y="${H - 9}" text-anchor="middle" font-size="10.5" fill="var(--mut)">${hShort(h)}</text>`;
+  for (let h = h0; h <= h1 - 1; h += (W < 460 ? 4 : 3)) s += `<text x="${X(h) + bw / 2}" y="${H - 9}" text-anchor="middle" font-size="10.5" fill="var(--mut)">${hShort(h)}</text>`;
   $('#dayChart').innerHTML = s + `<text x="${pl}" y="${pt - 3}" font-size="10" fill="var(--mut)">mm per hour</text></svg>`;
 }
 function smsText(d, lang) {
@@ -454,12 +455,13 @@ function bindUI() {
   armReveal = () => $$('.rv, .scene-card').forEach((el) => io.observe(el));
   const prog = $('#prog'); addEventListener('scroll', () => { const h = document.documentElement.scrollHeight - innerHeight; prog.style.transform = `scaleX(${h > 0 ? scrollY / h : 0})`; }, { passive: true });
   const links = $$('.links a'), box = $('.links'), ind = document.createElement('span'); ind.className = 'ind'; box.prepend(ind);
-  const moveInd = () => { const a = links.find((x) => x.classList.contains('on')); if (!a) { ind.style.opacity = 0; return; }
+  const moveInd = () => { const a = links.find((x) => x.classList.contains('on')); if (!a) { ind.style.opacity = 0; box.scrollTo({ left: 0, behavior: 'smooth' }); return; }
     ind.style.opacity = 1; ind.style.left = a.offsetLeft + 'px'; ind.style.width = a.offsetWidth + 'px';
     if (box.scrollWidth > box.clientWidth) box.scrollTo({ left: a.offsetLeft - (box.clientWidth - a.offsetWidth) / 2, behavior: 'smooth' }); };
   const spy = new IntersectionObserver((es) => es.forEach((e) => { if (!e.isIntersecting) return; links.forEach((a) => a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id)); moveInd(); }), { rootMargin: '-45% 0px -50% 0px' });
   links.forEach((a) => { const t = document.querySelector(a.getAttribute('href')); if (t) spy.observe(t); }); spy.observe($('#top'));
   addEventListener('resize', moveInd);
+  let rzT, lastW = innerWidth; addEventListener('resize', () => { clearTimeout(rzT); rzT = setTimeout(() => { if (!M || Math.abs(innerWidth - lastW) < 30) return; lastW = innerWidth; renderScatter(); moveScatter(); renderPlan(); }, 220); });
   ['nPumps', 'nCrews'].forEach((id) => $('#' + id).addEventListener('input', () => renderPlanner(currentRows())));
   $('#btnBrief').addEventListener('click', openBrief);
   // how
