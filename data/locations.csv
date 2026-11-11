@@ -1,0 +1,70 @@
+location_id,location_canonical,location_type,n_usable_events_reported,geocode_query,lat,lon,coord_status
+L001,NH-48 Delhi-Gurugram corridor,corridor,5,"NH-48 Delhi-Gurugram corridor, Gurugram, Haryana, India",,,to_geocode
+L002,Narsinghpur (NH-48 stretch),corridor,6,"Narsinghpur (NH-48 stretch), Gurugram, Haryana, India",,,to_geocode
+L003,Sohna Road,road,5,"Sohna Road, Gurugram, Haryana, India",,,to_geocode
+L004,Rajiv Chowk,junction,4,"Rajiv Chowk, Gurugram, Haryana, India",,,to_geocode
+L005,Sheetla Mata Road,road,4,"Sheetla Mata Road, Gurugram, Haryana, India",,,to_geocode
+L006,Subhash Chowk,junction,4,"Subhash Chowk, Gurugram, Haryana, India",,,to_geocode
+L007,Bus Adda / Old Bus Stand area,area,3,"Bus Adda / Old Bus Stand area, Gurugram, Haryana, India",,,to_geocode
+L008,Hero Honda Chowk,junction,3,"Hero Honda Chowk, Gurugram, Haryana, India",,,to_geocode
+L009,IFFCO Chowk,junction,2,"IFFCO Chowk, Gurugram, Haryana, India",,,to_geocode
+L010,Sector 9,sector,3,"Sector 9, Gurugram, Haryana, India",,,to_geocode
+L011,Basai Chowk,junction,2,"Basai Chowk, Gurugram, Haryana, India",,,to_geocode
+L012,Golf Course Extension Road,road,2,"Golf Course Extension Road, Gurugram, Haryana, India",,,to_geocode
+L013,Khandsa Chowk,junction,2,"Khandsa Chowk, Gurugram, Haryana, India",,,to_geocode
+L014,Old Delhi-Gurugram Road,road,2,"Old Delhi-Gurugram Road, Gurugram, Haryana, India",,,to_geocode
+L015,Sector 10,sector,2,"Sector 10, Gurugram, Haryana, India",,,to_geocode
+L016,Sector 14,sector,2,"Sector 14, Gurugram, Haryana, India",,,to_geocode
+L017,Sector 30,sector,2,"Sector 30, Gurugram, Haryana, India",,,to_geocode
+L018,Sector 31,sector,2,"Sector 31, Gurugram, Haryana, India",,,to_geocode
+L019,Sector 40,sector,2,"Sector 40, Gurugram, Haryana, India",,,to_geocode
+L020,Sector 45,sector,2,"Sector 45, Gurugram, Haryana, India",,,to_geocode
+L021,Sector 47,sector,2,"Sector 47, Gurugram, Haryana, India",,,to_geocode
+L022,Sector 5,sector,2,"Sector 5, Gurugram, Haryana, India",,,to_geocode
+L023,Udyog Vihar,area,2,"Udyog Vihar, Gurugram, Haryana, India",,,to_geocode
+L024,Aggarwal Dharmshala Chowk,junction,1,"Aggarwal Dharmshala Chowk, Gurugram, Haryana, India",,,to_geocode
+L025,Ardee City to Sector 52 road,road,1,"Ardee City to Sector 52 road, Gurugram, Haryana, India",,,to_geocode
+L026,Bajghera,area,1,"Bajghera, Gurugram, Haryana, India",,,to_geocode
+L027,Basai (area),area,1,"Basai (area), Gurugram, Haryana, India",,,to_geocode
+L028,DLF Phase 1 underpass,underpass,1,"DLF Phase 1 underpass, Gurugram, Haryana, India",,,to_geocode
+L029,DLF Phase 3 V Block,colony,1,"DLF Phase 3 V Block, Gurugram, Haryana, India",,,to_geocode
+L030,DLF Phase 3 underpass,underpass,1,"DLF Phase 3 underpass, Gurugram, Haryana, India",,,to_geocode
+L031,Dhanwapur Road,road,1,"Dhanwapur Road, Gurugram, Haryana, India",,,to_geocode
+L032,Dundahera,area,1,"Dundahera, Gurugram, Haryana, India",,,to_geocode
+L033,Dwarka Expressway service lane near Sector 104,road,1,"Dwarka Expressway service lane near Sector 104, Gurugram, Haryana, India",,,to_geocode
+L034,Greenwood City,colony,1,"Greenwood City, Gurugram, Haryana, India",,,to_geocode
+L035,Himgiri Chowk,junction,1,"Himgiri Chowk, Gurugram, Haryana, India",,,to_geocode
+L036,Jharsa to Sector 30/40 stretch,road,1,"Jharsa to Sector 30/40 stretch, Gurugram, Haryana, India",,,to_geocode
+L037,Kadipur,area,1,"Kadipur, Gurugram, Haryana, India",,,to_geocode
+L038,Kanhai Chowk,junction,1,"Kanhai Chowk, Gurugram, Haryana, India",,,to_geocode
+L039,MG Road,road,1,"MG Road, Gurugram, Haryana, India",,,to_geocode
+L040,Malibu Town,colony,1,"Malibu Town, Gurugram, Haryana, India",,,to_geocode
+L041,Near Gurugram MLA office,area,1,"Near Gurugram MLA office, Gurugram, Haryana, India",,,to_geocode
+L042,Palam Vihar,colony,1,"Palam Vihar, Gurugram, Haryana, India",,,to_geocode
+L043,Palam Vihar underpass,underpass,1,"Palam Vihar underpass, Gurugram, Haryana, India",,,to_geocode
+L044,Police Line,area,1,"Police Line, Gurugram, Haryana, India",,,to_geocode
+L045,Rosewood City,colony,1,"Rosewood City, Gurugram, Haryana, India",,,to_geocode
+L046,Sadar Bazaar,area,1,"Sadar Bazaar, Gurugram, Haryana, India",,,to_geocode
+L047,Sadar Red Light,junction,1,"Sadar Red Light, Gurugram, Haryana, India",,,to_geocode
+L048,Sanjay Gram Road,road,1,"Sanjay Gram Road, Gurugram, Haryana, India",,,to_geocode
+L049,Sector 10A,sector,1,"Sector 10A, Gurugram, Haryana, India",,,to_geocode
+L050,Sector 12,sector,1,"Sector 12, Gurugram, Haryana, India",,,to_geocode
+L051,Sector 13,sector,1,"Sector 13, Gurugram, Haryana, India",,,to_geocode
+L052,Sector 15,sector,1,"Sector 15, Gurugram, Haryana, India",,,to_geocode
+L053,Sector 15 Part 2,park,0,"Sector 15 Part 2, Gurugram, Haryana, India",,,to_geocode
+L054,Sector 17,sector,1,"Sector 17, Gurugram, Haryana, India",,,to_geocode
+L055,Sector 22,sector,1,"Sector 22, Gurugram, Haryana, India",,,to_geocode
+L056,Sector 23,sector,1,"Sector 23, Gurugram, Haryana, India",,,to_geocode
+L057,Sector 29,sector,1,"Sector 29, Gurugram, Haryana, India",,,to_geocode
+L058,Sector 39,sector,1,"Sector 39, Gurugram, Haryana, India",,,to_geocode
+L059,Sector 4,sector,1,"Sector 4, Gurugram, Haryana, India",,,to_geocode
+L060,Sector 4-5 underpass,sector,1,"Sector 4-5 underpass, Gurugram, Haryana, India",,,to_geocode
+L061,Sector 48,sector,1,"Sector 48, Gurugram, Haryana, India",,,to_geocode
+L062,Sector 51,sector,1,"Sector 51, Gurugram, Haryana, India",,,to_geocode
+L063,Sector 52A,sector,1,"Sector 52A, Gurugram, Haryana, India",,,to_geocode
+L064,Sector 56 Road,sector,1,"Sector 56 Road, Gurugram, Haryana, India",,,to_geocode
+L065,Sikanderpur Metro station,station,1,"Sikanderpur Metro station, Gurugram, Haryana, India",,,to_geocode
+L066,South City-1,colony,1,"South City-1, Gurugram, Haryana, India",,,to_geocode
+L067,Suncity Township underpass,underpass,1,"Suncity Township underpass, Gurugram, Haryana, India",,,to_geocode
+L068,Surat Nagar,area,1,"Surat Nagar, Gurugram, Haryana, India",,,to_geocode
+L069,"Tulip Chowk, Sector 69",junction,1,"Tulip Chowk, Sector 69, Gurugram, Haryana, India",,,to_geocode

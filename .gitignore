@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+.DS_Store
+data/locations_geocoded.csv
+data/gurugram_dem.tif

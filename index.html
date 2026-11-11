@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en" class="no-js loading">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FlowSense AI | Know before it floods</title>
+<meta name="description" content="FlowSense AI turns a rainfall forecast into a flood-risk plan for Gurugram: for the city, and for your day. SustainX 2026 prototype.">
+<meta name="theme-color" content="#05101f">
+<meta property="og:title" content="FlowSense AI | Know before it floods">
+<meta property="og:description" content="Flood-risk intelligence and a commute planner for Gurugram. SustainX 2026 prototype.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div id="loader" role="status" aria-label="Loading FlowSense AI">
+  <div class="l-strips" aria-hidden="true"></div>
+  <div class="l-rain" aria-hidden="true"></div>
+  <div class="l-core">
+    <div class="l-logo"><span class="ring"></span><span class="ring r2"></span><svg width="84" height="84"><use href="#i-logo"/></svg></div>
+    <div class="l-word">FlowSense<b> AI</b></div>
+    <div class="l-tag">Predict before it floods</div>
+    <div class="l-bar"><i></i></div>
+  </div>
+</div>
+<a class="skip" href="#console">Skip to the risk console</a>
+
+<!-- icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2DD4BF"/><stop offset="1" stop-color="#3B82F6"/></linearGradient>
+    <symbol id="i-logo" viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="url(#lg)"/><path d="M32 11C32 11 17 28 17 38a15 15 0 0 0 30 0C47 28 32 11 32 11z" fill="#fff"/><path d="M23 40q4.5-5 9 0t9 0" fill="none" stroke="#0B5C7A" stroke-width="3" stroke-linecap="round"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5.3 5.3l1.7 1.7M17 17l1.7 1.7M5.3 18.7L7 17M17 7l1.7-1.7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><rect x="6.5" y="5" width="4" height="14" rx="1.2" fill="currentColor"/><rect x="13.5" y="5" width="4" height="14" rx="1.2" fill="currentColor"/></symbol>
+    <symbol id="i-replay" viewBox="0 0 24 24"><path d="M4.5 12a7.5 7.5 0 1 0 2.4-5.5M4.5 4.5v4h4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><rect x="4" y="5.5" width="16" height="14.5" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4 10h16M8.5 3.5v4M15.5 3.5v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8.5" y="8.5" width="11" height="11" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M15.5 8.5V6.5a2 2 0 0 0-2-2h-7a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h2" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24"><path d="M12 15V4M8 7.5l4-4 4 4M6 11.5H5.5a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h13a2 2 0 0 0 2-2v-5a2 2 0 0 0-2-2H18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7.5 3v5.5c0 4.6-3.1 8.2-7.5 9.5-4.4-1.3-7.5-4.9-7.5-9.5V6L12 3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.5 12l2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-split" viewBox="0 0 24 24"><rect x="3.5" y="5" width="7.5" height="14" rx="2.2" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="13" y="5" width="7.5" height="14" rx="2.2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-dasharray="3 2.4"/></symbol>
+  </defs>
+</svg>
+
+<div class="progress" id="prog"></div>
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <a class="brand" href="#top" aria-label="FlowSense AI home"><svg class="logo" width="26" height="26"><use href="#i-logo"/></svg><span>FlowSense<b> AI</b></span></a>
+    <nav class="links" aria-label="Sections">
+      <a href="#problem">Problem</a><a href="#how">How it works</a><a href="#console">Console</a><a href="#plan">Plan My Day</a><a href="#trust">Trust</a><a href="#evidence">Evidence</a>
+    </nav>
+    <div class="nav-r">
+      <button class="icon-btn" id="themeBtn" type="button" aria-label="Toggle dark mode"><svg width="18" height="18"><use href="#i-moon" id="themeIcon"/></svg></button>
+      <a class="pill sm" href="#console">Try it</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-scene" id="heroScene" aria-hidden="true"></div>
+  <div class="hero-copy">
+    <p class="eyebrow rv">SustainX 2026 &nbsp;·&nbsp; Prototype</p>
+    <h1 class="rv d1">Know before<br><span class="grad">it floods.</span></h1>
+    <p class="lede rv d2">FlowSense AI turns a rainfall forecast into a flood-risk plan for Gurugram. For the city, and for your day.</p>
+    <div class="cta rv d3"><a class="pill" href="#console">Try the risk console</a><a class="pill ghost" href="#plan">Plan my day</a></div>
+  </div>
+  <div class="float f1" id="fl1"></div><div class="float f2" id="fl2"></div><div class="float f3" id="fl3"></div>
+  <a class="scroll-cue" href="#problem" aria-label="Scroll to learn more"><span></span></a>
+</section>
+
+<!-- PROBLEM -->
+<section class="sec" id="problem">
+  <div class="wrap narrow center">
+    <p class="eyebrow rv">The problem</p>
+    <h2 class="rv d1">Gurugram doesn&rsquo;t lack warnings.<br><span class="soft">It lacks coordination.</span></h2>
+    <p class="sub rv d2">One blocked drain upstream floods roads downstream. Forecasts, crews and residents never see the same picture.</p>
+  </div>
+  <div class="wrap">
+    <div class="scene-card rv" id="drainCard">
+      <svg id="drainScene" viewBox="0 0 960 380" role="img" aria-label="Cutaway of a street and its drainage pipe: a blocked drain at the left forces water to spread along the road and flood low points downstream.">
+        <defs>
+          <linearGradient id="gRoad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--road1)"/><stop offset="1" stop-color="var(--road2)"/></linearGradient>
+          <linearGradient id="gPipe" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--pipe1)"/><stop offset="1" stop-color="var(--pipe2)"/></linearGradient>
+        </defs>
+        <g id="drainRain"></g>
+        <rect x="0" y="150" width="960" height="230" fill="var(--soil)"/>
+        <rect x="0" y="118" width="960" height="36" fill="url(#gRoad)"/>
+        <path d="M24 136H936" stroke="rgba(255,255,255,.6)" stroke-width="3" stroke-dasharray="26 22"/>
+        <g fill="var(--grate)"><rect x="130" y="150" width="40" height="9" rx="3"/><rect x="350" y="150" width="40" height="9" rx="3"/><rect x="570" y="150" width="40" height="9" rx="3"/><rect x="790" y="150" width="40" height="9" rx="3"/></g>
+        <g fill="url(#gPipe)"><rect x="142" y="159" width="16" height="97"/><rect x="362" y="159" width="16" height="97"/><rect x="582" y="159" width="16" height="97"/><rect x="802" y="159" width="16" height="97"/>
+        <rect x="60" y="250" width="840" height="40" rx="20"/></g>
+        <path class="flow" d="M82 270H880" stroke="var(--aqua)" stroke-width="5" stroke-linecap="round" stroke-dasharray="12 16"/>
+        <g class="debris"><rect x="132" y="196" width="36" height="22" rx="6" fill="var(--sev)"/><path d="M137 203l26 8M137 211l26-8" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></g>
+        <g class="pool"><ellipse class="p0" cx="150" cy="150" rx="46" ry="8"/><ellipse class="p1" cx="370" cy="150" rx="66" ry="11"/><ellipse class="p2" cx="590" cy="150" rx="78" ry="13"/><ellipse class="p3" cx="810" cy="150" rx="88" ry="15"/></g>
+        <g class="spill" stroke="var(--aqua)" stroke-width="3.5" stroke-linecap="round" fill="none"><path d="M196 112H310"/><path d="M416 112H530"/><path d="M636 112H750"/></g>
+        <g fill="var(--aqua)" class="spill"><path d="M312 112l-9-6v12z"/><path d="M532 112l-9-6v12z"/><path d="M752 112l-9-6v12z"/></g>
+      </svg>
+      <div class="tag t-a" style="left:15.6%;top:60%"><i class="d red"></i>Blocked drain</div>
+      <div class="tag t-b" style="left:38%;top:16%">Water spreads along the road</div>
+      <div class="tag t-c" style="left:84%;top:25%"><i class="d amb"></i>Downstream floods</div>
+    </div>
+    <div class="stats">
+      <div class="stat rv"><b data-count="159">0</b><span>waterlogging hotspots flagged by MCG ahead of monsoon 2026</span><small>The Tribune, Apr 2026</small></div>
+      <div class="stat rv d1"><b data-count="133" data-suffix=" mm">0</b><span>of rain in a single night in July 2025</span><small>District administration, via PTI</small></div>
+      <div class="stat rv d2"><b data-count="100" data-prefix=">" data-suffix=" mm">0</b><span>in just four hours on 1 September 2025</span><small>District Disaster Management Authority</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW -->
+<section class="sec dark" id="how">
+  <div class="wrap narrow center">
+    <p class="eyebrow rv">How it works</p>
+    <h2 class="rv d1">One forecast. <span class="grad">Four moves.</span></h2>
+  </div>
+  <div class="wrap">
+    <div class="tabs rv" role="tablist" aria-label="How FlowSense works">
+      <button role="tab" class="on" data-i="0" aria-selected="true"><span>1</span>Predict</button>
+      <button role="tab" data-i="1" aria-selected="false"><span>2</span>Map</button>
+      <button role="tab" data-i="2" aria-selected="false"><span>3</span>Act</button>
+      <button role="tab" data-i="3" aria-selected="false"><span>4</span>Notify</button>
+    </div>
+    <div class="how-stage">
+      <div class="how-scene" id="howScene">
+        <svg class="sc on" viewBox="0 0 360 220" aria-hidden="true">
+          <defs><linearGradient id="gCloud" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#bcd3ee"/></linearGradient></defs>
+          <path d="M92 96a27 27 0 0 1 49-15 34 34 0 0 1 66 8 23 23 0 0 1 2 47H104a25 25 0 0 1-12-40z" fill="url(#gCloud)"/>
+          <g stroke="#7dd3fc" stroke-width="3" stroke-linecap="round" class="drops"><path d="M118 150l-7 14"/><path d="M146 152l-7 14"/><path d="M174 150l-7 14"/><path d="M202 152l-7 14"/><path d="M230 150l-7 14"/></g>
+          <path d="M82 206A98 98 0 0 1 278 206" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="14" stroke-linecap="round"/>
+          <path class="arc" d="M82 206A98 98 0 0 1 278 206" fill="none" stroke="url(#lg)" stroke-width="14" stroke-linecap="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100"/>
+          <text x="180" y="200" text-anchor="middle" font-size="24" font-weight="800" fill="#fff">24–48 h</text>
+        </svg>
+        <svg class="sc" viewBox="0 0 360 220" aria-hidden="true">
+          <g stroke="rgba(255,255,255,.28)" stroke-width="3" fill="none"><path d="M60 150L130 100M60 150L130 180M130 100L210 70M130 100L210 130M130 180L210 130M130 180L210 190M210 70L290 100M210 130L290 100M210 130L290 170M210 190L290 170M290 100L335 135M290 170L335 135"/></g>
+          <g stroke="var(--aqua)" stroke-width="3" fill="none" stroke-dasharray="6 10" class="flow2"><path d="M60 150L130 100M130 100L210 130M210 130L290 170M290 170L335 135"/></g>
+          <g><circle cx="60" cy="150" r="10" fill="#94a3b8"/><circle cx="130" cy="180" r="10" fill="#94a3b8"/><circle cx="210" cy="70" r="10" fill="#fbbf24"/><circle cx="210" cy="130" r="12" fill="#fbbf24"/><circle cx="210" cy="190" r="10" fill="#94a3b8"/><circle cx="290" cy="100" r="10" fill="#fbbf24"/><circle cx="290" cy="170" r="10" fill="#fbbf24"/><circle cx="335" cy="135" r="10" fill="#fbbf24"/></g>
+          <circle class="pulse" cx="130" cy="100" r="12" fill="none" stroke="#ff453a" stroke-width="3"/><circle cx="130" cy="100" r="13" fill="#ff453a"/><path d="M130 94v8M130 106v.5" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <svg class="sc" viewBox="0 0 360 220" aria-hidden="true">
+          <rect x="20" y="168" width="320" height="8" rx="4" fill="rgba(255,255,255,.18)"/>
+          <g class="truck"><rect x="30" y="118" width="86" height="40" rx="8" fill="#3B82F6"/><path d="M116 130h26a10 10 0 0 1 9 6l8 14v8h-43z" fill="#2DD4BF"/><rect x="124" y="136" width="18" height="12" rx="3" fill="#06202e" opacity=".5"/><circle cx="56" cy="162" r="11" fill="#0b1220"/><circle cx="56" cy="162" r="4.5" fill="#94a3b8"/><circle cx="136" cy="162" r="11" fill="#0b1220"/><circle cx="136" cy="162" r="4.5" fill="#94a3b8"/><path d="M30 126h-10q-8 0-8 10v22" fill="none" stroke="#fbbf24" stroke-width="5" stroke-linecap="round"/></g>
+          <g transform="translate(206 44)"><rect width="128" height="40" rx="12" fill="rgba(255,255,255,.1)"/><circle cx="22" cy="20" r="11" fill="none" stroke="var(--aqua)" stroke-width="2.5"/><path class="ck" d="M17 20l4 4 7-8" fill="none" stroke="var(--aqua)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" pathLength="20" stroke-dasharray="20" stroke-dashoffset="20" style="--dl:.2s"/><rect x="42" y="14" width="64" height="5" rx="2.5" fill="rgba(255,255,255,.5)"/><rect x="42" y="24" width="40" height="4" rx="2" fill="rgba(255,255,255,.25)"/></g>
+          <g transform="translate(206 92)"><rect width="128" height="40" rx="12" fill="rgba(255,255,255,.1)"/><circle cx="22" cy="20" r="11" fill="none" stroke="var(--aqua)" stroke-width="2.5"/><path class="ck" d="M17 20l4 4 7-8" fill="none" stroke="var(--aqua)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" pathLength="20" stroke-dasharray="20" stroke-dashoffset="20" style="--dl:.7s"/><rect x="42" y="14" width="56" height="5" rx="2.5" fill="rgba(255,255,255,.5)"/><rect x="42" y="24" width="44" height="4" rx="2" fill="rgba(255,255,255,.25)"/></g>
+          <g transform="translate(206 140)"><rect width="128" height="40" rx="12" fill="rgba(255,255,255,.1)"/><circle cx="22" cy="20" r="11" fill="none" stroke="var(--aqua)" stroke-width="2.5"/><path class="ck" d="M17 20l4 4 7-8" fill="none" stroke="var(--aqua)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" pathLength="20" stroke-dasharray="20" stroke-dashoffset="20" style="--dl:1.2s"/><rect x="42" y="14" width="70" height="5" rx="2.5" fill="rgba(255,255,255,.5)"/><rect x="42" y="24" width="34" height="4" rx="2" fill="rgba(255,255,255,.25)"/></g>
+        </svg>
+        <svg class="sc" viewBox="0 0 360 220" aria-hidden="true">
+          <rect x="125" y="18" width="110" height="190" rx="22" fill="#0b1220" stroke="rgba(255,255,255,.35)" stroke-width="3"/>
+          <rect x="133" y="34" width="94" height="164" rx="14" fill="#102039"/>
+          <g class="bub b1"><rect x="140" y="48" width="80" height="34" rx="9" fill="#fbbf24"/><rect x="148" y="57" width="50" height="5" rx="2.5" fill="#3a2400"/><rect x="148" y="68" width="34" height="4" rx="2" fill="#3a2400" opacity=".6"/></g>
+          <g class="bub b2"><rect x="140" y="90" width="80" height="34" rx="9" fill="var(--aqua)"/><rect x="148" y="99" width="46" height="5" rx="2.5" fill="#06303a"/><rect x="148" y="110" width="30" height="4" rx="2" fill="#06303a" opacity=".6"/></g>
+          <g class="bub b3"><rect x="140" y="132" width="80" height="34" rx="9" fill="#a7f3d0"/><rect x="148" y="141" width="54" height="5" rx="2.5" fill="#06301f"/><rect x="148" y="152" width="36" height="4" rx="2" fill="#06301f" opacity=".6"/></g>
+          <g fill="none" stroke="var(--aqua)" stroke-width="3" stroke-linecap="round" class="waves"><path d="M262 90q10 10 0 20"/><path d="M274 80q18 20 0 40"/><path d="M286 70q26 30 0 60"/></g>
+          <g fill="none" stroke="rgba(255,255,255,.55)" stroke-width="3" stroke-linecap="round" class="waves w2"><path d="M98 90q-10 10 0 20"/><path d="M86 80q-18 20 0 40"/><path d="M74 70q-26 30 0 60"/></g>
+        </svg>
+      </div>
+      <div class="how-copy" id="howCopy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARE -->
+<section class="sec" id="compare">
+  <div class="wrap narrow center">
+    <p class="eyebrow rv">The difference</p>
+    <h2 class="rv d1">From reacting <span class="soft">to preparing.</span></h2>
+  </div>
+  <div class="wrap">
+    <div class="lanes rv">
+      <div class="lane-row react"><div class="lane-h"><b>Today</b><span>Reactive</span></div><ol><li>Rain falls</li><li>Water rises</li><li>Residents find out by driving in</li><li>Crews respond</li></ol></div>
+      <div class="lane-row proact"><div class="lane-h"><b>With FlowSense</b><span>Predictive</span></div><ol><li>Forecast flags risk <small>24–48 h ahead</small></li><li>Drains inspected and desilted</li><li>Pumps positioned</li><li>Residents alerted and rerouted</li></ol></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONSOLE -->
+<section class="sec tint" id="console">
+  <div class="wrap narrow center">
+    <p class="eyebrow rv">Risk console</p>
+    <h2 class="rv d1">See the city&rsquo;s risk, <span class="soft">instantly.</span></h2>
+    <p class="sub rv d2">Drag the rain. Watch 69 locations respond.</p>
+  </div>
+  <div class="wrap">
+    <div class="console rv">
+      <div class="rain-head">
+        <div class="rain-big"><output id="rainValue" for="rainSlider">100</output><span>mm of rain</span></div>
+        <div class="rain-ctl">
+          <input id="rainSlider" type="range" min="0" max="200" step="1" value="100" aria-label="Expected rainfall in millimetres">
+          <div class="presets" role="group" aria-label="Rain presets">
+            <button data-mm="30">Light</button><button data-mm="70">Heavy</button><button data-mm="110">Severe</button><button data-mm="150">Extreme</button>
+          </div>
+        </div>
+      </div>
+      <div class="live-pill" id="livePill" hidden></div>
+      <div class="replay-row" id="replayRow" aria-label="Replay a past event"></div>
+
+      <div class="duo">
+        <div class="card gauge-card">
+          <svg id="gauge" viewBox="0 0 240 150" role="img" aria-label="Expected number of flooded locations"><path class="trk" d="M30 130A90 90 0 0 1 210 130" pathLength="100"/><path id="gArc" class="val" d="M30 130A90 90 0 0 1 210 130" pathLength="100"/></svg>
+          <div class="g-num" id="gNum">0</div>
+          <div class="g-lab" id="gLab">locations likely to flood</div>
+          <div class="g-chip" id="gChip"></div>
+        </div>
+        <div class="card city-card">
+          <div class="city-head"><b>City at a glance</b><span id="cityNote">Each dot is a tracked location</span></div>
+          <div class="waffle" id="waffle" role="img" aria-label="One dot per tracked location, coloured by risk"></div>
+          <div class="legend"><i class="c-Low"></i>Low<i class="c-Moderate"></i>Moderate<i class="c-High"></i>High<i class="c-Severe"></i>Severe<span id="ringLeg" hidden><i class="ring"></i>Reported flooded</span></div>
+        </div>
+      </div>
+
+      <h3 class="h3">Act first</h3>
+      <p class="hint" id="actNote" style="margin:-8px 0 16px"></p>
+      <div class="act-cards" id="actCards"></div>
+
+      <div class="planner card" id="planner">
+        <div class="city-head"><b>Crew planner</b><span>Where should limited pumps and crews go?</span></div>
+        <div class="pl-ctl">
+          <label>Pumps <output id="oPumps">6</output><input id="nPumps" type="range" min="0" max="20" value="6"></label>
+          <label>Inspection crews <output id="oCrews">8</output><input id="nCrews" type="range" min="0" max="30" value="8"></label>
+        </div>
+        <div class="pl-res" id="plRes"></div>
+        <div class="pl-chips" id="plChips"></div>
+        <p class="hint">Greedy allocation by predicted probability: pumps go to the highest-risk locations, crews to the next. Coverage is the model's expected share of flooding, not a guarantee. Every assignment is explainable from the numbers above.</p>
+        <div class="btn-row"><button class="pill sm" id="btnBrief"><svg width="16" height="16"><use href="#i-copy"/></svg>Print officer brief</button></div>
+      </div>
+      <div class="more-row"><button class="pill ghost sm" id="btnAll" aria-expanded="false">See all locations <svg width="14" height="14"><use href="#i-chev"/></svg></button></div>
+      <div class="drawer" id="drawer"><div class="drawer-in">
+        <div class="filters"><input id="search" type="search" placeholder="Search a location" aria-label="Search locations"><select id="filterType" aria-label="Filter by type"></select></div>
+        <div class="list" id="allList"></div>
+        <p class="hint">Locations of the same type share a probability in v0.1; ties are ordered by past report count.</p>
+      </div></div>
+
+      <div class="card hist-card">
+        <div class="city-head"><b>What the history says</b><span>More rain, more reports. Your slider is the line.</span></div>
+        <div id="scatter"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLAN MY DAY -->
+<section class="sec" id="plan">
+  <div class="wrap narrow center">
+    <p class="eyebrow rv">Plan My Day</p>
+    <h2 class="rv d1">Your commute, <span class="grad">forecast.</span></h2>
+    <p class="sub rv d2">Tell us your route. We&rsquo;ll tell you when to go, and show you what the city does about it.</p>
+  </div>
+  <div class="wrap pmd">
+    <div class="pmd-main">
+
+      <div class="step rv" id="st1">
+        <div class="step-h"><span class="sn">1</span><div><h3>Where do you travel?</h3><p>Pick up to three places on your route.</p></div></div>
+        <div class="chips" id="placeChips"></div>
+        <div class="add-row"><select id="addPlace" aria-label="Add another place"></select></div>
+      </div>
+
+      <div class="step rv" id="st2">
+        <div class="step-h"><span class="sn">2</span><div><h3>When do you move?</h3><p>Set your times and the rain.</p></div></div>
+        <div class="sliders">
+          <label>Leave<output id="outDep">9:00 AM</output><input id="depart" type="range" min="5" max="12" step="0.5" value="9"></label>
+          <label>Return<output id="outRet">6:00 PM</output><input id="ret" type="range" min="14" max="23" step="0.5" value="18"></label>
+          <label id="peakWrap">Rain peaks around<output id="outPeak">5:00 PM</output><input id="peak" type="range" min="0" max="23" step="1" value="17"></label>
+        </div>
+        <p class="hint" id="rainSrc"></p>
+        <div class="day-chart" id="dayChart"></div>
+        <div class="verdict" id="verdict" aria-live="polite"></div>
+        <div class="actions">
+          <button class="pill sm" id="btnIcs"><svg width="16" height="16"><use href="#i-cal"/></svg>Add to calendar</button>
+          <button class="pill ghost sm" id="btnShare"><svg width="16" height="16"><use href="#i-share"/></svg>Share my plan</button>
+          <div class="seg" role="group" aria-label="Alert language"><button id="lEn" class="on" aria-pressed="true">English</button><button id="lHi" aria-pressed="false">हिन्दी</button></div>
+        </div>
+        <div class="sms" id="smsBox"></div>
+        <div class="actions"><button class="pill ghost sm" id="btnCopy"><svg width="16" height="16"><use href="#i-copy"/></svg>Copy alert</button><button class="pill ghost sm" id="btnRwa">Message my RWA</button></div>
+      </div>
+
+      <div class="step rv" id="st3">
+        <div class="step-h"><span class="sn">3</span><div><h3>Watch the city respond</h3><p>Same storm, two cities. Press play.</p></div></div>
+        <div class="sim" id="sim">
+          <div class="sim-bar">
+            <button class="play" id="simPlay" aria-label="Play"><svg width="22" height="22"><use href="#i-play" id="simIcon"/></svg></button>
+            <button class="icon-btn" id="simReplay" aria-label="Replay"><svg width="18" height="18"><use href="#i-replay"/></svg></button>
+            <input id="simScrub" type="range" min="-24" max="8" step="0.1" value="-24" aria-label="Scrub the timeline">
+            <div class="seg sm" role="group" aria-label="Speed"><button id="sp1" class="on" aria-pressed="true">1×</button><button id="sp2" aria-pressed="false">2×</button></div>
+          </div>
+          <div class="ticker" id="ticker" aria-live="polite"><small>Illustrative timeline</small><b>Press play to start</b></div>
+          <div class="tl">
+            <div class="tl-row"><span>Without</span><div class="tl-track wo"><i id="fillWo"></i><div id="mkWo"></div></div></div>
+            <div class="tl-row"><span>With</span><div class="tl-track wi"><i id="fillWi"></i><div id="mkWi"></div></div></div>
+            <div class="tl-axis"><em style="left:0">24 h before</em><em style="left:75%">Rain starts</em><em style="left:100%">+8 h</em></div>
+            <div class="playhead" id="playhead"></div>
+          </div>
+          <div class="sim-cols">
+            <div class="sim-col wo"><h4>Without FlowSense</h4><ul id="listWo"></ul></div>
+            <div class="sim-col wi"><h4>With FlowSense</h4><ul id="listWi"></ul></div>
+          </div>
+          <div class="sim-stats"><div><b id="stWarn">0 h</b><span>warning before the rain</span></div><div><b id="stHrs">&ndash;</b><span>until the road is verified safe</span></div></div>
+          <p class="hint">Illustrative response timeline for one location, not live data. Real response times will differ. Timings are assumptions to show the sequence of steps.</p>
+        </div>
+      </div>
+    </div>
+
+    <aside class="pmd-phone" aria-label="Phone preview">
+      <div class="phone" id="phone">
+        <div class="notch"></div>
+        <div class="p-head"><small id="pDate"></small><b>Plan My Day</b></div>
+        <div class="p-card pred" id="pPred"><small>PREDICTED RISK</small><strong>&ndash;</strong><span></span></div>
+        <div class="p-card conf" id="pConf"><small>CONFIRMED BY FIELD TEAMS</small><strong>None yet</strong><span>Predictions and confirmations stay separate</span></div>
+        <div class="p-card plan" id="pPlan"><small>YOUR COMMUTE</small><strong>&ndash;</strong><span></span></div>
+        <div class="p-notifs" id="pNotifs"></div>
+        <div class="p-track"><small>RESPONSE TRACKER</small><ol id="pTrack"></ol></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section class="sec tint" id="trust">
+  <div class="wrap narrow center">
+    <p class="eyebrow rv">Trust</p>
+    <h2 class="rv d1">Built to be <span class="soft">trusted.</span></h2>
+    <p class="sub rv d2">Politically influenced allocation is the hardest risk. So every decision leaves a trail.</p>
+  </div>
+  <div class="wrap">
+    <div class="trio">
+      <div class="tcard rv"><svg width="30" height="30"><use href="#i-eye"/></svg><h3>Transparent ranking</h3><p>Risk comes from published inputs. No hidden weights.</p></div>
+      <div class="tcard rv d1"><svg width="30" height="30"><use href="#i-shield"/></svg><h3>Human-approved closures</h3><p>AI recommends. Traffic police approve. Field teams verify reopening.</p></div>
+      <div class="tcard rv d2"><svg width="30" height="30"><use href="#i-split"/></svg><h3>Predicted &ne; confirmed</h3><p>Forecasts and verified incidents are never mixed, so false alarms don&rsquo;t cost trust.</p></div>
+    </div>
+    <details class="log-card rv"><summary>Override log <span id="logCount" class="badge">0</span><svg width="16" height="16"><use href="#i-chev"/></svg></summary>
+      <p class="hint">Use <b>Override</b> on any location in the console. Each override needs a justification and an approving officer. This demo stores entries in your browser only; a real deployment needs officer sign-in and a tamper-evident store.</p>
+      <div class="table-wrap"><table id="logTable"><thead><tr><th>Time (IST)</th><th>Location</th><th>Model</th><th>Changed to</th><th>Justification</th><th>Officer</th></tr></thead><tbody></tbody></table></div>
+      <button id="btnExport" class="pill ghost sm">Export CSV</button>
+    </details>
+  </div>
+</section>
+
+<!-- EVIDENCE -->
+<section class="sec" id="evidence">
+  <div class="wrap narrow center">
+    <p class="eyebrow rv">Evidence</p>
+    <h2 class="rv d1">Under the <span class="soft">hood.</span></h2>
+    <p class="sub rv d2"><b>Honest status:</b> v0.1, trained on 8 news-reported events. It predicts how many locations flood well. Which ones is only modestly better than chance. Open any section for detail.</p>
+  </div>
+  <div class="wrap narrow">
+    <div class="acc rv">
+      <details><summary>How accurate is it?<svg width="18" height="18"><use href="#i-chev"/></svg></summary><div class="acc-in">
+        <p id="btIntro"></p><div id="btChart"></div><div class="table-wrap"><table id="btTable"></table></div><div class="callout" id="btHonest"></div></div></details>
+      <details><summary>How the model works<svg width="18" height="18"><use href="#i-chev"/></svg></summary><div class="acc-in">
+        <p class="code" id="formula"></p><div id="curveChart"></div>
+        <p>A small logistic regression: how likely a location is to flood given the rainfall and whether it is a junction, road or highway corridor. Small on purpose, so every alert can be explained. Location history and a sector flag were tested and dropped, because they added no signal. Terrain features are next.</p></div></details>
+      <details><summary>Data and sources<svg width="18" height="18"><use href="#i-chev"/></svg></summary><div class="acc-in">
+        <p>Every label comes from a named news report. Nothing is inferred. Rainfall is the figure stated in the article (district administration where named).</p>
+        <div class="table-wrap short"><table id="evTable"></table></div><ul class="src" id="srcList"></ul>
+        <div class="btn-row"><a class="pill ghost sm" href="data/hotspot_event_matrix.csv" download>Training matrix</a><a class="pill ghost sm" href="data/flood_reports.csv" download>Flood reports</a><a class="pill ghost sm" href="data/events.csv" download>Events</a><a class="pill ghost sm" href="data/model.json" download>Model JSON</a></div></div></details>
+      <details><summary>What it can&rsquo;t do yet<svg width="18" height="18"><use href="#i-chev"/></svg></summary><div class="acc-in"><ul class="limits">
+        <li><b>Small sample.</b> 8 usable events and 110 reported-flooded records.</li>
+        <li><b>Weak negatives.</b> &ldquo;Not reported&rdquo; does not mean dry. News favours highways and well-known junctions.</li>
+        <li><b>Not the official list.</b> The 159-hotspot names are not public in the sources we found. These 69 locations are news-named.</li>
+        <li><b>Optimistic candidate set.</b> Each location was chosen because it was reported at least once, which flatters the backtest.</li>
+        <li><b>Coarse ranking.</b> Locations of the same type share one probability. Terrain data will separate them.</li>
+        <li><b>Not a safety system.</b> Do not use for real safety decisions.</li></ul></div></details>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div class="foot-brand"><svg width="30" height="30"><use href="#i-logo"/></svg><div><b>FlowSense AI</b><span>Predict before it floods. Act before it disrupts.</span></div></div>
+    <div class="foot-meta">Ujwal Raj K P &amp; Sameer Kumar<br>Symbiosis Institute of International Business, Pune<br>SustainX 2026</div>
+  </div>
+</footer>
+
+<section id="brief" aria-hidden="true"></section>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<dialog id="ovDialog">
+  <form method="dialog" id="ovForm">
+    <h3>Override priority</h3>
+    <p class="hint">An override needs a documented justification and an accountable approving officer. It is logged.</p>
+    <label>Location <input id="ovLoc" readonly></label>
+    <label>Model class <input id="ovFrom" readonly></label>
+    <label>Change to <select id="ovTo"><option>Low</option><option>Moderate</option><option>High</option><option>Severe</option></select></label>
+    <p class="ov-err" id="ovErr" role="alert" hidden></p>
+    <label>Justification (min. 15 characters) <textarea id="ovWhy" rows="3" required minlength="15"></textarea></label>
+    <label>Approving officer (name and designation) <input id="ovOfficer" required minlength="3"></label>
+    <div class="btn-row"><button class="pill sm" id="ovSave" value="save">Log override</button><button class="pill ghost sm" value="cancel" formnovalidate>Cancel</button></div>
+  </form>
+</dialog>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

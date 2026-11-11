@@ -1,0 +1,553 @@
+event_id,event_date,location_id,location_canonical,location_type,flooded_reported,evidence,event_report_depth,prior_flood_events,prior_events_observed
+E01,2023-07-09,L001,NH-48 Delhi-Gurugram corridor,corridor,1,explicit_waterlogging,34,0,0
+E02,2024-08-11,L001,NH-48 Delhi-Gurugram corridor,corridor,1,explicit_waterlogging,7,1,1
+E04,2025-07-09,L001,NH-48 Delhi-Gurugram corridor,corridor,0,weak_negative_not_reported,25,2,2
+E05,2025-07-31,L001,NH-48 Delhi-Gurugram corridor,corridor,0,weak_negative_not_reported,10,2,3
+E06,2025-09-01,L001,NH-48 Delhi-Gurugram corridor,corridor,1,explicit_waterlogging,9,2,4
+E09,2026-08-07,L001,NH-48 Delhi-Gurugram corridor,corridor,1,explicit_waterlogging,10,3,5
+E10,2026-08-24,L001,NH-48 Delhi-Gurugram corridor,corridor,0,weak_negative_not_reported,12,4,6
+E11,2026-08-25,L001,NH-48 Delhi-Gurugram corridor,corridor,1,indirect_closure_or_damage,3,4,7
+E01,2023-07-09,L002,Narsinghpur (NH-48 stretch),corridor,1,explicit_waterlogging,34,0,0
+E02,2024-08-11,L002,Narsinghpur (NH-48 stretch),corridor,1,explicit_waterlogging,7,1,1
+E04,2025-07-09,L002,Narsinghpur (NH-48 stretch),corridor,1,explicit_waterlogging,25,2,2
+E05,2025-07-31,L002,Narsinghpur (NH-48 stretch),corridor,1,explicit_waterlogging,10,3,3
+E06,2025-09-01,L002,Narsinghpur (NH-48 stretch),corridor,1,explicit_waterlogging,9,4,4
+E09,2026-08-07,L002,Narsinghpur (NH-48 stretch),corridor,0,weak_negative_not_reported,10,5,5
+E10,2026-08-24,L002,Narsinghpur (NH-48 stretch),corridor,1,explicit_waterlogging,12,5,6
+E11,2026-08-25,L002,Narsinghpur (NH-48 stretch),corridor,0,weak_negative_not_reported,3,6,7
+E01,2023-07-09,L003,Sohna Road,road,1,explicit_waterlogging,34,0,0
+E02,2024-08-11,L003,Sohna Road,road,0,weak_negative_not_reported,7,1,1
+E04,2025-07-09,L003,Sohna Road,road,1,explicit_waterlogging,25,1,2
+E05,2025-07-31,L003,Sohna Road,road,1,explicit_waterlogging,10,2,3
+E06,2025-09-01,L003,Sohna Road,road,1,explicit_waterlogging,9,3,4
+E09,2026-08-07,L003,Sohna Road,road,0,weak_negative_not_reported,10,4,5
+E10,2026-08-24,L003,Sohna Road,road,1,explicit_waterlogging,12,4,6
+E11,2026-08-25,L003,Sohna Road,road,0,weak_negative_not_reported,3,5,7
+E01,2023-07-09,L004,Rajiv Chowk,junction,1,explicit_waterlogging,34,0,0
+E02,2024-08-11,L004,Rajiv Chowk,junction,0,weak_negative_not_reported,7,1,1
+E04,2025-07-09,L004,Rajiv Chowk,junction,1,explicit_waterlogging,25,1,2
+E05,2025-07-31,L004,Rajiv Chowk,junction,1,explicit_waterlogging,10,2,3
+E06,2025-09-01,L004,Rajiv Chowk,junction,1,explicit_waterlogging,9,3,4
+E09,2026-08-07,L004,Rajiv Chowk,junction,0,weak_negative_not_reported,10,4,5
+E10,2026-08-24,L004,Rajiv Chowk,junction,0,weak_negative_not_reported,12,4,6
+E11,2026-08-25,L004,Rajiv Chowk,junction,0,weak_negative_not_reported,3,4,7
+E01,2023-07-09,L005,Sheetla Mata Road,road,1,explicit_waterlogging,34,0,0
+E02,2024-08-11,L005,Sheetla Mata Road,road,0,weak_negative_not_reported,7,1,1
+E04,2025-07-09,L005,Sheetla Mata Road,road,1,explicit_waterlogging,25,1,2
+E05,2025-07-31,L005,Sheetla Mata Road,road,0,weak_negative_not_reported,10,2,3
+E06,2025-09-01,L005,Sheetla Mata Road,road,1,explicit_waterlogging,9,2,4
+E09,2026-08-07,L005,Sheetla Mata Road,road,1,explicit_waterlogging,10,3,5
+E10,2026-08-24,L005,Sheetla Mata Road,road,0,weak_negative_not_reported,12,4,6
+E11,2026-08-25,L005,Sheetla Mata Road,road,0,weak_negative_not_reported,3,4,7
+E01,2023-07-09,L006,Subhash Chowk,junction,1,explicit_waterlogging,34,0,0
+E02,2024-08-11,L006,Subhash Chowk,junction,0,weak_negative_not_reported,7,1,1
+E04,2025-07-09,L006,Subhash Chowk,junction,1,explicit_waterlogging,25,1,2
+E05,2025-07-31,L006,Subhash Chowk,junction,1,explicit_waterlogging,10,2,3
+E06,2025-09-01,L006,Subhash Chowk,junction,0,weak_negative_not_reported,9,3,4
+E09,2026-08-07,L006,Subhash Chowk,junction,0,weak_negative_not_reported,10,3,5
+E10,2026-08-24,L006,Subhash Chowk,junction,0,weak_negative_not_reported,12,3,6
+E11,2026-08-25,L006,Subhash Chowk,junction,1,explicit_waterlogging,3,3,7
+E01,2023-07-09,L007,Bus Adda / Old Bus Stand area,area,1,explicit_waterlogging,34,0,0
+E02,2024-08-11,L007,Bus Adda / Old Bus Stand area,area,0,weak_negative_not_reported,7,1,1
+E04,2025-07-09,L007,Bus Adda / Old Bus Stand area,area,1,explicit_waterlogging,25,1,2
+E05,2025-07-31,L007,Bus Adda / Old Bus Stand area,area,0,weak_negative_not_reported,10,2,3
+E06,2025-09-01,L007,Bus Adda / Old Bus Stand area,area,0,weak_negative_not_reported,9,2,4
+E09,2026-08-07,L007,Bus Adda / Old Bus Stand area,area,1,explicit_waterlogging,10,2,5
+E10,2026-08-24,L007,Bus Adda / Old Bus Stand area,area,0,weak_negative_not_reported,12,3,6
+E11,2026-08-25,L007,Bus Adda / Old Bus Stand area,area,0,weak_negative_not_reported,3,3,7
+E01,2023-07-09,L008,Hero Honda Chowk,junction,1,explicit_waterlogging,34,0,0
+E02,2024-08-11,L008,Hero Honda Chowk,junction,0,weak_negative_not_reported,7,1,1
+E04,2025-07-09,L008,Hero Honda Chowk,junction,0,weak_negative_not_reported,25,1,2
+E05,2025-07-31,L008,Hero Honda Chowk,junction,1,explicit_waterlogging,10,1,3
+E06,2025-09-01,L008,Hero Honda Chowk,junction,1,explicit_waterlogging,9,2,4
+E09,2026-08-07,L008,Hero Honda Chowk,junction,0,weak_negative_not_reported,10,3,5
+E10,2026-08-24,L008,Hero Honda Chowk,junction,0,weak_negative_not_reported,12,3,6
+E11,2026-08-25,L008,Hero Honda Chowk,junction,0,weak_negative_not_reported,3,3,7
+E01,2023-07-09,L009,IFFCO Chowk,junction,0,weak_negative_not_reported,34,0,0
+E02,2024-08-11,L009,IFFCO Chowk,junction,0,weak_negative_not_reported,7,0,1
+E04,2025-07-09,L009,IFFCO Chowk,junction,0,weak_negative_not_reported,25,0,2
+E05,2025-07-31,L009,IFFCO Chowk,junction,0,weak_negative_not_reported,10,0,3
+E06,2025-09-01,L009,IFFCO Chowk,junction,1,explicit_waterlogging,9,0,4
+E09,2026-08-07,L009,IFFCO Chowk,junction,0,weak_negative_not_reported,10,1,5
+E10,2026-08-24,L009,IFFCO Chowk,junction,0,weak_negative_not_reported,12,1,6
+E11,2026-08-25,L009,IFFCO Chowk,junction,1,indirect_closure_or_damage,3,1,7
+E01,2023-07-09,L010,Sector 9,sector,1,explicit_waterlogging,34,0,0
+E02,2024-08-11,L010,Sector 9,sector,0,weak_negative_not_reported,7,1,1
+E04,2025-07-09,L010,Sector 9,sector,0,weak_negative_not_reported,25,1,2
+E05,2025-07-31,L010,Sector 9,sector,0,weak_negative_not_reported,10,1,3
+E06,2025-09-01,L010,Sector 9,sector,0,weak_negative_not_reported,9,1,4
+E09,2026-08-07,L010,Sector 9,sector,1,explicit_waterlogging,10,1,5
+E10,2026-08-24,L010,Sector 9,sector,1,explicit_waterlogging,12,2,6
+E11,2026-08-25,L010,Sector 9,sector,0,weak_negative_not_reported,3,3,7
+E01,2023-07-09,L011,Basai Chowk,junction,1,explicit_waterlogging,34,0,0
+E02,2024-08-11,L011,Basai Chowk,junction,0,weak_negative_not_reported,7,1,1
+E04,2025-07-09,L011,Basai Chowk,junction,1,explicit_waterlogging,25,1,2
+E05,2025-07-31,L011,Basai Chowk,junction,0,weak_negative_not_reported,10,2,3
+E06,2025-09-01,L011,Basai Chowk,junction,0,weak_negative_not_reported,9,2,4
+E09,2026-08-07,L011,Basai Chowk,junction,0,weak_negative_not_reported,10,2,5
+E10,2026-08-24,L011,Basai Chowk,junction,0,weak_negative_not_reported,12,2,6
+E11,2026-08-25,L011,Basai Chowk,junction,0,weak_negative_not_reported,3,2,7
+E01,2023-07-09,L012,Golf Course Extension Road,road,0,weak_negative_not_reported,34,0,0
+E02,2024-08-11,L012,Golf Course Extension Road,road,0,weak_negative_not_reported,7,0,1
+E04,2025-07-09,L012,Golf Course Extension Road,road,1,explicit_waterlogging,25,0,2
+E05,2025-07-31,L012,Golf Course Extension Road,road,1,explicit_waterlogging,10,1,3
+E06,2025-09-01,L012,Golf Course Extension Road,road,0,weak_negative_not_reported,9,2,4
+E09,2026-08-07,L012,Golf Course Extension Road,road,0,weak_negative_not_reported,10,2,5
+E10,2026-08-24,L012,Golf Course Extension Road,road,0,weak_negative_not_reported,12,2,6
+E11,2026-08-25,L012,Golf Course Extension Road,road,0,weak_negative_not_reported,3,2,7
+E01,2023-07-09,L013,Khandsa Chowk,junction,1,explicit_waterlogging,34,0,0
+E02,2024-08-11,L013,Khandsa Chowk,junction,0,weak_negative_not_reported,7,1,1
+E04,2025-07-09,L013,Khandsa Chowk,junction,1,explicit_waterlogging,25,1,2
+E05,2025-07-31,L013,Khandsa Chowk,junction,0,weak_negative_not_reported,10,2,3
+E06,2025-09-01,L013,Khandsa Chowk,junction,0,weak_negative_not_reported,9,2,4
+E09,2026-08-07,L013,Khandsa Chowk,junction,0,weak_negative_not_reported,10,2,5
+E10,2026-08-24,L013,Khandsa Chowk,junction,0,weak_negative_not_reported,12,2,6
+E11,2026-08-25,L013,Khandsa Chowk,junction,0,weak_negative_not_reported,3,2,7
+E01,2023-07-09,L014,Old Delhi-Gurugram Road,road,0,weak_negative_not_reported,34,0,0
+E02,2024-08-11,L014,Old Delhi-Gurugram Road,road,0,weak_negative_not_reported,7,0,1
+E04,2025-07-09,L014,Old Delhi-Gurugram Road,road,0,weak_negative_not_reported,25,0,2
+E05,2025-07-31,L014,Old Delhi-Gurugram Road,road,1,explicit_waterlogging,10,0,3
+E06,2025-09-01,L014,Old Delhi-Gurugram Road,road,0,weak_negative_not_reported,9,1,4
+E09,2026-08-07,L014,Old Delhi-Gurugram Road,road,1,explicit_waterlogging,10,1,5
+E10,2026-08-24,L014,Old Delhi-Gurugram Road,road,0,weak_negative_not_reported,12,2,6
+E11,2026-08-25,L014,Old Delhi-Gurugram Road,road,0,weak_negative_not_reported,3,2,7
+E01,2023-07-09,L015,Sector 10,sector,1,explicit_waterlogging,34,0,0
+E02,2024-08-11,L015,Sector 10,sector,0,weak_negative_not_reported,7,1,1
+E04,2025-07-09,L015,Sector 10,sector,0,weak_negative_not_reported,25,1,2
+E05,2025-07-31,L015,Sector 10,sector,0,weak_negative_not_reported,10,1,3
+E06,2025-09-01,L015,Sector 10,sector,0,weak_negative_not_reported,9,1,4
+E09,2026-08-07,L015,Sector 10,sector,0,weak_negative_not_reported,10,1,5
+E10,2026-08-24,L015,Sector 10,sector,1,explicit_waterlogging,12,1,6
+E11,2026-08-25,L015,Sector 10,sector,0,weak_negative_not_reported,3,2,7
+E01,2023-07-09,L016,Sector 14,sector,1,explicit_waterlogging,34,0,0
+E02,2024-08-11,L016,Sector 14,sector,0,weak_negative_not_reported,7,1,1
+E04,2025-07-09,L016,Sector 14,sector,0,weak_negative_not_reported,25,1,2
+E05,2025-07-31,L016,Sector 14,sector,0,weak_negative_not_reported,10,1,3
+E06,2025-09-01,L016,Sector 14,sector,0,weak_negative_not_reported,9,1,4
+E09,2026-08-07,L016,Sector 14,sector,0,weak_negative_not_reported,10,1,5
+E10,2026-08-24,L016,Sector 14,sector,1,explicit_waterlogging,12,1,6
+E11,2026-08-25,L016,Sector 14,sector,0,weak_negative_not_reported,3,2,7
+E01,2023-07-09,L017,Sector 30,sector,1,explicit_waterlogging,34,0,0
+E02,2024-08-11,L017,Sector 30,sector,0,weak_negative_not_reported,7,1,1
+E04,2025-07-09,L017,Sector 30,sector,1,explicit_waterlogging,25,1,2
+E05,2025-07-31,L017,Sector 30,sector,0,weak_negative_not_reported,10,2,3
+E06,2025-09-01,L017,Sector 30,sector,0,weak_negative_not_reported,9,2,4
+E09,2026-08-07,L017,Sector 30,sector,0,weak_negative_not_reported,10,2,5
+E10,2026-08-24,L017,Sector 30,sector,0,weak_negative_not_reported,12,2,6
+E11,2026-08-25,L017,Sector 30,sector,0,weak_negative_not_reported,3,2,7
+E01,2023-07-09,L018,Sector 31,sector,1,explicit_waterlogging,34,0,0
+E02,2024-08-11,L018,Sector 31,sector,0,weak_negative_not_reported,7,1,1
+E04,2025-07-09,L018,Sector 31,sector,1,explicit_waterlogging,25,1,2
+E05,2025-07-31,L018,Sector 31,sector,0,weak_negative_not_reported,10,2,3
+E06,2025-09-01,L018,Sector 31,sector,0,weak_negative_not_reported,9,2,4
+E09,2026-08-07,L018,Sector 31,sector,0,weak_negative_not_reported,10,2,5
+E10,2026-08-24,L018,Sector 31,sector,0,weak_negative_not_reported,12,2,6
+E11,2026-08-25,L018,Sector 31,sector,0,weak_negative_not_reported,3,2,7
+E01,2023-07-09,L019,Sector 40,sector,1,explicit_waterlogging,34,0,0
+E02,2024-08-11,L019,Sector 40,sector,0,weak_negative_not_reported,7,1,1
+E04,2025-07-09,L019,Sector 40,sector,1,explicit_waterlogging,25,1,2
+E05,2025-07-31,L019,Sector 40,sector,0,weak_negative_not_reported,10,2,3
+E06,2025-09-01,L019,Sector 40,sector,0,weak_negative_not_reported,9,2,4
+E09,2026-08-07,L019,Sector 40,sector,0,weak_negative_not_reported,10,2,5
+E10,2026-08-24,L019,Sector 40,sector,0,weak_negative_not_reported,12,2,6
+E11,2026-08-25,L019,Sector 40,sector,0,weak_negative_not_reported,3,2,7
+E01,2023-07-09,L020,Sector 45,sector,0,weak_negative_not_reported,34,0,0
+E02,2024-08-11,L020,Sector 45,sector,0,weak_negative_not_reported,7,0,1
+E04,2025-07-09,L020,Sector 45,sector,1,explicit_waterlogging,25,0,2
+E05,2025-07-31,L020,Sector 45,sector,0,weak_negative_not_reported,10,1,3
+E06,2025-09-01,L020,Sector 45,sector,0,weak_negative_not_reported,9,1,4
+E09,2026-08-07,L020,Sector 45,sector,0,weak_negative_not_reported,10,1,5
+E10,2026-08-24,L020,Sector 45,sector,1,explicit_waterlogging,12,1,6
+E11,2026-08-25,L020,Sector 45,sector,0,weak_negative_not_reported,3,2,7
+E01,2023-07-09,L021,Sector 47,sector,1,explicit_waterlogging,34,0,0
+E02,2024-08-11,L021,Sector 47,sector,0,weak_negative_not_reported,7,1,1
+E04,2025-07-09,L021,Sector 47,sector,1,explicit_waterlogging,25,1,2
+E05,2025-07-31,L021,Sector 47,sector,0,weak_negative_not_reported,10,2,3
+E06,2025-09-01,L021,Sector 47,sector,0,weak_negative_not_reported,9,2,4
+E09,2026-08-07,L021,Sector 47,sector,0,weak_negative_not_reported,10,2,5
+E10,2026-08-24,L021,Sector 47,sector,0,weak_negative_not_reported,12,2,6
+E11,2026-08-25,L021,Sector 47,sector,0,weak_negative_not_reported,3,2,7
+E01,2023-07-09,L022,Sector 5,sector,0,weak_negative_not_reported,34,0,0
+E02,2024-08-11,L022,Sector 5,sector,0,weak_negative_not_reported,7,0,1
+E04,2025-07-09,L022,Sector 5,sector,1,explicit_waterlogging,25,0,2
+E05,2025-07-31,L022,Sector 5,sector,0,weak_negative_not_reported,10,1,3
+E06,2025-09-01,L022,Sector 5,sector,0,weak_negative_not_reported,9,1,4
+E09,2026-08-07,L022,Sector 5,sector,0,weak_negative_not_reported,10,1,5
+E10,2026-08-24,L022,Sector 5,sector,1,explicit_waterlogging,12,1,6
+E11,2026-08-25,L022,Sector 5,sector,0,weak_negative_not_reported,3,2,7
+E01,2023-07-09,L023,Udyog Vihar,area,1,explicit_waterlogging,34,0,0
+E02,2024-08-11,L023,Udyog Vihar,area,0,weak_negative_not_reported,7,1,1
+E04,2025-07-09,L023,Udyog Vihar,area,0,weak_negative_not_reported,25,1,2
+E05,2025-07-31,L023,Udyog Vihar,area,1,explicit_waterlogging,10,1,3
+E06,2025-09-01,L023,Udyog Vihar,area,0,weak_negative_not_reported,9,2,4
+E09,2026-08-07,L023,Udyog Vihar,area,0,weak_negative_not_reported,10,2,5
+E10,2026-08-24,L023,Udyog Vihar,area,0,weak_negative_not_reported,12,2,6
+E11,2026-08-25,L023,Udyog Vihar,area,0,weak_negative_not_reported,3,2,7
+E01,2023-07-09,L024,Aggarwal Dharmshala Chowk,junction,1,explicit_waterlogging,34,0,0
+E02,2024-08-11,L024,Aggarwal Dharmshala Chowk,junction,0,weak_negative_not_reported,7,1,1
+E04,2025-07-09,L024,Aggarwal Dharmshala Chowk,junction,0,weak_negative_not_reported,25,1,2
+E05,2025-07-31,L024,Aggarwal Dharmshala Chowk,junction,0,weak_negative_not_reported,10,1,3
+E06,2025-09-01,L024,Aggarwal Dharmshala Chowk,junction,0,weak_negative_not_reported,9,1,4
+E09,2026-08-07,L024,Aggarwal Dharmshala Chowk,junction,0,weak_negative_not_reported,10,1,5
+E10,2026-08-24,L024,Aggarwal Dharmshala Chowk,junction,0,weak_negative_not_reported,12,1,6
+E11,2026-08-25,L024,Aggarwal Dharmshala Chowk,junction,0,weak_negative_not_reported,3,1,7
+E01,2023-07-09,L025,Ardee City to Sector 52 road,road,0,weak_negative_not_reported,34,0,0
+E02,2024-08-11,L025,Ardee City to Sector 52 road,road,0,weak_negative_not_reported,7,0,1
+E04,2025-07-09,L025,Ardee City to Sector 52 road,road,0,weak_negative_not_reported,25,0,2
+E05,2025-07-31,L025,Ardee City to Sector 52 road,road,0,weak_negative_not_reported,10,0,3
+E06,2025-09-01,L025,Ardee City to Sector 52 road,road,0,weak_negative_not_reported,9,0,4
+E09,2026-08-07,L025,Ardee City to Sector 52 road,road,0,weak_negative_not_reported,10,0,5
+E10,2026-08-24,L025,Ardee City to Sector 52 road,road,1,explicit_waterlogging,12,0,6
+E11,2026-08-25,L025,Ardee City to Sector 52 road,road,0,weak_negative_not_reported,3,1,7
+E01,2023-07-09,L026,Bajghera,area,0,weak_negative_not_reported,34,0,0
+E02,2024-08-11,L026,Bajghera,area,0,weak_negative_not_reported,7,0,1
+E04,2025-07-09,L026,Bajghera,area,0,weak_negative_not_reported,25,0,2
+E05,2025-07-31,L026,Bajghera,area,0,weak_negative_not_reported,10,0,3
+E06,2025-09-01,L026,Bajghera,area,0,weak_negative_not_reported,9,0,4
+E09,2026-08-07,L026,Bajghera,area,1,explicit_waterlogging,10,0,5
+E10,2026-08-24,L026,Bajghera,area,0,weak_negative_not_reported,12,1,6
+E11,2026-08-25,L026,Bajghera,area,0,weak_negative_not_reported,3,1,7
+E01,2023-07-09,L027,Basai (area),area,0,weak_negative_not_reported,34,0,0
+E02,2024-08-11,L027,Basai (area),area,0,weak_negative_not_reported,7,0,1
+E04,2025-07-09,L027,Basai (area),area,1,explicit_waterlogging,25,0,2
+E05,2025-07-31,L027,Basai (area),area,0,weak_negative_not_reported,10,1,3
+E06,2025-09-01,L027,Basai (area),area,0,weak_negative_not_reported,9,1,4
+E09,2026-08-07,L027,Basai (area),area,0,weak_negative_not_reported,10,1,5
+E10,2026-08-24,L027,Basai (area),area,0,weak_negative_not_reported,12,1,6
+E11,2026-08-25,L027,Basai (area),area,0,weak_negative_not_reported,3,1,7
+E01,2023-07-09,L028,DLF Phase 1 underpass,underpass,0,weak_negative_not_reported,34,0,0
+E02,2024-08-11,L028,DLF Phase 1 underpass,underpass,1,indirect_closure_or_damage,7,0,1
+E04,2025-07-09,L028,DLF Phase 1 underpass,underpass,0,weak_negative_not_reported,25,1,2
+E05,2025-07-31,L028,DLF Phase 1 underpass,underpass,0,weak_negative_not_reported,10,1,3
+E06,2025-09-01,L028,DLF Phase 1 underpass,underpass,0,weak_negative_not_reported,9,1,4
+E09,2026-08-07,L028,DLF Phase 1 underpass,underpass,0,weak_negative_not_reported,10,1,5
+E10,2026-08-24,L028,DLF Phase 1 underpass,underpass,0,weak_negative_not_reported,12,1,6
+E11,2026-08-25,L028,DLF Phase 1 underpass,underpass,0,weak_negative_not_reported,3,1,7
+E01,2023-07-09,L029,DLF Phase 3 V Block,colony,0,weak_negative_not_reported,34,0,0
+E02,2024-08-11,L029,DLF Phase 3 V Block,colony,0,weak_negative_not_reported,7,0,1
+E04,2025-07-09,L029,DLF Phase 3 V Block,colony,0,weak_negative_not_reported,25,0,2
+E05,2025-07-31,L029,DLF Phase 3 V Block,colony,0,weak_negative_not_reported,10,0,3
+E06,2025-09-01,L029,DLF Phase 3 V Block,colony,0,weak_negative_not_reported,9,0,4
+E09,2026-08-07,L029,DLF Phase 3 V Block,colony,0,weak_negative_not_reported,10,0,5
+E10,2026-08-24,L029,DLF Phase 3 V Block,colony,1,explicit_waterlogging,12,0,6
+E11,2026-08-25,L029,DLF Phase 3 V Block,colony,0,weak_negative_not_reported,3,1,7
+E01,2023-07-09,L030,DLF Phase 3 underpass,underpass,0,weak_negative_not_reported,34,0,0
+E02,2024-08-11,L030,DLF Phase 3 underpass,underpass,1,indirect_closure_or_damage,7,0,1
+E04,2025-07-09,L030,DLF Phase 3 underpass,underpass,0,weak_negative_not_reported,25,1,2
+E05,2025-07-31,L030,DLF Phase 3 underpass,underpass,0,weak_negative_not_reported,10,1,3
+E06,2025-09-01,L030,DLF Phase 3 underpass,underpass,0,weak_negative_not_reported,9,1,4
+E09,2026-08-07,L030,DLF Phase 3 underpass,underpass,0,weak_negative_not_reported,10,1,5
+E10,2026-08-24,L030,DLF Phase 3 underpass,underpass,0,weak_negative_not_reported,12,1,6
+E11,2026-08-25,L030,DLF Phase 3 underpass,underpass,0,weak_negative_not_reported,3,1,7
+E01,2023-07-09,L031,Dhanwapur Road,road,0,weak_negative_not_reported,34,0,0
+E02,2024-08-11,L031,Dhanwapur Road,road,0,weak_negative_not_reported,7,0,1
+E04,2025-07-09,L031,Dhanwapur Road,road,0,weak_negative_not_reported,25,0,2
+E05,2025-07-31,L031,Dhanwapur Road,road,0,weak_negative_not_reported,10,0,3
+E06,2025-09-01,L031,Dhanwapur Road,road,0,weak_negative_not_reported,9,0,4
+E09,2026-08-07,L031,Dhanwapur Road,road,1,explicit_waterlogging,10,0,5
+E10,2026-08-24,L031,Dhanwapur Road,road,0,weak_negative_not_reported,12,1,6
+E11,2026-08-25,L031,Dhanwapur Road,road,0,weak_negative_not_reported,3,1,7
+E01,2023-07-09,L032,Dundahera,area,0,weak_negative_not_reported,34,0,0
+E02,2024-08-11,L032,Dundahera,area,0,weak_negative_not_reported,7,0,1
+E04,2025-07-09,L032,Dundahera,area,0,weak_negative_not_reported,25,0,2
+E05,2025-07-31,L032,Dundahera,area,0,weak_negative_not_reported,10,0,3
+E06,2025-09-01,L032,Dundahera,area,0,weak_negative_not_reported,9,0,4
+E09,2026-08-07,L032,Dundahera,area,1,explicit_waterlogging,10,0,5
+E10,2026-08-24,L032,Dundahera,area,0,weak_negative_not_reported,12,1,6
+E11,2026-08-25,L032,Dundahera,area,0,weak_negative_not_reported,3,1,7
+E01,2023-07-09,L033,Dwarka Expressway service lane near Sector 104,road,0,weak_negative_not_reported,34,0,0
+E02,2024-08-11,L033,Dwarka Expressway service lane near Sector 104,road,0,weak_negative_not_reported,7,0,1
+E04,2025-07-09,L033,Dwarka Expressway service lane near Sector 104,road,0,weak_negative_not_reported,25,0,2
+E05,2025-07-31,L033,Dwarka Expressway service lane near Sector 104,road,1,explicit_waterlogging,10,0,3
+E06,2025-09-01,L033,Dwarka Expressway service lane near Sector 104,road,0,weak_negative_not_reported,9,1,4
+E09,2026-08-07,L033,Dwarka Expressway service lane near Sector 104,road,0,weak_negative_not_reported,10,1,5
+E10,2026-08-24,L033,Dwarka Expressway service lane near Sector 104,road,0,weak_negative_not_reported,12,1,6
+E11,2026-08-25,L033,Dwarka Expressway service lane near Sector 104,road,0,weak_negative_not_reported,3,1,7
+E01,2023-07-09,L034,Greenwood City,colony,1,explicit_waterlogging,34,0,0
+E02,2024-08-11,L034,Greenwood City,colony,0,weak_negative_not_reported,7,1,1
+E04,2025-07-09,L034,Greenwood City,colony,0,weak_negative_not_reported,25,1,2
+E05,2025-07-31,L034,Greenwood City,colony,0,weak_negative_not_reported,10,1,3
+E06,2025-09-01,L034,Greenwood City,colony,0,weak_negative_not_reported,9,1,4
+E09,2026-08-07,L034,Greenwood City,colony,0,weak_negative_not_reported,10,1,5
+E10,2026-08-24,L034,Greenwood City,colony,0,weak_negative_not_reported,12,1,6
+E11,2026-08-25,L034,Greenwood City,colony,0,weak_negative_not_reported,3,1,7
+E01,2023-07-09,L035,Himgiri Chowk,junction,1,explicit_waterlogging,34,0,0
+E02,2024-08-11,L035,Himgiri Chowk,junction,0,weak_negative_not_reported,7,1,1
+E04,2025-07-09,L035,Himgiri Chowk,junction,0,weak_negative_not_reported,25,1,2
+E05,2025-07-31,L035,Himgiri Chowk,junction,0,weak_negative_not_reported,10,1,3
+E06,2025-09-01,L035,Himgiri Chowk,junction,0,weak_negative_not_reported,9,1,4
+E09,2026-08-07,L035,Himgiri Chowk,junction,0,weak_negative_not_reported,10,1,5
+E10,2026-08-24,L035,Himgiri Chowk,junction,0,weak_negative_not_reported,12,1,6
+E11,2026-08-25,L035,Himgiri Chowk,junction,0,weak_negative_not_reported,3,1,7
+E01,2023-07-09,L036,Jharsa to Sector 30/40 stretch,road,1,explicit_waterlogging,34,0,0
+E02,2024-08-11,L036,Jharsa to Sector 30/40 stretch,road,0,weak_negative_not_reported,7,1,1
+E04,2025-07-09,L036,Jharsa to Sector 30/40 stretch,road,0,weak_negative_not_reported,25,1,2
+E05,2025-07-31,L036,Jharsa to Sector 30/40 stretch,road,0,weak_negative_not_reported,10,1,3
+E06,2025-09-01,L036,Jharsa to Sector 30/40 stretch,road,0,weak_negative_not_reported,9,1,4
+E09,2026-08-07,L036,Jharsa to Sector 30/40 stretch,road,0,weak_negative_not_reported,10,1,5
+E10,2026-08-24,L036,Jharsa to Sector 30/40 stretch,road,0,weak_negative_not_reported,12,1,6
+E11,2026-08-25,L036,Jharsa to Sector 30/40 stretch,road,0,weak_negative_not_reported,3,1,7
+E01,2023-07-09,L037,Kadipur,area,0,weak_negative_not_reported,34,0,0
+E02,2024-08-11,L037,Kadipur,area,0,weak_negative_not_reported,7,0,1
+E04,2025-07-09,L037,Kadipur,area,0,weak_negative_not_reported,25,0,2
+E05,2025-07-31,L037,Kadipur,area,0,weak_negative_not_reported,10,0,3
+E06,2025-09-01,L037,Kadipur,area,0,weak_negative_not_reported,9,0,4
+E09,2026-08-07,L037,Kadipur,area,1,explicit_waterlogging,10,0,5
+E10,2026-08-24,L037,Kadipur,area,0,weak_negative_not_reported,12,1,6
+E11,2026-08-25,L037,Kadipur,area,0,weak_negative_not_reported,3,1,7
+E01,2023-07-09,L038,Kanhai Chowk,junction,1,explicit_waterlogging,34,0,0
+E02,2024-08-11,L038,Kanhai Chowk,junction,0,weak_negative_not_reported,7,1,1
+E04,2025-07-09,L038,Kanhai Chowk,junction,0,weak_negative_not_reported,25,1,2
+E05,2025-07-31,L038,Kanhai Chowk,junction,0,weak_negative_not_reported,10,1,3
+E06,2025-09-01,L038,Kanhai Chowk,junction,0,weak_negative_not_reported,9,1,4
+E09,2026-08-07,L038,Kanhai Chowk,junction,0,weak_negative_not_reported,10,1,5
+E10,2026-08-24,L038,Kanhai Chowk,junction,0,weak_negative_not_reported,12,1,6
+E11,2026-08-25,L038,Kanhai Chowk,junction,0,weak_negative_not_reported,3,1,7
+E01,2023-07-09,L039,MG Road,road,1,explicit_waterlogging,34,0,0
+E02,2024-08-11,L039,MG Road,road,0,weak_negative_not_reported,7,1,1
+E04,2025-07-09,L039,MG Road,road,0,weak_negative_not_reported,25,1,2
+E05,2025-07-31,L039,MG Road,road,0,weak_negative_not_reported,10,1,3
+E06,2025-09-01,L039,MG Road,road,0,weak_negative_not_reported,9,1,4
+E09,2026-08-07,L039,MG Road,road,0,weak_negative_not_reported,10,1,5
+E10,2026-08-24,L039,MG Road,road,0,weak_negative_not_reported,12,1,6
+E11,2026-08-25,L039,MG Road,road,0,weak_negative_not_reported,3,1,7
+E01,2023-07-09,L040,Malibu Town,colony,1,explicit_waterlogging,34,0,0
+E02,2024-08-11,L040,Malibu Town,colony,0,weak_negative_not_reported,7,1,1
+E04,2025-07-09,L040,Malibu Town,colony,0,weak_negative_not_reported,25,1,2
+E05,2025-07-31,L040,Malibu Town,colony,0,weak_negative_not_reported,10,1,3
+E06,2025-09-01,L040,Malibu Town,colony,0,weak_negative_not_reported,9,1,4
+E09,2026-08-07,L040,Malibu Town,colony,0,weak_negative_not_reported,10,1,5
+E10,2026-08-24,L040,Malibu Town,colony,0,weak_negative_not_reported,12,1,6
+E11,2026-08-25,L040,Malibu Town,colony,0,weak_negative_not_reported,3,1,7
+E01,2023-07-09,L041,Near Gurugram MLA office,area,1,explicit_waterlogging,34,0,0
+E02,2024-08-11,L041,Near Gurugram MLA office,area,0,weak_negative_not_reported,7,1,1
+E04,2025-07-09,L041,Near Gurugram MLA office,area,0,weak_negative_not_reported,25,1,2
+E05,2025-07-31,L041,Near Gurugram MLA office,area,0,weak_negative_not_reported,10,1,3
+E06,2025-09-01,L041,Near Gurugram MLA office,area,0,weak_negative_not_reported,9,1,4
+E09,2026-08-07,L041,Near Gurugram MLA office,area,0,weak_negative_not_reported,10,1,5
+E10,2026-08-24,L041,Near Gurugram MLA office,area,0,weak_negative_not_reported,12,1,6
+E11,2026-08-25,L041,Near Gurugram MLA office,area,0,weak_negative_not_reported,3,1,7
+E01,2023-07-09,L042,Palam Vihar,colony,1,explicit_waterlogging,34,0,0
+E02,2024-08-11,L042,Palam Vihar,colony,0,weak_negative_not_reported,7,1,1
+E04,2025-07-09,L042,Palam Vihar,colony,0,weak_negative_not_reported,25,1,2
+E05,2025-07-31,L042,Palam Vihar,colony,0,weak_negative_not_reported,10,1,3
+E06,2025-09-01,L042,Palam Vihar,colony,0,weak_negative_not_reported,9,1,4
+E09,2026-08-07,L042,Palam Vihar,colony,0,weak_negative_not_reported,10,1,5
+E10,2026-08-24,L042,Palam Vihar,colony,0,weak_negative_not_reported,12,1,6
+E11,2026-08-25,L042,Palam Vihar,colony,0,weak_negative_not_reported,3,1,7
+E01,2023-07-09,L043,Palam Vihar underpass,underpass,0,weak_negative_not_reported,34,0,0
+E02,2024-08-11,L043,Palam Vihar underpass,underpass,1,indirect_closure_or_damage,7,0,1
+E04,2025-07-09,L043,Palam Vihar underpass,underpass,0,weak_negative_not_reported,25,1,2
+E05,2025-07-31,L043,Palam Vihar underpass,underpass,0,weak_negative_not_reported,10,1,3
+E06,2025-09-01,L043,Palam Vihar underpass,underpass,0,weak_negative_not_reported,9,1,4
+E09,2026-08-07,L043,Palam Vihar underpass,underpass,0,weak_negative_not_reported,10,1,5
+E10,2026-08-24,L043,Palam Vihar underpass,underpass,0,weak_negative_not_reported,12,1,6
+E11,2026-08-25,L043,Palam Vihar underpass,underpass,0,weak_negative_not_reported,3,1,7
+E01,2023-07-09,L044,Police Line,area,1,explicit_waterlogging,34,0,0
+E02,2024-08-11,L044,Police Line,area,0,weak_negative_not_reported,7,1,1
+E04,2025-07-09,L044,Police Line,area,0,weak_negative_not_reported,25,1,2
+E05,2025-07-31,L044,Police Line,area,0,weak_negative_not_reported,10,1,3
+E06,2025-09-01,L044,Police Line,area,0,weak_negative_not_reported,9,1,4
+E09,2026-08-07,L044,Police Line,area,0,weak_negative_not_reported,10,1,5
+E10,2026-08-24,L044,Police Line,area,0,weak_negative_not_reported,12,1,6
+E11,2026-08-25,L044,Police Line,area,0,weak_negative_not_reported,3,1,7
+E01,2023-07-09,L045,Rosewood City,colony,1,explicit_waterlogging,34,0,0
+E02,2024-08-11,L045,Rosewood City,colony,0,weak_negative_not_reported,7,1,1
+E04,2025-07-09,L045,Rosewood City,colony,0,weak_negative_not_reported,25,1,2
+E05,2025-07-31,L045,Rosewood City,colony,0,weak_negative_not_reported,10,1,3
+E06,2025-09-01,L045,Rosewood City,colony,0,weak_negative_not_reported,9,1,4
+E09,2026-08-07,L045,Rosewood City,colony,0,weak_negative_not_reported,10,1,5
+E10,2026-08-24,L045,Rosewood City,colony,0,weak_negative_not_reported,12,1,6
+E11,2026-08-25,L045,Rosewood City,colony,0,weak_negative_not_reported,3,1,7
+E01,2023-07-09,L046,Sadar Bazaar,area,0,weak_negative_not_reported,34,0,0
+E02,2024-08-11,L046,Sadar Bazaar,area,0,weak_negative_not_reported,7,0,1
+E04,2025-07-09,L046,Sadar Bazaar,area,1,explicit_waterlogging,25,0,2
+E05,2025-07-31,L046,Sadar Bazaar,area,0,weak_negative_not_reported,10,1,3
+E06,2025-09-01,L046,Sadar Bazaar,area,0,weak_negative_not_reported,9,1,4
+E09,2026-08-07,L046,Sadar Bazaar,area,0,weak_negative_not_reported,10,1,5
+E10,2026-08-24,L046,Sadar Bazaar,area,0,weak_negative_not_reported,12,1,6
+E11,2026-08-25,L046,Sadar Bazaar,area,0,weak_negative_not_reported,3,1,7
+E01,2023-07-09,L047,Sadar Red Light,junction,0,weak_negative_not_reported,34,0,0
+E02,2024-08-11,L047,Sadar Red Light,junction,0,weak_negative_not_reported,7,0,1
+E04,2025-07-09,L047,Sadar Red Light,junction,0,weak_negative_not_reported,25,0,2
+E05,2025-07-31,L047,Sadar Red Light,junction,0,weak_negative_not_reported,10,0,3
+E06,2025-09-01,L047,Sadar Red Light,junction,1,explicit_waterlogging,9,0,4
+E09,2026-08-07,L047,Sadar Red Light,junction,0,weak_negative_not_reported,10,1,5
+E10,2026-08-24,L047,Sadar Red Light,junction,0,weak_negative_not_reported,12,1,6
+E11,2026-08-25,L047,Sadar Red Light,junction,0,weak_negative_not_reported,3,1,7
+E01,2023-07-09,L048,Sanjay Gram Road,road,0,weak_negative_not_reported,34,0,0
+E02,2024-08-11,L048,Sanjay Gram Road,road,0,weak_negative_not_reported,7,0,1
+E04,2025-07-09,L048,Sanjay Gram Road,road,1,explicit_waterlogging,25,0,2
+E05,2025-07-31,L048,Sanjay Gram Road,road,0,weak_negative_not_reported,10,1,3
+E06,2025-09-01,L048,Sanjay Gram Road,road,0,weak_negative_not_reported,9,1,4
+E09,2026-08-07,L048,Sanjay Gram Road,road,0,weak_negative_not_reported,10,1,5
+E10,2026-08-24,L048,Sanjay Gram Road,road,0,weak_negative_not_reported,12,1,6
+E11,2026-08-25,L048,Sanjay Gram Road,road,0,weak_negative_not_reported,3,1,7
+E01,2023-07-09,L049,Sector 10A,sector,1,explicit_waterlogging,34,0,0
+E02,2024-08-11,L049,Sector 10A,sector,0,weak_negative_not_reported,7,1,1
+E04,2025-07-09,L049,Sector 10A,sector,0,weak_negative_not_reported,25,1,2
+E05,2025-07-31,L049,Sector 10A,sector,0,weak_negative_not_reported,10,1,3
+E06,2025-09-01,L049,Sector 10A,sector,0,weak_negative_not_reported,9,1,4
+E09,2026-08-07,L049,Sector 10A,sector,0,weak_negative_not_reported,10,1,5
+E10,2026-08-24,L049,Sector 10A,sector,0,weak_negative_not_reported,12,1,6
+E11,2026-08-25,L049,Sector 10A,sector,0,weak_negative_not_reported,3,1,7
+E01,2023-07-09,L050,Sector 12,sector,0,weak_negative_not_reported,34,0,0
+E02,2024-08-11,L050,Sector 12,sector,0,weak_negative_not_reported,7,0,1
+E04,2025-07-09,L050,Sector 12,sector,1,explicit_waterlogging,25,0,2
+E05,2025-07-31,L050,Sector 12,sector,0,weak_negative_not_reported,10,1,3
+E06,2025-09-01,L050,Sector 12,sector,0,weak_negative_not_reported,9,1,4
+E09,2026-08-07,L050,Sector 12,sector,0,weak_negative_not_reported,10,1,5
+E10,2026-08-24,L050,Sector 12,sector,0,weak_negative_not_reported,12,1,6
+E11,2026-08-25,L050,Sector 12,sector,0,weak_negative_not_reported,3,1,7
+E01,2023-07-09,L051,Sector 13,sector,0,weak_negative_not_reported,34,0,0
+E02,2024-08-11,L051,Sector 13,sector,0,weak_negative_not_reported,7,0,1
+E04,2025-07-09,L051,Sector 13,sector,1,explicit_waterlogging,25,0,2
+E05,2025-07-31,L051,Sector 13,sector,0,weak_negative_not_reported,10,1,3
+E06,2025-09-01,L051,Sector 13,sector,0,weak_negative_not_reported,9,1,4
+E09,2026-08-07,L051,Sector 13,sector,0,weak_negative_not_reported,10,1,5
+E10,2026-08-24,L051,Sector 13,sector,0,weak_negative_not_reported,12,1,6
+E11,2026-08-25,L051,Sector 13,sector,0,weak_negative_not_reported,3,1,7
+E01,2023-07-09,L052,Sector 15,sector,1,explicit_waterlogging,34,0,0
+E02,2024-08-11,L052,Sector 15,sector,0,weak_negative_not_reported,7,1,1
+E04,2025-07-09,L052,Sector 15,sector,0,weak_negative_not_reported,25,1,2
+E05,2025-07-31,L052,Sector 15,sector,0,weak_negative_not_reported,10,1,3
+E06,2025-09-01,L052,Sector 15,sector,0,weak_negative_not_reported,9,1,4
+E09,2026-08-07,L052,Sector 15,sector,0,weak_negative_not_reported,10,1,5
+E10,2026-08-24,L052,Sector 15,sector,0,weak_negative_not_reported,12,1,6
+E11,2026-08-25,L052,Sector 15,sector,0,weak_negative_not_reported,3,1,7
+E01,2023-07-09,L053,Sector 15 Part 2,park,0,weak_negative_not_reported,34,0,0
+E02,2024-08-11,L053,Sector 15 Part 2,park,0,weak_negative_not_reported,7,0,1
+E04,2025-07-09,L053,Sector 15 Part 2,park,0,weak_negative_not_reported,25,0,2
+E05,2025-07-31,L053,Sector 15 Part 2,park,0,weak_negative_not_reported,10,0,3
+E06,2025-09-01,L053,Sector 15 Part 2,park,0,weak_negative_not_reported,9,0,4
+E09,2026-08-07,L053,Sector 15 Part 2,park,0,weak_negative_not_reported,10,0,5
+E10,2026-08-24,L053,Sector 15 Part 2,park,0,weak_negative_not_reported,12,0,6
+E11,2026-08-25,L053,Sector 15 Part 2,park,0,weak_negative_not_reported,3,0,7
+E01,2023-07-09,L054,Sector 17,sector,1,explicit_waterlogging,34,0,0
+E02,2024-08-11,L054,Sector 17,sector,0,weak_negative_not_reported,7,1,1
+E04,2025-07-09,L054,Sector 17,sector,0,weak_negative_not_reported,25,1,2
+E05,2025-07-31,L054,Sector 17,sector,0,weak_negative_not_reported,10,1,3
+E06,2025-09-01,L054,Sector 17,sector,0,weak_negative_not_reported,9,1,4
+E09,2026-08-07,L054,Sector 17,sector,0,weak_negative_not_reported,10,1,5
+E10,2026-08-24,L054,Sector 17,sector,0,weak_negative_not_reported,12,1,6
+E11,2026-08-25,L054,Sector 17,sector,0,weak_negative_not_reported,3,1,7
+E01,2023-07-09,L055,Sector 22,sector,0,weak_negative_not_reported,34,0,0
+E02,2024-08-11,L055,Sector 22,sector,0,weak_negative_not_reported,7,0,1
+E04,2025-07-09,L055,Sector 22,sector,1,explicit_waterlogging,25,0,2
+E05,2025-07-31,L055,Sector 22,sector,0,weak_negative_not_reported,10,1,3
+E06,2025-09-01,L055,Sector 22,sector,0,weak_negative_not_reported,9,1,4
+E09,2026-08-07,L055,Sector 22,sector,0,weak_negative_not_reported,10,1,5
+E10,2026-08-24,L055,Sector 22,sector,0,weak_negative_not_reported,12,1,6
+E11,2026-08-25,L055,Sector 22,sector,0,weak_negative_not_reported,3,1,7
+E01,2023-07-09,L056,Sector 23,sector,0,weak_negative_not_reported,34,0,0
+E02,2024-08-11,L056,Sector 23,sector,0,weak_negative_not_reported,7,0,1
+E04,2025-07-09,L056,Sector 23,sector,1,explicit_waterlogging,25,0,2
+E05,2025-07-31,L056,Sector 23,sector,0,weak_negative_not_reported,10,1,3
+E06,2025-09-01,L056,Sector 23,sector,0,weak_negative_not_reported,9,1,4
+E09,2026-08-07,L056,Sector 23,sector,0,weak_negative_not_reported,10,1,5
+E10,2026-08-24,L056,Sector 23,sector,0,weak_negative_not_reported,12,1,6
+E11,2026-08-25,L056,Sector 23,sector,0,weak_negative_not_reported,3,1,7
+E01,2023-07-09,L057,Sector 29,sector,1,explicit_waterlogging,34,0,0
+E02,2024-08-11,L057,Sector 29,sector,0,weak_negative_not_reported,7,1,1
+E04,2025-07-09,L057,Sector 29,sector,0,weak_negative_not_reported,25,1,2
+E05,2025-07-31,L057,Sector 29,sector,0,weak_negative_not_reported,10,1,3
+E06,2025-09-01,L057,Sector 29,sector,0,weak_negative_not_reported,9,1,4
+E09,2026-08-07,L057,Sector 29,sector,0,weak_negative_not_reported,10,1,5
+E10,2026-08-24,L057,Sector 29,sector,0,weak_negative_not_reported,12,1,6
+E11,2026-08-25,L057,Sector 29,sector,0,weak_negative_not_reported,3,1,7
+E01,2023-07-09,L058,Sector 39,sector,1,explicit_waterlogging,34,0,0
+E02,2024-08-11,L058,Sector 39,sector,0,weak_negative_not_reported,7,1,1
+E04,2025-07-09,L058,Sector 39,sector,0,weak_negative_not_reported,25,1,2
+E05,2025-07-31,L058,Sector 39,sector,0,weak_negative_not_reported,10,1,3
+E06,2025-09-01,L058,Sector 39,sector,0,weak_negative_not_reported,9,1,4
+E09,2026-08-07,L058,Sector 39,sector,0,weak_negative_not_reported,10,1,5
+E10,2026-08-24,L058,Sector 39,sector,0,weak_negative_not_reported,12,1,6
+E11,2026-08-25,L058,Sector 39,sector,0,weak_negative_not_reported,3,1,7
+E01,2023-07-09,L059,Sector 4,sector,0,weak_negative_not_reported,34,0,0
+E02,2024-08-11,L059,Sector 4,sector,0,weak_negative_not_reported,7,0,1
+E04,2025-07-09,L059,Sector 4,sector,1,explicit_waterlogging,25,0,2
+E05,2025-07-31,L059,Sector 4,sector,0,weak_negative_not_reported,10,1,3
+E06,2025-09-01,L059,Sector 4,sector,0,weak_negative_not_reported,9,1,4
+E09,2026-08-07,L059,Sector 4,sector,0,weak_negative_not_reported,10,1,5
+E10,2026-08-24,L059,Sector 4,sector,0,weak_negative_not_reported,12,1,6
+E11,2026-08-25,L059,Sector 4,sector,0,weak_negative_not_reported,3,1,7
+E01,2023-07-09,L060,Sector 4-5 underpass,sector,0,weak_negative_not_reported,34,0,0
+E02,2024-08-11,L060,Sector 4-5 underpass,sector,1,indirect_closure_or_damage,7,0,1
+E04,2025-07-09,L060,Sector 4-5 underpass,sector,0,weak_negative_not_reported,25,1,2
+E05,2025-07-31,L060,Sector 4-5 underpass,sector,0,weak_negative_not_reported,10,1,3
+E06,2025-09-01,L060,Sector 4-5 underpass,sector,0,weak_negative_not_reported,9,1,4
+E09,2026-08-07,L060,Sector 4-5 underpass,sector,0,weak_negative_not_reported,10,1,5
+E10,2026-08-24,L060,Sector 4-5 underpass,sector,0,weak_negative_not_reported,12,1,6
+E11,2026-08-25,L060,Sector 4-5 underpass,sector,0,weak_negative_not_reported,3,1,7
+E01,2023-07-09,L061,Sector 48,sector,0,weak_negative_not_reported,34,0,0
+E02,2024-08-11,L061,Sector 48,sector,0,weak_negative_not_reported,7,0,1
+E04,2025-07-09,L061,Sector 48,sector,1,explicit_waterlogging,25,0,2
+E05,2025-07-31,L061,Sector 48,sector,0,weak_negative_not_reported,10,1,3
+E06,2025-09-01,L061,Sector 48,sector,0,weak_negative_not_reported,9,1,4
+E09,2026-08-07,L061,Sector 48,sector,0,weak_negative_not_reported,10,1,5
+E10,2026-08-24,L061,Sector 48,sector,0,weak_negative_not_reported,12,1,6
+E11,2026-08-25,L061,Sector 48,sector,0,weak_negative_not_reported,3,1,7
+E01,2023-07-09,L062,Sector 51,sector,0,weak_negative_not_reported,34,0,0
+E02,2024-08-11,L062,Sector 51,sector,0,weak_negative_not_reported,7,0,1
+E04,2025-07-09,L062,Sector 51,sector,1,explicit_waterlogging,25,0,2
+E05,2025-07-31,L062,Sector 51,sector,0,weak_negative_not_reported,10,1,3
+E06,2025-09-01,L062,Sector 51,sector,0,weak_negative_not_reported,9,1,4
+E09,2026-08-07,L062,Sector 51,sector,0,weak_negative_not_reported,10,1,5
+E10,2026-08-24,L062,Sector 51,sector,0,weak_negative_not_reported,12,1,6
+E11,2026-08-25,L062,Sector 51,sector,0,weak_negative_not_reported,3,1,7
+E01,2023-07-09,L063,Sector 52A,sector,0,weak_negative_not_reported,34,0,0
+E02,2024-08-11,L063,Sector 52A,sector,0,weak_negative_not_reported,7,0,1
+E04,2025-07-09,L063,Sector 52A,sector,0,weak_negative_not_reported,25,0,2
+E05,2025-07-31,L063,Sector 52A,sector,0,weak_negative_not_reported,10,0,3
+E06,2025-09-01,L063,Sector 52A,sector,0,weak_negative_not_reported,9,0,4
+E09,2026-08-07,L063,Sector 52A,sector,0,weak_negative_not_reported,10,0,5
+E10,2026-08-24,L063,Sector 52A,sector,1,explicit_waterlogging,12,0,6
+E11,2026-08-25,L063,Sector 52A,sector,0,weak_negative_not_reported,3,1,7
+E01,2023-07-09,L064,Sector 56 Road,sector,0,weak_negative_not_reported,34,0,0
+E02,2024-08-11,L064,Sector 56 Road,sector,0,weak_negative_not_reported,7,0,1
+E04,2025-07-09,L064,Sector 56 Road,sector,0,weak_negative_not_reported,25,0,2
+E05,2025-07-31,L064,Sector 56 Road,sector,1,explicit_waterlogging,10,0,3
+E06,2025-09-01,L064,Sector 56 Road,sector,0,weak_negative_not_reported,9,1,4
+E09,2026-08-07,L064,Sector 56 Road,sector,0,weak_negative_not_reported,10,1,5
+E10,2026-08-24,L064,Sector 56 Road,sector,0,weak_negative_not_reported,12,1,6
+E11,2026-08-25,L064,Sector 56 Road,sector,0,weak_negative_not_reported,3,1,7
+E01,2023-07-09,L065,Sikanderpur Metro station,station,0,weak_negative_not_reported,34,0,0
+E02,2024-08-11,L065,Sikanderpur Metro station,station,0,weak_negative_not_reported,7,0,1
+E04,2025-07-09,L065,Sikanderpur Metro station,station,0,weak_negative_not_reported,25,0,2
+E05,2025-07-31,L065,Sikanderpur Metro station,station,0,weak_negative_not_reported,10,0,3
+E06,2025-09-01,L065,Sikanderpur Metro station,station,1,indirect_closure_or_damage,9,0,4
+E09,2026-08-07,L065,Sikanderpur Metro station,station,0,weak_negative_not_reported,10,1,5
+E10,2026-08-24,L065,Sikanderpur Metro station,station,0,weak_negative_not_reported,12,1,6
+E11,2026-08-25,L065,Sikanderpur Metro station,station,0,weak_negative_not_reported,3,1,7
+E01,2023-07-09,L066,South City-1,colony,0,weak_negative_not_reported,34,0,0
+E02,2024-08-11,L066,South City-1,colony,0,weak_negative_not_reported,7,0,1
+E04,2025-07-09,L066,South City-1,colony,0,weak_negative_not_reported,25,0,2
+E05,2025-07-31,L066,South City-1,colony,0,weak_negative_not_reported,10,0,3
+E06,2025-09-01,L066,South City-1,colony,0,weak_negative_not_reported,9,0,4
+E09,2026-08-07,L066,South City-1,colony,0,weak_negative_not_reported,10,0,5
+E10,2026-08-24,L066,South City-1,colony,1,explicit_waterlogging,12,0,6
+E11,2026-08-25,L066,South City-1,colony,0,weak_negative_not_reported,3,1,7
+E01,2023-07-09,L067,Suncity Township underpass,underpass,0,weak_negative_not_reported,34,0,0
+E02,2024-08-11,L067,Suncity Township underpass,underpass,1,indirect_closure_or_damage,7,0,1
+E04,2025-07-09,L067,Suncity Township underpass,underpass,0,weak_negative_not_reported,25,1,2
+E05,2025-07-31,L067,Suncity Township underpass,underpass,0,weak_negative_not_reported,10,1,3
+E06,2025-09-01,L067,Suncity Township underpass,underpass,0,weak_negative_not_reported,9,1,4
+E09,2026-08-07,L067,Suncity Township underpass,underpass,0,weak_negative_not_reported,10,1,5
+E10,2026-08-24,L067,Suncity Township underpass,underpass,0,weak_negative_not_reported,12,1,6
+E11,2026-08-25,L067,Suncity Township underpass,underpass,0,weak_negative_not_reported,3,1,7
+E01,2023-07-09,L068,Surat Nagar,area,0,weak_negative_not_reported,34,0,0
+E02,2024-08-11,L068,Surat Nagar,area,0,weak_negative_not_reported,7,0,1
+E04,2025-07-09,L068,Surat Nagar,area,0,weak_negative_not_reported,25,0,2
+E05,2025-07-31,L068,Surat Nagar,area,0,weak_negative_not_reported,10,0,3
+E06,2025-09-01,L068,Surat Nagar,area,0,weak_negative_not_reported,9,0,4
+E09,2026-08-07,L068,Surat Nagar,area,1,explicit_waterlogging,10,0,5
+E10,2026-08-24,L068,Surat Nagar,area,0,weak_negative_not_reported,12,1,6
+E11,2026-08-25,L068,Surat Nagar,area,0,weak_negative_not_reported,3,1,7
+E01,2023-07-09,L069,"Tulip Chowk, Sector 69",junction,0,weak_negative_not_reported,34,0,0
+E02,2024-08-11,L069,"Tulip Chowk, Sector 69",junction,0,weak_negative_not_reported,7,0,1
+E04,2025-07-09,L069,"Tulip Chowk, Sector 69",junction,0,weak_negative_not_reported,25,0,2
+E05,2025-07-31,L069,"Tulip Chowk, Sector 69",junction,0,weak_negative_not_reported,10,0,3
+E06,2025-09-01,L069,"Tulip Chowk, Sector 69",junction,0,weak_negative_not_reported,9,0,4
+E09,2026-08-07,L069,"Tulip Chowk, Sector 69",junction,0,weak_negative_not_reported,10,0,5
+E10,2026-08-24,L069,"Tulip Chowk, Sector 69",junction,1,explicit_waterlogging,12,0,6
+E11,2026-08-25,L069,"Tulip Chowk, Sector 69",junction,0,weak_negative_not_reported,3,1,7

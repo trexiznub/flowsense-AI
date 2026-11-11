@@ -1,0 +1,3731 @@
+{
+ "version": "0.1",
+ "built": "2026-11-11",
+ "model": {
+  "feature_names": [
+   "intercept",
+   "ln_rain",
+   "is_arterial"
+  ],
+  "coef": [
+   -1.6379939628350657,
+   2.219142405170064,
+   0.8694439113407624
+  ],
+  "smoothing": {
+   "A": 0.5,
+   "B": 1.5
+  },
+  "l2": 1.0,
+  "rain_ref_mm": 100.0,
+  "class_thresholds": {
+   "moderate": 0.1,
+   "high": 0.25,
+   "severe": 0.5
+  }
+ },
+ "backtest": {
+  "per_event": [
+   {
+    "event_id": "E04",
+    "date": "2025-07-09",
+    "n_candidates": 69,
+    "n_reported": 25,
+    "auc_model": 0.5209,
+    "auc_type_only": 0.5209,
+    "precision_at_k_model": 0.4,
+    "precision_at_k_type_only": 0.4,
+    "precision_at_k_random": 0.3623,
+    "recall_top20_model": 0.36,
+    "expected_flooded": 28.7601,
+    "rain_mm": 133.0
+   },
+   {
+    "event_id": "E05",
+    "date": "2025-07-31",
+    "n_candidates": 69,
+    "n_reported": 10,
+    "auc_model": 0.7729,
+    "auc_type_only": 0.7729,
+    "precision_at_k_model": 0.6,
+    "precision_at_k_type_only": 0.6,
+    "precision_at_k_random": 0.1449,
+    "recall_top20_model": 0.8,
+    "expected_flooded": 11.4874,
+    "rain_mm": 66.0
+   },
+   {
+    "event_id": "E06",
+    "date": "2025-09-01",
+    "n_candidates": 69,
+    "n_reported": 9,
+    "auc_model": 0.8194,
+    "auc_type_only": 0.8194,
+    "precision_at_k_model": 0.7778,
+    "precision_at_k_type_only": 0.7778,
+    "precision_at_k_random": 0.1304,
+    "recall_top20_model": 0.7778,
+    "expected_flooded": 19.3018,
+    "rain_mm": 100.0
+   },
+   {
+    "event_id": "E09",
+    "date": "2026-08-07",
+    "n_candidates": 69,
+    "n_reported": 10,
+    "auc_model": 0.539,
+    "auc_type_only": 0.539,
+    "precision_at_k_model": 0.2,
+    "precision_at_k_type_only": 0.2,
+    "precision_at_k_random": 0.1449,
+    "recall_top20_model": 0.4,
+    "expected_flooded": 16.3202,
+    "rain_mm": 97.0
+   },
+   {
+    "event_id": "E10",
+    "date": "2026-08-24",
+    "n_candidates": 69,
+    "n_reported": 12,
+    "auc_model": 0.5,
+    "auc_type_only": 0.5,
+    "precision_at_k_model": 0.1667,
+    "precision_at_k_type_only": 0.1667,
+    "precision_at_k_random": 0.1739,
+    "recall_top20_model": 0.25,
+    "expected_flooded": null,
+    "rain_mm": null
+   },
+   {
+    "event_id": "E11",
+    "date": "2026-08-25",
+    "n_candidates": 69,
+    "n_reported": 3,
+    "auc_model": 0.8485,
+    "auc_type_only": 0.8485,
+    "precision_at_k_model": 0.3333,
+    "precision_at_k_type_only": 0.3333,
+    "precision_at_k_random": 0.0435,
+    "recall_top20_model": 1.0,
+    "expected_flooded": 9.0776,
+    "rain_mm": 70.0
+   }
+  ],
+  "mean": {
+   "auc_model": 0.6667837984363408,
+   "auc_type_only": 0.6667837984363408,
+   "precision_at_k_model": 0.412962962962963,
+   "precision_at_k_type_only": 0.412962962962963,
+   "precision_at_k_random": 0.16666666666666666,
+   "recall_top20_model": 0.5979629629629629
+  },
+  "n_events": 6,
+  "method": "forward-chaining: train on earlier events only; propensity counts earlier events only",
+  "caveat": "Candidate list built from news mentions across all events, so results are optimistic versus ranking all ~159 official hotspots."
+ },
+ "events": [
+  {
+   "id": "E01",
+   "date": "2023-07-09",
+   "rain_mm": 150.0,
+   "window": "Sunday 06:00-23:00 (article also says total recorded 'till the afternoon')",
+   "n_reported": 34,
+   "source": "https://www.dailypioneer.com/2023/state-editions/g---gram-dc-urges-wfh-as-downpour-wreaks-havoc.html"
+  },
+  {
+   "id": "E02",
+   "date": "2024-08-11",
+   "rain_mm": 53.0,
+   "window": "Sunday early morning, measured by 08:30",
+   "n_reported": 7,
+   "source": "https://www.indiatvnews.com/haryana/gurugram-rains-latest-update-gurugram-turns-jalgram-as-heavy-rain-leads-to-waterlogging-traffic-disruption-in-several-areas-see-photos-2024-08-11-946367"
+  },
+  {
+   "id": "E04",
+   "date": "2025-07-09",
+   "rain_mm": 133.0,
+   "window": "Wed evening to 08:30 Thu 10 Jul (intermittent overnight)",
+   "n_reported": 25,
+   "source": "https://www.theweek.in/wire-updates/national/2025/07/10/des3-ncr-rain-waterlogging.html"
+  },
+  {
+   "id": "E05",
+   "date": "2025-07-31",
+   "rain_mm": 66.0,
+   "window": "Thursday (time not stated)",
+   "n_reported": 10,
+   "source": "https://theprint.in/india/gurugram-rains-severe-waterlogging-leaves-roads-inundated-stranding-helpless-commuters/2709543"
+  },
+  {
+   "id": "E06",
+   "date": "2025-09-01",
+   "rain_mm": 100.0,
+   "window": "Monday 15:00-19:00",
+   "n_reported": 9,
+   "source": "https://www.business-standard.com/india-news/gurugram-heavy-rains-floods-work-from-home-orders-delhi-ncr-weather-125090200151_1.html"
+  },
+  {
+   "id": "E09",
+   "date": "2026-08-07",
+   "rain_mm": 97.0,
+   "window": "Friday (one-day total)",
+   "n_reported": 10,
+   "source": "https://www.tribuneindia.com/news/haryana/97mm-rainfall-floods-millennium-city-again-old-gurugram-areas-worst-hit/"
+  },
+  {
+   "id": "E10",
+   "date": "2026-08-24",
+   "rain_mm": null,
+   "window": "Monday (time not stated)",
+   "n_reported": 12,
+   "source": "https://www.businesstoday.in/india/story/gurugram-issues-work-from-home-advisory-for-tuesday-following-heavy-rain-and-flooding-551080-2026-08-24"
+  },
+  {
+   "id": "E11",
+   "date": "2026-08-25",
+   "rain_mm": 70.0,
+   "window": "Tuesday; ~70 mm over a 35-minute period",
+   "n_reported": 3,
+   "source": "https://theprint.in/india/70-mm-rainfall-over-short-span-inundates-gurugram-road-cave-ins-unending-jams-compound-woes/3024709/"
+  }
+ ],
+ "locations": [
+  {
+   "id": "L001",
+   "name": "NH-48 Delhi-Gurugram corridor",
+   "type": "corridor",
+   "pos": 5,
+   "obs": 8,
+   "propensity": 0.55,
+   "events": [
+    "E01",
+    "E02",
+    "E06",
+    "E09",
+    "E11"
+   ],
+   "sources": [
+    "https://theprint.in/india/70-mm-rainfall-over-short-span-inundates-gurugram-road-cave-ins-unending-jams-compound-woes/3024709/",
+    "https://www.businesstoday.in/india/story/delhi-ncr-rains-key-roads-waterlogged-after-heavy-downpour-gurugram-comes-to-a-standstill-547671-2026-08-06",
+    "https://www.businesstoday.in/india/story/gurugram-may-face-bangalores-fate-netizens-as-heavy-rains-waterlogging-mar-normal-life-492055-2025-09-02"
+   ]
+  },
+  {
+   "id": "L002",
+   "name": "Narsinghpur (NH-48 stretch)",
+   "type": "corridor",
+   "pos": 6,
+   "obs": 8,
+   "propensity": 0.65,
+   "events": [
+    "E01",
+    "E02",
+    "E04",
+    "E05",
+    "E06",
+    "E10"
+   ],
+   "sources": [
+    "https://theprint.in/india/gurugram-rains-severe-waterlogging-leaves-roads-inundated-stranding-helpless-commuters/2709543",
+    "https://www.businesstoday.in/india/story/gurugram-issues-work-from-home-advisory-for-tuesday-following-heavy-rain-and-flooding-551080-2026-08-24",
+    "https://www.businesstoday.in/india/story/gurugram-may-face-bangalores-fate-netizens-as-heavy-rains-waterlogging-mar-normal-life-492055-2025-09-02"
+   ]
+  },
+  {
+   "id": "L003",
+   "name": "Sohna Road",
+   "type": "road",
+   "pos": 5,
+   "obs": 8,
+   "propensity": 0.55,
+   "events": [
+    "E01",
+    "E04",
+    "E05",
+    "E06",
+    "E10"
+   ],
+   "sources": [
+    "https://theprint.in/india/gurugram-rains-severe-waterlogging-leaves-roads-inundated-stranding-helpless-commuters/2709543",
+    "https://www.business-standard.com/india-news/gurugram-heavy-rains-floods-work-from-home-orders-delhi-ncr-weather-125090200151_1.html",
+    "https://www.businesstoday.in/india/story/gurugram-issues-work-from-home-advisory-for-tuesday-following-heavy-rain-and-flooding-551080-2026-08-24"
+   ]
+  },
+  {
+   "id": "L004",
+   "name": "Rajiv Chowk",
+   "type": "junction",
+   "pos": 4,
+   "obs": 8,
+   "propensity": 0.45,
+   "events": [
+    "E01",
+    "E04",
+    "E05",
+    "E06"
+   ],
+   "sources": [
+    "https://theprint.in/india/gurugram-rains-severe-waterlogging-leaves-roads-inundated-stranding-helpless-commuters/2709543",
+    "https://www.business-standard.com/india-news/gurugram-heavy-rains-floods-work-from-home-orders-delhi-ncr-weather-125090200151_1.html",
+    "https://www.dailypioneer.com/2023/state-editions/g---gram-dc-urges-wfh-as-downpour-wreaks-havoc.html"
+   ]
+  },
+  {
+   "id": "L005",
+   "name": "Sheetla Mata Road",
+   "type": "road",
+   "pos": 4,
+   "obs": 8,
+   "propensity": 0.45,
+   "events": [
+    "E01",
+    "E04",
+    "E06",
+    "E09"
+   ],
+   "sources": [
+    "https://www.businesstoday.in/india/story/gurugram-may-face-bangalores-fate-netizens-as-heavy-rains-waterlogging-mar-normal-life-492055-2025-09-02",
+    "https://www.dailypioneer.com/2023/state-editions/g---gram-dc-urges-wfh-as-downpour-wreaks-havoc.html",
+    "https://www.theweek.in/wire-updates/national/2025/07/10/des3-ncr-rain-waterlogging.html"
+   ]
+  },
+  {
+   "id": "L006",
+   "name": "Subhash Chowk",
+   "type": "junction",
+   "pos": 4,
+   "obs": 8,
+   "propensity": 0.45,
+   "events": [
+    "E01",
+    "E04",
+    "E05",
+    "E11"
+   ],
+   "sources": [
+    "https://theprint.in/india/70-mm-rainfall-over-short-span-inundates-gurugram-road-cave-ins-unending-jams-compound-woes/3024709/",
+    "https://theprint.in/india/gurugram-rains-severe-waterlogging-leaves-roads-inundated-stranding-helpless-commuters/2709543",
+    "https://www.dailypioneer.com/2023/state-editions/g---gram-dc-urges-wfh-as-downpour-wreaks-havoc.html"
+   ]
+  },
+  {
+   "id": "L007",
+   "name": "Bus Adda / Old Bus Stand area",
+   "type": "area",
+   "pos": 3,
+   "obs": 8,
+   "propensity": 0.35,
+   "events": [
+    "E01",
+    "E04",
+    "E09"
+   ],
+   "sources": [
+    "https://www.dailypioneer.com/2023/state-editions/g---gram-dc-urges-wfh-as-downpour-wreaks-havoc.html",
+    "https://www.theweek.in/wire-updates/national/2025/07/10/des3-ncr-rain-waterlogging.html",
+    "https://www.tribuneindia.com/news/haryana/97mm-rainfall-floods-millennium-city-again-old-gurugram-areas-worst-hit/"
+   ]
+  },
+  {
+   "id": "L008",
+   "name": "Hero Honda Chowk",
+   "type": "junction",
+   "pos": 3,
+   "obs": 8,
+   "propensity": 0.35,
+   "events": [
+    "E01",
+    "E05",
+    "E06"
+   ],
+   "sources": [
+    "https://theprint.in/india/gurugram-rains-severe-waterlogging-leaves-roads-inundated-stranding-helpless-commuters/2709543",
+    "https://www.businesstoday.in/india/story/gurugram-may-face-bangalores-fate-netizens-as-heavy-rains-waterlogging-mar-normal-life-492055-2025-09-02",
+    "https://www.dailypioneer.com/2023/state-editions/g---gram-dc-urges-wfh-as-downpour-wreaks-havoc.html"
+   ]
+  },
+  {
+   "id": "L009",
+   "name": "IFFCO Chowk",
+   "type": "junction",
+   "pos": 2,
+   "obs": 8,
+   "propensity": 0.25,
+   "events": [
+    "E06",
+    "E11"
+   ],
+   "sources": [
+    "https://theprint.in/india/70-mm-rainfall-over-short-span-inundates-gurugram-road-cave-ins-unending-jams-compound-woes/3024709/",
+    "https://www.business-standard.com/india-news/gurugram-heavy-rains-floods-work-from-home-orders-delhi-ncr-weather-125090200151_1.html",
+    "https://www.businesstoday.in/india/story/delhi-ncr-rains-key-roads-waterlogged-after-heavy-downpour-gurugram-comes-to-a-standstill-547671-2026-08-06"
+   ]
+  },
+  {
+   "id": "L010",
+   "name": "Sector 9",
+   "type": "sector",
+   "pos": 3,
+   "obs": 8,
+   "propensity": 0.35,
+   "events": [
+    "E01",
+    "E09",
+    "E10"
+   ],
+   "sources": [
+    "https://www.businesstoday.in/india/story/gurugram-issues-work-from-home-advisory-for-tuesday-following-heavy-rain-and-flooding-551080-2026-08-24",
+    "https://www.dailypioneer.com/2023/state-editions/g---gram-dc-urges-wfh-as-downpour-wreaks-havoc.html",
+    "https://www.tribuneindia.com/news/haryana/97mm-rainfall-floods-millennium-city-again-old-gurugram-areas-worst-hit/"
+   ]
+  },
+  {
+   "id": "L011",
+   "name": "Basai Chowk",
+   "type": "junction",
+   "pos": 2,
+   "obs": 8,
+   "propensity": 0.25,
+   "events": [
+    "E01",
+    "E04"
+   ],
+   "sources": [
+    "https://www.dailypioneer.com/2023/state-editions/g---gram-dc-urges-wfh-as-downpour-wreaks-havoc.html",
+    "https://www.theweek.in/wire-updates/national/2025/07/10/des3-ncr-rain-waterlogging.html"
+   ]
+  },
+  {
+   "id": "L012",
+   "name": "Golf Course Extension Road",
+   "type": "road",
+   "pos": 2,
+   "obs": 8,
+   "propensity": 0.25,
+   "events": [
+    "E04",
+    "E05"
+   ],
+   "sources": [
+    "https://theprint.in/india/gurugram-rains-severe-waterlogging-leaves-roads-inundated-stranding-helpless-commuters/2709543",
+    "https://www.theweek.in/wire-updates/national/2025/07/10/des3-ncr-rain-waterlogging.html"
+   ]
+  },
+  {
+   "id": "L013",
+   "name": "Khandsa Chowk",
+   "type": "junction",
+   "pos": 2,
+   "obs": 8,
+   "propensity": 0.25,
+   "events": [
+    "E01",
+    "E04"
+   ],
+   "sources": [
+    "https://www.dailypioneer.com/2023/state-editions/g---gram-dc-urges-wfh-as-downpour-wreaks-havoc.html",
+    "https://www.theweek.in/wire-updates/national/2025/07/10/des3-ncr-rain-waterlogging.html"
+   ]
+  },
+  {
+   "id": "L014",
+   "name": "Old Delhi-Gurugram Road",
+   "type": "road",
+   "pos": 2,
+   "obs": 8,
+   "propensity": 0.25,
+   "events": [
+    "E05",
+    "E09"
+   ],
+   "sources": [
+    "https://theprint.in/india/gurugram-rains-severe-waterlogging-leaves-roads-inundated-stranding-helpless-commuters/2709543",
+    "https://www.tribuneindia.com/news/haryana/97mm-rainfall-floods-millennium-city-again-old-gurugram-areas-worst-hit/"
+   ]
+  },
+  {
+   "id": "L015",
+   "name": "Sector 10",
+   "type": "sector",
+   "pos": 2,
+   "obs": 8,
+   "propensity": 0.25,
+   "events": [
+    "E01",
+    "E10"
+   ],
+   "sources": [
+    "https://www.businesstoday.in/india/story/gurugram-issues-work-from-home-advisory-for-tuesday-following-heavy-rain-and-flooding-551080-2026-08-24",
+    "https://www.dailypioneer.com/2023/state-editions/g---gram-dc-urges-wfh-as-downpour-wreaks-havoc.html"
+   ]
+  },
+  {
+   "id": "L016",
+   "name": "Sector 14",
+   "type": "sector",
+   "pos": 2,
+   "obs": 8,
+   "propensity": 0.25,
+   "events": [
+    "E01",
+    "E10"
+   ],
+   "sources": [
+    "https://www.businesstoday.in/india/story/gurugram-issues-work-from-home-advisory-for-tuesday-following-heavy-rain-and-flooding-551080-2026-08-24",
+    "https://www.dailypioneer.com/2023/state-editions/g---gram-dc-urges-wfh-as-downpour-wreaks-havoc.html"
+   ]
+  },
+  {
+   "id": "L017",
+   "name": "Sector 30",
+   "type": "sector",
+   "pos": 2,
+   "obs": 8,
+   "propensity": 0.25,
+   "events": [
+    "E01",
+    "E04"
+   ],
+   "sources": [
+    "https://www.dailypioneer.com/2023/state-editions/g---gram-dc-urges-wfh-as-downpour-wreaks-havoc.html",
+    "https://www.theweek.in/wire-updates/national/2025/07/10/des3-ncr-rain-waterlogging.html"
+   ]
+  },
+  {
+   "id": "L018",
+   "name": "Sector 31",
+   "type": "sector",
+   "pos": 2,
+   "obs": 8,
+   "propensity": 0.25,
+   "events": [
+    "E01",
+    "E04"
+   ],
+   "sources": [
+    "https://www.dailypioneer.com/2023/state-editions/g---gram-dc-urges-wfh-as-downpour-wreaks-havoc.html",
+    "https://www.theweek.in/wire-updates/national/2025/07/10/des3-ncr-rain-waterlogging.html"
+   ]
+  },
+  {
+   "id": "L019",
+   "name": "Sector 40",
+   "type": "sector",
+   "pos": 2,
+   "obs": 8,
+   "propensity": 0.25,
+   "events": [
+    "E01",
+    "E04"
+   ],
+   "sources": [
+    "https://www.dailypioneer.com/2023/state-editions/g---gram-dc-urges-wfh-as-downpour-wreaks-havoc.html",
+    "https://www.theweek.in/wire-updates/national/2025/07/10/des3-ncr-rain-waterlogging.html"
+   ]
+  },
+  {
+   "id": "L020",
+   "name": "Sector 45",
+   "type": "sector",
+   "pos": 2,
+   "obs": 8,
+   "propensity": 0.25,
+   "events": [
+    "E04",
+    "E10"
+   ],
+   "sources": [
+    "https://www.businesstoday.in/india/story/gurugram-issues-work-from-home-advisory-for-tuesday-following-heavy-rain-and-flooding-551080-2026-08-24",
+    "https://www.theweek.in/wire-updates/national/2025/07/10/des3-ncr-rain-waterlogging.html"
+   ]
+  },
+  {
+   "id": "L021",
+   "name": "Sector 47",
+   "type": "sector",
+   "pos": 2,
+   "obs": 8,
+   "propensity": 0.25,
+   "events": [
+    "E01",
+    "E04"
+   ],
+   "sources": [
+    "https://www.dailypioneer.com/2023/state-editions/g---gram-dc-urges-wfh-as-downpour-wreaks-havoc.html",
+    "https://www.theweek.in/wire-updates/national/2025/07/10/des3-ncr-rain-waterlogging.html"
+   ]
+  },
+  {
+   "id": "L022",
+   "name": "Sector 5",
+   "type": "sector",
+   "pos": 2,
+   "obs": 8,
+   "propensity": 0.25,
+   "events": [
+    "E04",
+    "E10"
+   ],
+   "sources": [
+    "https://www.businesstoday.in/india/story/gurugram-issues-work-from-home-advisory-for-tuesday-following-heavy-rain-and-flooding-551080-2026-08-24",
+    "https://www.theweek.in/wire-updates/national/2025/07/10/des3-ncr-rain-waterlogging.html"
+   ]
+  },
+  {
+   "id": "L023",
+   "name": "Udyog Vihar",
+   "type": "area",
+   "pos": 2,
+   "obs": 8,
+   "propensity": 0.25,
+   "events": [
+    "E01",
+    "E05"
+   ],
+   "sources": [
+    "https://theprint.in/india/gurugram-rains-severe-waterlogging-leaves-roads-inundated-stranding-helpless-commuters/2709543",
+    "https://www.dailypioneer.com/2023/state-editions/g---gram-dc-urges-wfh-as-downpour-wreaks-havoc.html"
+   ]
+  },
+  {
+   "id": "L024",
+   "name": "Aggarwal Dharmshala Chowk",
+   "type": "junction",
+   "pos": 1,
+   "obs": 8,
+   "propensity": 0.15,
+   "events": [
+    "E01"
+   ],
+   "sources": [
+    "https://www.dailypioneer.com/2023/state-editions/g---gram-dc-urges-wfh-as-downpour-wreaks-havoc.html"
+   ]
+  },
+  {
+   "id": "L025",
+   "name": "Ardee City to Sector 52 road",
+   "type": "road",
+   "pos": 1,
+   "obs": 8,
+   "propensity": 0.15,
+   "events": [
+    "E10"
+   ],
+   "sources": [
+    "https://www.businesstoday.in/india/story/gurugram-issues-work-from-home-advisory-for-tuesday-following-heavy-rain-and-flooding-551080-2026-08-24"
+   ]
+  },
+  {
+   "id": "L026",
+   "name": "Bajghera",
+   "type": "area",
+   "pos": 1,
+   "obs": 8,
+   "propensity": 0.15,
+   "events": [
+    "E09"
+   ],
+   "sources": [
+    "https://www.tribuneindia.com/news/haryana/97mm-rainfall-floods-millennium-city-again-old-gurugram-areas-worst-hit/"
+   ]
+  },
+  {
+   "id": "L027",
+   "name": "Basai (area)",
+   "type": "area",
+   "pos": 1,
+   "obs": 8,
+   "propensity": 0.15,
+   "events": [
+    "E04"
+   ],
+   "sources": [
+    "https://www.theweek.in/wire-updates/national/2025/07/10/des3-ncr-rain-waterlogging.html"
+   ]
+  },
+  {
+   "id": "L028",
+   "name": "DLF Phase 1 underpass",
+   "type": "underpass",
+   "pos": 1,
+   "obs": 8,
+   "propensity": 0.15,
+   "events": [
+    "E02"
+   ],
+   "sources": [
+    "https://www.indiatvnews.com/haryana/gurugram-rains-latest-update-gurugram-turns-jalgram-as-heavy-rain-leads-to-waterlogging-traffic-disruption-in-several-areas-see-photos-2024-08-11-946367"
+   ]
+  },
+  {
+   "id": "L029",
+   "name": "DLF Phase 3 V Block",
+   "type": "colony",
+   "pos": 1,
+   "obs": 8,
+   "propensity": 0.15,
+   "events": [
+    "E10"
+   ],
+   "sources": [
+    "https://www.businesstoday.in/india/story/gurugram-issues-work-from-home-advisory-for-tuesday-following-heavy-rain-and-flooding-551080-2026-08-24"
+   ]
+  },
+  {
+   "id": "L030",
+   "name": "DLF Phase 3 underpass",
+   "type": "underpass",
+   "pos": 1,
+   "obs": 8,
+   "propensity": 0.15,
+   "events": [
+    "E02"
+   ],
+   "sources": [
+    "https://www.indiatvnews.com/haryana/gurugram-rains-latest-update-gurugram-turns-jalgram-as-heavy-rain-leads-to-waterlogging-traffic-disruption-in-several-areas-see-photos-2024-08-11-946367"
+   ]
+  },
+  {
+   "id": "L031",
+   "name": "Dhanwapur Road",
+   "type": "road",
+   "pos": 1,
+   "obs": 8,
+   "propensity": 0.15,
+   "events": [
+    "E09"
+   ],
+   "sources": [
+    "https://www.tribuneindia.com/news/haryana/97mm-rainfall-floods-millennium-city-again-old-gurugram-areas-worst-hit/"
+   ]
+  },
+  {
+   "id": "L032",
+   "name": "Dundahera",
+   "type": "area",
+   "pos": 1,
+   "obs": 8,
+   "propensity": 0.15,
+   "events": [
+    "E09"
+   ],
+   "sources": [
+    "https://www.tribuneindia.com/news/haryana/97mm-rainfall-floods-millennium-city-again-old-gurugram-areas-worst-hit/"
+   ]
+  },
+  {
+   "id": "L033",
+   "name": "Dwarka Expressway service lane near Sector 104",
+   "type": "road",
+   "pos": 1,
+   "obs": 8,
+   "propensity": 0.15,
+   "events": [
+    "E05"
+   ],
+   "sources": [
+    "https://theprint.in/india/gurugram-rains-severe-waterlogging-leaves-roads-inundated-stranding-helpless-commuters/2709543"
+   ]
+  },
+  {
+   "id": "L034",
+   "name": "Greenwood City",
+   "type": "colony",
+   "pos": 1,
+   "obs": 8,
+   "propensity": 0.15,
+   "events": [
+    "E01"
+   ],
+   "sources": [
+    "https://www.dailypioneer.com/2023/state-editions/g---gram-dc-urges-wfh-as-downpour-wreaks-havoc.html"
+   ]
+  },
+  {
+   "id": "L035",
+   "name": "Himgiri Chowk",
+   "type": "junction",
+   "pos": 1,
+   "obs": 8,
+   "propensity": 0.15,
+   "events": [
+    "E01"
+   ],
+   "sources": [
+    "https://www.dailypioneer.com/2023/state-editions/g---gram-dc-urges-wfh-as-downpour-wreaks-havoc.html"
+   ]
+  },
+  {
+   "id": "L036",
+   "name": "Jharsa to Sector 30/40 stretch",
+   "type": "road",
+   "pos": 1,
+   "obs": 8,
+   "propensity": 0.15,
+   "events": [
+    "E01"
+   ],
+   "sources": [
+    "https://www.dailypioneer.com/2023/state-editions/g---gram-dc-urges-wfh-as-downpour-wreaks-havoc.html"
+   ]
+  },
+  {
+   "id": "L037",
+   "name": "Kadipur",
+   "type": "area",
+   "pos": 1,
+   "obs": 8,
+   "propensity": 0.15,
+   "events": [
+    "E09"
+   ],
+   "sources": [
+    "https://www.tribuneindia.com/news/haryana/97mm-rainfall-floods-millennium-city-again-old-gurugram-areas-worst-hit/"
+   ]
+  },
+  {
+   "id": "L038",
+   "name": "Kanhai Chowk",
+   "type": "junction",
+   "pos": 1,
+   "obs": 8,
+   "propensity": 0.15,
+   "events": [
+    "E01"
+   ],
+   "sources": [
+    "https://www.dailypioneer.com/2023/state-editions/g---gram-dc-urges-wfh-as-downpour-wreaks-havoc.html"
+   ]
+  },
+  {
+   "id": "L039",
+   "name": "MG Road",
+   "type": "road",
+   "pos": 1,
+   "obs": 8,
+   "propensity": 0.15,
+   "events": [
+    "E01"
+   ],
+   "sources": [
+    "https://www.dailypioneer.com/2023/state-editions/g---gram-dc-urges-wfh-as-downpour-wreaks-havoc.html"
+   ]
+  },
+  {
+   "id": "L040",
+   "name": "Malibu Town",
+   "type": "colony",
+   "pos": 1,
+   "obs": 8,
+   "propensity": 0.15,
+   "events": [
+    "E01"
+   ],
+   "sources": [
+    "https://www.dailypioneer.com/2023/state-editions/g---gram-dc-urges-wfh-as-downpour-wreaks-havoc.html"
+   ]
+  },
+  {
+   "id": "L041",
+   "name": "Near Gurugram MLA office",
+   "type": "area",
+   "pos": 1,
+   "obs": 8,
+   "propensity": 0.15,
+   "events": [
+    "E01"
+   ],
+   "sources": [
+    "https://www.dailypioneer.com/2023/state-editions/g---gram-dc-urges-wfh-as-downpour-wreaks-havoc.html"
+   ]
+  },
+  {
+   "id": "L042",
+   "name": "Palam Vihar",
+   "type": "colony",
+   "pos": 1,
+   "obs": 8,
+   "propensity": 0.15,
+   "events": [
+    "E01"
+   ],
+   "sources": [
+    "https://www.dailypioneer.com/2023/state-editions/g---gram-dc-urges-wfh-as-downpour-wreaks-havoc.html"
+   ]
+  },
+  {
+   "id": "L043",
+   "name": "Palam Vihar underpass",
+   "type": "underpass",
+   "pos": 1,
+   "obs": 8,
+   "propensity": 0.15,
+   "events": [
+    "E02"
+   ],
+   "sources": [
+    "https://www.indiatvnews.com/haryana/gurugram-rains-latest-update-gurugram-turns-jalgram-as-heavy-rain-leads-to-waterlogging-traffic-disruption-in-several-areas-see-photos-2024-08-11-946367"
+   ]
+  },
+  {
+   "id": "L044",
+   "name": "Police Line",
+   "type": "area",
+   "pos": 1,
+   "obs": 8,
+   "propensity": 0.15,
+   "events": [
+    "E01"
+   ],
+   "sources": [
+    "https://www.dailypioneer.com/2023/state-editions/g---gram-dc-urges-wfh-as-downpour-wreaks-havoc.html"
+   ]
+  },
+  {
+   "id": "L045",
+   "name": "Rosewood City",
+   "type": "colony",
+   "pos": 1,
+   "obs": 8,
+   "propensity": 0.15,
+   "events": [
+    "E01"
+   ],
+   "sources": [
+    "https://www.dailypioneer.com/2023/state-editions/g---gram-dc-urges-wfh-as-downpour-wreaks-havoc.html"
+   ]
+  },
+  {
+   "id": "L046",
+   "name": "Sadar Bazaar",
+   "type": "area",
+   "pos": 1,
+   "obs": 8,
+   "propensity": 0.15,
+   "events": [
+    "E04"
+   ],
+   "sources": [
+    "https://www.theweek.in/wire-updates/national/2025/07/10/des3-ncr-rain-waterlogging.html"
+   ]
+  },
+  {
+   "id": "L047",
+   "name": "Sadar Red Light",
+   "type": "junction",
+   "pos": 1,
+   "obs": 8,
+   "propensity": 0.15,
+   "events": [
+    "E06"
+   ],
+   "sources": [
+    "https://www.businesstoday.in/india/story/gurugram-may-face-bangalores-fate-netizens-as-heavy-rains-waterlogging-mar-normal-life-492055-2025-09-02"
+   ]
+  },
+  {
+   "id": "L048",
+   "name": "Sanjay Gram Road",
+   "type": "road",
+   "pos": 1,
+   "obs": 8,
+   "propensity": 0.15,
+   "events": [
+    "E04"
+   ],
+   "sources": [
+    "https://www.theweek.in/wire-updates/national/2025/07/10/des3-ncr-rain-waterlogging.html"
+   ]
+  },
+  {
+   "id": "L049",
+   "name": "Sector 10A",
+   "type": "sector",
+   "pos": 1,
+   "obs": 8,
+   "propensity": 0.15,
+   "events": [
+    "E01"
+   ],
+   "sources": [
+    "https://www.dailypioneer.com/2023/state-editions/g---gram-dc-urges-wfh-as-downpour-wreaks-havoc.html"
+   ]
+  },
+  {
+   "id": "L050",
+   "name": "Sector 12",
+   "type": "sector",
+   "pos": 1,
+   "obs": 8,
+   "propensity": 0.15,
+   "events": [
+    "E04"
+   ],
+   "sources": [
+    "https://www.theweek.in/wire-updates/national/2025/07/10/des3-ncr-rain-waterlogging.html"
+   ]
+  },
+  {
+   "id": "L051",
+   "name": "Sector 13",
+   "type": "sector",
+   "pos": 1,
+   "obs": 8,
+   "propensity": 0.15,
+   "events": [
+    "E04"
+   ],
+   "sources": [
+    "https://www.theweek.in/wire-updates/national/2025/07/10/des3-ncr-rain-waterlogging.html"
+   ]
+  },
+  {
+   "id": "L052",
+   "name": "Sector 15",
+   "type": "sector",
+   "pos": 1,
+   "obs": 8,
+   "propensity": 0.15,
+   "events": [
+    "E01"
+   ],
+   "sources": [
+    "https://www.dailypioneer.com/2023/state-editions/g---gram-dc-urges-wfh-as-downpour-wreaks-havoc.html"
+   ]
+  },
+  {
+   "id": "L053",
+   "name": "Sector 15 Part 2",
+   "type": "park",
+   "pos": 0,
+   "obs": 8,
+   "propensity": 0.05,
+   "events": [],
+   "sources": [
+    "https://www.tribuneindia.com/news/haryana/rain-unmasks-civic-lapses-gurugram-reports-waterlogging-at-154-locations"
+   ]
+  },
+  {
+   "id": "L054",
+   "name": "Sector 17",
+   "type": "sector",
+   "pos": 1,
+   "obs": 8,
+   "propensity": 0.15,
+   "events": [
+    "E01"
+   ],
+   "sources": [
+    "https://www.dailypioneer.com/2023/state-editions/g---gram-dc-urges-wfh-as-downpour-wreaks-havoc.html"
+   ]
+  },
+  {
+   "id": "L055",
+   "name": "Sector 22",
+   "type": "sector",
+   "pos": 1,
+   "obs": 8,
+   "propensity": 0.15,
+   "events": [
+    "E04"
+   ],
+   "sources": [
+    "https://www.theweek.in/wire-updates/national/2025/07/10/des3-ncr-rain-waterlogging.html"
+   ]
+  },
+  {
+   "id": "L056",
+   "name": "Sector 23",
+   "type": "sector",
+   "pos": 1,
+   "obs": 8,
+   "propensity": 0.15,
+   "events": [
+    "E04"
+   ],
+   "sources": [
+    "https://www.theweek.in/wire-updates/national/2025/07/10/des3-ncr-rain-waterlogging.html"
+   ]
+  },
+  {
+   "id": "L057",
+   "name": "Sector 29",
+   "type": "sector",
+   "pos": 1,
+   "obs": 8,
+   "propensity": 0.15,
+   "events": [
+    "E01"
+   ],
+   "sources": [
+    "https://www.dailypioneer.com/2023/state-editions/g---gram-dc-urges-wfh-as-downpour-wreaks-havoc.html"
+   ]
+  },
+  {
+   "id": "L058",
+   "name": "Sector 39",
+   "type": "sector",
+   "pos": 1,
+   "obs": 8,
+   "propensity": 0.15,
+   "events": [
+    "E01"
+   ],
+   "sources": [
+    "https://www.dailypioneer.com/2023/state-editions/g---gram-dc-urges-wfh-as-downpour-wreaks-havoc.html"
+   ]
+  },
+  {
+   "id": "L059",
+   "name": "Sector 4",
+   "type": "sector",
+   "pos": 1,
+   "obs": 8,
+   "propensity": 0.15,
+   "events": [
+    "E04"
+   ],
+   "sources": [
+    "https://www.theweek.in/wire-updates/national/2025/07/10/des3-ncr-rain-waterlogging.html"
+   ]
+  },
+  {
+   "id": "L060",
+   "name": "Sector 4-5 underpass",
+   "type": "sector",
+   "pos": 1,
+   "obs": 8,
+   "propensity": 0.15,
+   "events": [
+    "E02"
+   ],
+   "sources": [
+    "https://www.indiatvnews.com/haryana/gurugram-rains-latest-update-gurugram-turns-jalgram-as-heavy-rain-leads-to-waterlogging-traffic-disruption-in-several-areas-see-photos-2024-08-11-946367"
+   ]
+  },
+  {
+   "id": "L061",
+   "name": "Sector 48",
+   "type": "sector",
+   "pos": 1,
+   "obs": 8,
+   "propensity": 0.15,
+   "events": [
+    "E04"
+   ],
+   "sources": [
+    "https://www.theweek.in/wire-updates/national/2025/07/10/des3-ncr-rain-waterlogging.html"
+   ]
+  },
+  {
+   "id": "L062",
+   "name": "Sector 51",
+   "type": "sector",
+   "pos": 1,
+   "obs": 8,
+   "propensity": 0.15,
+   "events": [
+    "E04"
+   ],
+   "sources": [
+    "https://www.theweek.in/wire-updates/national/2025/07/10/des3-ncr-rain-waterlogging.html"
+   ]
+  },
+  {
+   "id": "L063",
+   "name": "Sector 52A",
+   "type": "sector",
+   "pos": 1,
+   "obs": 8,
+   "propensity": 0.15,
+   "events": [
+    "E10"
+   ],
+   "sources": [
+    "https://www.businesstoday.in/india/story/gurugram-issues-work-from-home-advisory-for-tuesday-following-heavy-rain-and-flooding-551080-2026-08-24"
+   ]
+  },
+  {
+   "id": "L064",
+   "name": "Sector 56 Road",
+   "type": "sector",
+   "pos": 1,
+   "obs": 8,
+   "propensity": 0.15,
+   "events": [
+    "E05"
+   ],
+   "sources": [
+    "https://theprint.in/india/gurugram-rains-severe-waterlogging-leaves-roads-inundated-stranding-helpless-commuters/2709543"
+   ]
+  },
+  {
+   "id": "L065",
+   "name": "Sikanderpur Metro station",
+   "type": "station",
+   "pos": 1,
+   "obs": 8,
+   "propensity": 0.15,
+   "events": [
+    "E06"
+   ],
+   "sources": [
+    "https://www.business-standard.com/india-news/gurugram-heavy-rains-floods-work-from-home-orders-delhi-ncr-weather-125090200151_1.html"
+   ]
+  },
+  {
+   "id": "L066",
+   "name": "South City-1",
+   "type": "colony",
+   "pos": 1,
+   "obs": 8,
+   "propensity": 0.15,
+   "events": [
+    "E10"
+   ],
+   "sources": [
+    "https://www.businesstoday.in/india/story/gurugram-issues-work-from-home-advisory-for-tuesday-following-heavy-rain-and-flooding-551080-2026-08-24"
+   ]
+  },
+  {
+   "id": "L067",
+   "name": "Suncity Township underpass",
+   "type": "underpass",
+   "pos": 1,
+   "obs": 8,
+   "propensity": 0.15,
+   "events": [
+    "E02"
+   ],
+   "sources": [
+    "https://www.indiatvnews.com/haryana/gurugram-rains-latest-update-gurugram-turns-jalgram-as-heavy-rain-leads-to-waterlogging-traffic-disruption-in-several-areas-see-photos-2024-08-11-946367"
+   ]
+  },
+  {
+   "id": "L068",
+   "name": "Surat Nagar",
+   "type": "area",
+   "pos": 1,
+   "obs": 8,
+   "propensity": 0.15,
+   "events": [
+    "E09"
+   ],
+   "sources": [
+    "https://www.tribuneindia.com/news/haryana/97mm-rainfall-floods-millennium-city-again-old-gurugram-areas-worst-hit/"
+   ]
+  },
+  {
+   "id": "L069",
+   "name": "Tulip Chowk, Sector 69",
+   "type": "junction",
+   "pos": 1,
+   "obs": 8,
+   "propensity": 0.15,
+   "events": [
+    "E10"
+   ],
+   "sources": [
+    "https://www.businesstoday.in/india/story/gurugram-issues-work-from-home-advisory-for-tuesday-following-heavy-rain-and-flooding-551080-2026-08-24"
+   ]
+  }
+ ],
+ "replay": {
+  "E04": [
+   {
+    "id": "L001",
+    "name": "NH-48 Delhi-Gurugram corridor",
+    "score": 0.4747,
+    "flooded": 0
+   },
+   {
+    "id": "L002",
+    "name": "Narsinghpur (NH-48 stretch)",
+    "score": 0.4747,
+    "flooded": 1
+   },
+   {
+    "id": "L003",
+    "name": "Sohna Road",
+    "score": 0.4747,
+    "flooded": 1
+   },
+   {
+    "id": "L004",
+    "name": "Rajiv Chowk",
+    "score": 0.4747,
+    "flooded": 1
+   },
+   {
+    "id": "L005",
+    "name": "Sheetla Mata Road",
+    "score": 0.4747,
+    "flooded": 1
+   },
+   {
+    "id": "L006",
+    "name": "Subhash Chowk",
+    "score": 0.4747,
+    "flooded": 1
+   },
+   {
+    "id": "L008",
+    "name": "Hero Honda Chowk",
+    "score": 0.4747,
+    "flooded": 0
+   },
+   {
+    "id": "L009",
+    "name": "IFFCO Chowk",
+    "score": 0.4747,
+    "flooded": 0
+   },
+   {
+    "id": "L011",
+    "name": "Basai Chowk",
+    "score": 0.4747,
+    "flooded": 1
+   },
+   {
+    "id": "L013",
+    "name": "Khandsa Chowk",
+    "score": 0.4747,
+    "flooded": 1
+   },
+   {
+    "id": "L012",
+    "name": "Golf Course Extension Road",
+    "score": 0.4747,
+    "flooded": 1
+   },
+   {
+    "id": "L014",
+    "name": "Old Delhi-Gurugram Road",
+    "score": 0.4747,
+    "flooded": 0
+   },
+   {
+    "id": "L025",
+    "name": "Ardee City to Sector 52 road",
+    "score": 0.4747,
+    "flooded": 0
+   },
+   {
+    "id": "L031",
+    "name": "Dhanwapur Road",
+    "score": 0.4747,
+    "flooded": 0
+   },
+   {
+    "id": "L033",
+    "name": "Dwarka Expressway service lane near Sector 104",
+    "score": 0.4747,
+    "flooded": 0
+   },
+   {
+    "id": "L036",
+    "name": "Jharsa to Sector 30/40 stretch",
+    "score": 0.4747,
+    "flooded": 0
+   },
+   {
+    "id": "L035",
+    "name": "Himgiri Chowk",
+    "score": 0.4747,
+    "flooded": 0
+   },
+   {
+    "id": "L024",
+    "name": "Aggarwal Dharmshala Chowk",
+    "score": 0.4747,
+    "flooded": 0
+   },
+   {
+    "id": "L048",
+    "name": "Sanjay Gram Road",
+    "score": 0.4747,
+    "flooded": 1
+   },
+   {
+    "id": "L039",
+    "name": "MG Road",
+    "score": 0.4747,
+    "flooded": 0
+   },
+   {
+    "id": "L038",
+    "name": "Kanhai Chowk",
+    "score": 0.4747,
+    "flooded": 0
+   },
+   {
+    "id": "L047",
+    "name": "Sadar Red Light",
+    "score": 0.4747,
+    "flooded": 0
+   },
+   {
+    "id": "L069",
+    "name": "Tulip Chowk, Sector 69",
+    "score": 0.4747,
+    "flooded": 0
+   },
+   {
+    "id": "L019",
+    "name": "Sector 40",
+    "score": 0.3879,
+    "flooded": 1
+   },
+   {
+    "id": "L020",
+    "name": "Sector 45",
+    "score": 0.3879,
+    "flooded": 1
+   },
+   {
+    "id": "L021",
+    "name": "Sector 47",
+    "score": 0.3879,
+    "flooded": 1
+   },
+   {
+    "id": "L016",
+    "name": "Sector 14",
+    "score": 0.3879,
+    "flooded": 0
+   },
+   {
+    "id": "L023",
+    "name": "Udyog Vihar",
+    "score": 0.3879,
+    "flooded": 0
+   },
+   {
+    "id": "L022",
+    "name": "Sector 5",
+    "score": 0.3879,
+    "flooded": 1
+   },
+   {
+    "id": "L029",
+    "name": "DLF Phase 3 V Block",
+    "score": 0.3879,
+    "flooded": 0
+   },
+   {
+    "id": "L028",
+    "name": "DLF Phase 1 underpass",
+    "score": 0.3879,
+    "flooded": 0
+   },
+   {
+    "id": "L027",
+    "name": "Basai (area)",
+    "score": 0.3879,
+    "flooded": 1
+   },
+   {
+    "id": "L018",
+    "name": "Sector 31",
+    "score": 0.3879,
+    "flooded": 1
+   },
+   {
+    "id": "L017",
+    "name": "Sector 30",
+    "score": 0.3879,
+    "flooded": 1
+   },
+   {
+    "id": "L015",
+    "name": "Sector 10",
+    "score": 0.3879,
+    "flooded": 0
+   },
+   {
+    "id": "L010",
+    "name": "Sector 9",
+    "score": 0.3879,
+    "flooded": 0
+   },
+   {
+    "id": "L007",
+    "name": "Bus Adda / Old Bus Stand area",
+    "score": 0.3879,
+    "flooded": 1
+   },
+   {
+    "id": "L037",
+    "name": "Kadipur",
+    "score": 0.3879,
+    "flooded": 0
+   },
+   {
+    "id": "L034",
+    "name": "Greenwood City",
+    "score": 0.3879,
+    "flooded": 0
+   },
+   {
+    "id": "L030",
+    "name": "DLF Phase 3 underpass",
+    "score": 0.3879,
+    "flooded": 0
+   },
+   {
+    "id": "L032",
+    "name": "Dundahera",
+    "score": 0.3879,
+    "flooded": 0
+   },
+   {
+    "id": "L026",
+    "name": "Bajghera",
+    "score": 0.3879,
+    "flooded": 0
+   },
+   {
+    "id": "L042",
+    "name": "Palam Vihar",
+    "score": 0.3879,
+    "flooded": 0
+   },
+   {
+    "id": "L040",
+    "name": "Malibu Town",
+    "score": 0.3879,
+    "flooded": 0
+   },
+   {
+    "id": "L043",
+    "name": "Palam Vihar underpass",
+    "score": 0.3879,
+    "flooded": 0
+   },
+   {
+    "id": "L045",
+    "name": "Rosewood City",
+    "score": 0.3879,
+    "flooded": 0
+   },
+   {
+    "id": "L044",
+    "name": "Police Line",
+    "score": 0.3879,
+    "flooded": 0
+   },
+   {
+    "id": "L046",
+    "name": "Sadar Bazaar",
+    "score": 0.3879,
+    "flooded": 1
+   },
+   {
+    "id": "L049",
+    "name": "Sector 10A",
+    "score": 0.3879,
+    "flooded": 0
+   },
+   {
+    "id": "L050",
+    "name": "Sector 12",
+    "score": 0.3879,
+    "flooded": 1
+   },
+   {
+    "id": "L051",
+    "name": "Sector 13",
+    "score": 0.3879,
+    "flooded": 1
+   },
+   {
+    "id": "L052",
+    "name": "Sector 15",
+    "score": 0.3879,
+    "flooded": 0
+   },
+   {
+    "id": "L041",
+    "name": "Near Gurugram MLA office",
+    "score": 0.3879,
+    "flooded": 0
+   },
+   {
+    "id": "L053",
+    "name": "Sector 15 Part 2",
+    "score": 0.3879,
+    "flooded": 0
+   },
+   {
+    "id": "L054",
+    "name": "Sector 17",
+    "score": 0.3879,
+    "flooded": 0
+   },
+   {
+    "id": "L056",
+    "name": "Sector 23",
+    "score": 0.3879,
+    "flooded": 1
+   },
+   {
+    "id": "L055",
+    "name": "Sector 22",
+    "score": 0.3879,
+    "flooded": 1
+   },
+   {
+    "id": "L058",
+    "name": "Sector 39",
+    "score": 0.3879,
+    "flooded": 0
+   },
+   {
+    "id": "L059",
+    "name": "Sector 4",
+    "score": 0.3879,
+    "flooded": 1
+   },
+   {
+    "id": "L060",
+    "name": "Sector 4-5 underpass",
+    "score": 0.3879,
+    "flooded": 0
+   },
+   {
+    "id": "L057",
+    "name": "Sector 29",
+    "score": 0.3879,
+    "flooded": 0
+   },
+   {
+    "id": "L061",
+    "name": "Sector 48",
+    "score": 0.3879,
+    "flooded": 1
+   },
+   {
+    "id": "L062",
+    "name": "Sector 51",
+    "score": 0.3879,
+    "flooded": 1
+   },
+   {
+    "id": "L064",
+    "name": "Sector 56 Road",
+    "score": 0.3879,
+    "flooded": 0
+   },
+   {
+    "id": "L063",
+    "name": "Sector 52A",
+    "score": 0.3879,
+    "flooded": 0
+   },
+   {
+    "id": "L065",
+    "name": "Sikanderpur Metro station",
+    "score": 0.3879,
+    "flooded": 0
+   },
+   {
+    "id": "L066",
+    "name": "South City-1",
+    "score": 0.3879,
+    "flooded": 0
+   },
+   {
+    "id": "L067",
+    "name": "Suncity Township underpass",
+    "score": 0.3879,
+    "flooded": 0
+   },
+   {
+    "id": "L068",
+    "name": "Surat Nagar",
+    "score": 0.3879,
+    "flooded": 0
+   }
+  ],
+  "E05": [
+   {
+    "id": "L001",
+    "name": "NH-48 Delhi-Gurugram corridor",
+    "score": 0.1946,
+    "flooded": 0
+   },
+   {
+    "id": "L002",
+    "name": "Narsinghpur (NH-48 stretch)",
+    "score": 0.1946,
+    "flooded": 1
+   },
+   {
+    "id": "L003",
+    "name": "Sohna Road",
+    "score": 0.1946,
+    "flooded": 1
+   },
+   {
+    "id": "L004",
+    "name": "Rajiv Chowk",
+    "score": 0.1946,
+    "flooded": 1
+   },
+   {
+    "id": "L005",
+    "name": "Sheetla Mata Road",
+    "score": 0.1946,
+    "flooded": 0
+   },
+   {
+    "id": "L006",
+    "name": "Subhash Chowk",
+    "score": 0.1946,
+    "flooded": 1
+   },
+   {
+    "id": "L008",
+    "name": "Hero Honda Chowk",
+    "score": 0.1946,
+    "flooded": 1
+   },
+   {
+    "id": "L009",
+    "name": "IFFCO Chowk",
+    "score": 0.1946,
+    "flooded": 0
+   },
+   {
+    "id": "L011",
+    "name": "Basai Chowk",
+    "score": 0.1946,
+    "flooded": 0
+   },
+   {
+    "id": "L013",
+    "name": "Khandsa Chowk",
+    "score": 0.1946,
+    "flooded": 0
+   },
+   {
+    "id": "L012",
+    "name": "Golf Course Extension Road",
+    "score": 0.1946,
+    "flooded": 1
+   },
+   {
+    "id": "L014",
+    "name": "Old Delhi-Gurugram Road",
+    "score": 0.1946,
+    "flooded": 1
+   },
+   {
+    "id": "L025",
+    "name": "Ardee City to Sector 52 road",
+    "score": 0.1946,
+    "flooded": 0
+   },
+   {
+    "id": "L031",
+    "name": "Dhanwapur Road",
+    "score": 0.1946,
+    "flooded": 0
+   },
+   {
+    "id": "L033",
+    "name": "Dwarka Expressway service lane near Sector 104",
+    "score": 0.1946,
+    "flooded": 1
+   },
+   {
+    "id": "L036",
+    "name": "Jharsa to Sector 30/40 stretch",
+    "score": 0.1946,
+    "flooded": 0
+   },
+   {
+    "id": "L035",
+    "name": "Himgiri Chowk",
+    "score": 0.1946,
+    "flooded": 0
+   },
+   {
+    "id": "L024",
+    "name": "Aggarwal Dharmshala Chowk",
+    "score": 0.1946,
+    "flooded": 0
+   },
+   {
+    "id": "L048",
+    "name": "Sanjay Gram Road",
+    "score": 0.1946,
+    "flooded": 0
+   },
+   {
+    "id": "L039",
+    "name": "MG Road",
+    "score": 0.1946,
+    "flooded": 0
+   },
+   {
+    "id": "L038",
+    "name": "Kanhai Chowk",
+    "score": 0.1946,
+    "flooded": 0
+   },
+   {
+    "id": "L047",
+    "name": "Sadar Red Light",
+    "score": 0.1946,
+    "flooded": 0
+   },
+   {
+    "id": "L069",
+    "name": "Tulip Chowk, Sector 69",
+    "score": 0.1946,
+    "flooded": 0
+   },
+   {
+    "id": "L019",
+    "name": "Sector 40",
+    "score": 0.1524,
+    "flooded": 0
+   },
+   {
+    "id": "L020",
+    "name": "Sector 45",
+    "score": 0.1524,
+    "flooded": 0
+   },
+   {
+    "id": "L021",
+    "name": "Sector 47",
+    "score": 0.1524,
+    "flooded": 0
+   },
+   {
+    "id": "L016",
+    "name": "Sector 14",
+    "score": 0.1524,
+    "flooded": 0
+   },
+   {
+    "id": "L023",
+    "name": "Udyog Vihar",
+    "score": 0.1524,
+    "flooded": 1
+   },
+   {
+    "id": "L022",
+    "name": "Sector 5",
+    "score": 0.1524,
+    "flooded": 0
+   },
+   {
+    "id": "L029",
+    "name": "DLF Phase 3 V Block",
+    "score": 0.1524,
+    "flooded": 0
+   },
+   {
+    "id": "L028",
+    "name": "DLF Phase 1 underpass",
+    "score": 0.1524,
+    "flooded": 0
+   },
+   {
+    "id": "L027",
+    "name": "Basai (area)",
+    "score": 0.1524,
+    "flooded": 0
+   },
+   {
+    "id": "L018",
+    "name": "Sector 31",
+    "score": 0.1524,
+    "flooded": 0
+   },
+   {
+    "id": "L017",
+    "name": "Sector 30",
+    "score": 0.1524,
+    "flooded": 0
+   },
+   {
+    "id": "L015",
+    "name": "Sector 10",
+    "score": 0.1524,
+    "flooded": 0
+   },
+   {
+    "id": "L010",
+    "name": "Sector 9",
+    "score": 0.1524,
+    "flooded": 0
+   },
+   {
+    "id": "L007",
+    "name": "Bus Adda / Old Bus Stand area",
+    "score": 0.1524,
+    "flooded": 0
+   },
+   {
+    "id": "L037",
+    "name": "Kadipur",
+    "score": 0.1524,
+    "flooded": 0
+   },
+   {
+    "id": "L034",
+    "name": "Greenwood City",
+    "score": 0.1524,
+    "flooded": 0
+   },
+   {
+    "id": "L030",
+    "name": "DLF Phase 3 underpass",
+    "score": 0.1524,
+    "flooded": 0
+   },
+   {
+    "id": "L032",
+    "name": "Dundahera",
+    "score": 0.1524,
+    "flooded": 0
+   },
+   {
+    "id": "L026",
+    "name": "Bajghera",
+    "score": 0.1524,
+    "flooded": 0
+   },
+   {
+    "id": "L042",
+    "name": "Palam Vihar",
+    "score": 0.1524,
+    "flooded": 0
+   },
+   {
+    "id": "L040",
+    "name": "Malibu Town",
+    "score": 0.1524,
+    "flooded": 0
+   },
+   {
+    "id": "L043",
+    "name": "Palam Vihar underpass",
+    "score": 0.1524,
+    "flooded": 0
+   },
+   {
+    "id": "L045",
+    "name": "Rosewood City",
+    "score": 0.1524,
+    "flooded": 0
+   },
+   {
+    "id": "L044",
+    "name": "Police Line",
+    "score": 0.1524,
+    "flooded": 0
+   },
+   {
+    "id": "L046",
+    "name": "Sadar Bazaar",
+    "score": 0.1524,
+    "flooded": 0
+   },
+   {
+    "id": "L049",
+    "name": "Sector 10A",
+    "score": 0.1524,
+    "flooded": 0
+   },
+   {
+    "id": "L050",
+    "name": "Sector 12",
+    "score": 0.1524,
+    "flooded": 0
+   },
+   {
+    "id": "L051",
+    "name": "Sector 13",
+    "score": 0.1524,
+    "flooded": 0
+   },
+   {
+    "id": "L052",
+    "name": "Sector 15",
+    "score": 0.1524,
+    "flooded": 0
+   },
+   {
+    "id": "L041",
+    "name": "Near Gurugram MLA office",
+    "score": 0.1524,
+    "flooded": 0
+   },
+   {
+    "id": "L053",
+    "name": "Sector 15 Part 2",
+    "score": 0.1524,
+    "flooded": 0
+   },
+   {
+    "id": "L054",
+    "name": "Sector 17",
+    "score": 0.1524,
+    "flooded": 0
+   },
+   {
+    "id": "L056",
+    "name": "Sector 23",
+    "score": 0.1524,
+    "flooded": 0
+   },
+   {
+    "id": "L055",
+    "name": "Sector 22",
+    "score": 0.1524,
+    "flooded": 0
+   },
+   {
+    "id": "L058",
+    "name": "Sector 39",
+    "score": 0.1524,
+    "flooded": 0
+   },
+   {
+    "id": "L059",
+    "name": "Sector 4",
+    "score": 0.1524,
+    "flooded": 0
+   },
+   {
+    "id": "L060",
+    "name": "Sector 4-5 underpass",
+    "score": 0.1524,
+    "flooded": 0
+   },
+   {
+    "id": "L057",
+    "name": "Sector 29",
+    "score": 0.1524,
+    "flooded": 0
+   },
+   {
+    "id": "L061",
+    "name": "Sector 48",
+    "score": 0.1524,
+    "flooded": 0
+   },
+   {
+    "id": "L062",
+    "name": "Sector 51",
+    "score": 0.1524,
+    "flooded": 0
+   },
+   {
+    "id": "L064",
+    "name": "Sector 56 Road",
+    "score": 0.1524,
+    "flooded": 1
+   },
+   {
+    "id": "L063",
+    "name": "Sector 52A",
+    "score": 0.1524,
+    "flooded": 0
+   },
+   {
+    "id": "L065",
+    "name": "Sikanderpur Metro station",
+    "score": 0.1524,
+    "flooded": 0
+   },
+   {
+    "id": "L066",
+    "name": "South City-1",
+    "score": 0.1524,
+    "flooded": 0
+   },
+   {
+    "id": "L067",
+    "name": "Suncity Township underpass",
+    "score": 0.1524,
+    "flooded": 0
+   },
+   {
+    "id": "L068",
+    "name": "Surat Nagar",
+    "score": 0.1524,
+    "flooded": 0
+   }
+  ],
+  "E06": [
+   {
+    "id": "L001",
+    "name": "NH-48 Delhi-Gurugram corridor",
+    "score": 0.3665,
+    "flooded": 1
+   },
+   {
+    "id": "L002",
+    "name": "Narsinghpur (NH-48 stretch)",
+    "score": 0.3665,
+    "flooded": 1
+   },
+   {
+    "id": "L003",
+    "name": "Sohna Road",
+    "score": 0.3665,
+    "flooded": 1
+   },
+   {
+    "id": "L004",
+    "name": "Rajiv Chowk",
+    "score": 0.3665,
+    "flooded": 1
+   },
+   {
+    "id": "L005",
+    "name": "Sheetla Mata Road",
+    "score": 0.3665,
+    "flooded": 1
+   },
+   {
+    "id": "L006",
+    "name": "Subhash Chowk",
+    "score": 0.3665,
+    "flooded": 0
+   },
+   {
+    "id": "L008",
+    "name": "Hero Honda Chowk",
+    "score": 0.3665,
+    "flooded": 1
+   },
+   {
+    "id": "L009",
+    "name": "IFFCO Chowk",
+    "score": 0.3665,
+    "flooded": 1
+   },
+   {
+    "id": "L011",
+    "name": "Basai Chowk",
+    "score": 0.3665,
+    "flooded": 0
+   },
+   {
+    "id": "L013",
+    "name": "Khandsa Chowk",
+    "score": 0.3665,
+    "flooded": 0
+   },
+   {
+    "id": "L012",
+    "name": "Golf Course Extension Road",
+    "score": 0.3665,
+    "flooded": 0
+   },
+   {
+    "id": "L014",
+    "name": "Old Delhi-Gurugram Road",
+    "score": 0.3665,
+    "flooded": 0
+   },
+   {
+    "id": "L025",
+    "name": "Ardee City to Sector 52 road",
+    "score": 0.3665,
+    "flooded": 0
+   },
+   {
+    "id": "L031",
+    "name": "Dhanwapur Road",
+    "score": 0.3665,
+    "flooded": 0
+   },
+   {
+    "id": "L033",
+    "name": "Dwarka Expressway service lane near Sector 104",
+    "score": 0.3665,
+    "flooded": 0
+   },
+   {
+    "id": "L036",
+    "name": "Jharsa to Sector 30/40 stretch",
+    "score": 0.3665,
+    "flooded": 0
+   },
+   {
+    "id": "L035",
+    "name": "Himgiri Chowk",
+    "score": 0.3665,
+    "flooded": 0
+   },
+   {
+    "id": "L024",
+    "name": "Aggarwal Dharmshala Chowk",
+    "score": 0.3665,
+    "flooded": 0
+   },
+   {
+    "id": "L048",
+    "name": "Sanjay Gram Road",
+    "score": 0.3665,
+    "flooded": 0
+   },
+   {
+    "id": "L039",
+    "name": "MG Road",
+    "score": 0.3665,
+    "flooded": 0
+   },
+   {
+    "id": "L038",
+    "name": "Kanhai Chowk",
+    "score": 0.3665,
+    "flooded": 0
+   },
+   {
+    "id": "L047",
+    "name": "Sadar Red Light",
+    "score": 0.3665,
+    "flooded": 1
+   },
+   {
+    "id": "L069",
+    "name": "Tulip Chowk, Sector 69",
+    "score": 0.3665,
+    "flooded": 0
+   },
+   {
+    "id": "L019",
+    "name": "Sector 40",
+    "score": 0.2363,
+    "flooded": 0
+   },
+   {
+    "id": "L020",
+    "name": "Sector 45",
+    "score": 0.2363,
+    "flooded": 0
+   },
+   {
+    "id": "L021",
+    "name": "Sector 47",
+    "score": 0.2363,
+    "flooded": 0
+   },
+   {
+    "id": "L016",
+    "name": "Sector 14",
+    "score": 0.2363,
+    "flooded": 0
+   },
+   {
+    "id": "L023",
+    "name": "Udyog Vihar",
+    "score": 0.2363,
+    "flooded": 0
+   },
+   {
+    "id": "L022",
+    "name": "Sector 5",
+    "score": 0.2363,
+    "flooded": 0
+   },
+   {
+    "id": "L029",
+    "name": "DLF Phase 3 V Block",
+    "score": 0.2363,
+    "flooded": 0
+   },
+   {
+    "id": "L028",
+    "name": "DLF Phase 1 underpass",
+    "score": 0.2363,
+    "flooded": 0
+   },
+   {
+    "id": "L027",
+    "name": "Basai (area)",
+    "score": 0.2363,
+    "flooded": 0
+   },
+   {
+    "id": "L018",
+    "name": "Sector 31",
+    "score": 0.2363,
+    "flooded": 0
+   },
+   {
+    "id": "L017",
+    "name": "Sector 30",
+    "score": 0.2363,
+    "flooded": 0
+   },
+   {
+    "id": "L015",
+    "name": "Sector 10",
+    "score": 0.2363,
+    "flooded": 0
+   },
+   {
+    "id": "L010",
+    "name": "Sector 9",
+    "score": 0.2363,
+    "flooded": 0
+   },
+   {
+    "id": "L007",
+    "name": "Bus Adda / Old Bus Stand area",
+    "score": 0.2363,
+    "flooded": 0
+   },
+   {
+    "id": "L037",
+    "name": "Kadipur",
+    "score": 0.2363,
+    "flooded": 0
+   },
+   {
+    "id": "L034",
+    "name": "Greenwood City",
+    "score": 0.2363,
+    "flooded": 0
+   },
+   {
+    "id": "L030",
+    "name": "DLF Phase 3 underpass",
+    "score": 0.2363,
+    "flooded": 0
+   },
+   {
+    "id": "L032",
+    "name": "Dundahera",
+    "score": 0.2363,
+    "flooded": 0
+   },
+   {
+    "id": "L026",
+    "name": "Bajghera",
+    "score": 0.2363,
+    "flooded": 0
+   },
+   {
+    "id": "L042",
+    "name": "Palam Vihar",
+    "score": 0.2363,
+    "flooded": 0
+   },
+   {
+    "id": "L040",
+    "name": "Malibu Town",
+    "score": 0.2363,
+    "flooded": 0
+   },
+   {
+    "id": "L043",
+    "name": "Palam Vihar underpass",
+    "score": 0.2363,
+    "flooded": 0
+   },
+   {
+    "id": "L045",
+    "name": "Rosewood City",
+    "score": 0.2363,
+    "flooded": 0
+   },
+   {
+    "id": "L044",
+    "name": "Police Line",
+    "score": 0.2363,
+    "flooded": 0
+   },
+   {
+    "id": "L046",
+    "name": "Sadar Bazaar",
+    "score": 0.2363,
+    "flooded": 0
+   },
+   {
+    "id": "L049",
+    "name": "Sector 10A",
+    "score": 0.2363,
+    "flooded": 0
+   },
+   {
+    "id": "L050",
+    "name": "Sector 12",
+    "score": 0.2363,
+    "flooded": 0
+   },
+   {
+    "id": "L051",
+    "name": "Sector 13",
+    "score": 0.2363,
+    "flooded": 0
+   },
+   {
+    "id": "L052",
+    "name": "Sector 15",
+    "score": 0.2363,
+    "flooded": 0
+   },
+   {
+    "id": "L041",
+    "name": "Near Gurugram MLA office",
+    "score": 0.2363,
+    "flooded": 0
+   },
+   {
+    "id": "L053",
+    "name": "Sector 15 Part 2",
+    "score": 0.2363,
+    "flooded": 0
+   },
+   {
+    "id": "L054",
+    "name": "Sector 17",
+    "score": 0.2363,
+    "flooded": 0
+   },
+   {
+    "id": "L056",
+    "name": "Sector 23",
+    "score": 0.2363,
+    "flooded": 0
+   },
+   {
+    "id": "L055",
+    "name": "Sector 22",
+    "score": 0.2363,
+    "flooded": 0
+   },
+   {
+    "id": "L058",
+    "name": "Sector 39",
+    "score": 0.2363,
+    "flooded": 0
+   },
+   {
+    "id": "L059",
+    "name": "Sector 4",
+    "score": 0.2363,
+    "flooded": 0
+   },
+   {
+    "id": "L060",
+    "name": "Sector 4-5 underpass",
+    "score": 0.2363,
+    "flooded": 0
+   },
+   {
+    "id": "L057",
+    "name": "Sector 29",
+    "score": 0.2363,
+    "flooded": 0
+   },
+   {
+    "id": "L061",
+    "name": "Sector 48",
+    "score": 0.2363,
+    "flooded": 0
+   },
+   {
+    "id": "L062",
+    "name": "Sector 51",
+    "score": 0.2363,
+    "flooded": 0
+   },
+   {
+    "id": "L064",
+    "name": "Sector 56 Road",
+    "score": 0.2363,
+    "flooded": 0
+   },
+   {
+    "id": "L063",
+    "name": "Sector 52A",
+    "score": 0.2363,
+    "flooded": 0
+   },
+   {
+    "id": "L065",
+    "name": "Sikanderpur Metro station",
+    "score": 0.2363,
+    "flooded": 1
+   },
+   {
+    "id": "L066",
+    "name": "South City-1",
+    "score": 0.2363,
+    "flooded": 0
+   },
+   {
+    "id": "L067",
+    "name": "Suncity Township underpass",
+    "score": 0.2363,
+    "flooded": 0
+   },
+   {
+    "id": "L068",
+    "name": "Surat Nagar",
+    "score": 0.2363,
+    "flooded": 0
+   }
+  ],
+  "E09": [
+   {
+    "id": "L001",
+    "name": "NH-48 Delhi-Gurugram corridor",
+    "score": 0.3464,
+    "flooded": 1
+   },
+   {
+    "id": "L002",
+    "name": "Narsinghpur (NH-48 stretch)",
+    "score": 0.3464,
+    "flooded": 0
+   },
+   {
+    "id": "L003",
+    "name": "Sohna Road",
+    "score": 0.3464,
+    "flooded": 0
+   },
+   {
+    "id": "L004",
+    "name": "Rajiv Chowk",
+    "score": 0.3464,
+    "flooded": 0
+   },
+   {
+    "id": "L005",
+    "name": "Sheetla Mata Road",
+    "score": 0.3464,
+    "flooded": 1
+   },
+   {
+    "id": "L006",
+    "name": "Subhash Chowk",
+    "score": 0.3464,
+    "flooded": 0
+   },
+   {
+    "id": "L008",
+    "name": "Hero Honda Chowk",
+    "score": 0.3464,
+    "flooded": 0
+   },
+   {
+    "id": "L009",
+    "name": "IFFCO Chowk",
+    "score": 0.3464,
+    "flooded": 0
+   },
+   {
+    "id": "L011",
+    "name": "Basai Chowk",
+    "score": 0.3464,
+    "flooded": 0
+   },
+   {
+    "id": "L013",
+    "name": "Khandsa Chowk",
+    "score": 0.3464,
+    "flooded": 0
+   },
+   {
+    "id": "L012",
+    "name": "Golf Course Extension Road",
+    "score": 0.3464,
+    "flooded": 0
+   },
+   {
+    "id": "L014",
+    "name": "Old Delhi-Gurugram Road",
+    "score": 0.3464,
+    "flooded": 1
+   },
+   {
+    "id": "L025",
+    "name": "Ardee City to Sector 52 road",
+    "score": 0.3464,
+    "flooded": 0
+   },
+   {
+    "id": "L031",
+    "name": "Dhanwapur Road",
+    "score": 0.3464,
+    "flooded": 1
+   },
+   {
+    "id": "L033",
+    "name": "Dwarka Expressway service lane near Sector 104",
+    "score": 0.3464,
+    "flooded": 0
+   },
+   {
+    "id": "L036",
+    "name": "Jharsa to Sector 30/40 stretch",
+    "score": 0.3464,
+    "flooded": 0
+   },
+   {
+    "id": "L035",
+    "name": "Himgiri Chowk",
+    "score": 0.3464,
+    "flooded": 0
+   },
+   {
+    "id": "L024",
+    "name": "Aggarwal Dharmshala Chowk",
+    "score": 0.3464,
+    "flooded": 0
+   },
+   {
+    "id": "L048",
+    "name": "Sanjay Gram Road",
+    "score": 0.3464,
+    "flooded": 0
+   },
+   {
+    "id": "L039",
+    "name": "MG Road",
+    "score": 0.3464,
+    "flooded": 0
+   },
+   {
+    "id": "L038",
+    "name": "Kanhai Chowk",
+    "score": 0.3464,
+    "flooded": 0
+   },
+   {
+    "id": "L047",
+    "name": "Sadar Red Light",
+    "score": 0.3464,
+    "flooded": 0
+   },
+   {
+    "id": "L069",
+    "name": "Tulip Chowk, Sector 69",
+    "score": 0.3464,
+    "flooded": 0
+   },
+   {
+    "id": "L019",
+    "name": "Sector 40",
+    "score": 0.1816,
+    "flooded": 0
+   },
+   {
+    "id": "L020",
+    "name": "Sector 45",
+    "score": 0.1816,
+    "flooded": 0
+   },
+   {
+    "id": "L021",
+    "name": "Sector 47",
+    "score": 0.1816,
+    "flooded": 0
+   },
+   {
+    "id": "L016",
+    "name": "Sector 14",
+    "score": 0.1816,
+    "flooded": 0
+   },
+   {
+    "id": "L023",
+    "name": "Udyog Vihar",
+    "score": 0.1816,
+    "flooded": 0
+   },
+   {
+    "id": "L022",
+    "name": "Sector 5",
+    "score": 0.1816,
+    "flooded": 0
+   },
+   {
+    "id": "L029",
+    "name": "DLF Phase 3 V Block",
+    "score": 0.1816,
+    "flooded": 0
+   },
+   {
+    "id": "L028",
+    "name": "DLF Phase 1 underpass",
+    "score": 0.1816,
+    "flooded": 0
+   },
+   {
+    "id": "L027",
+    "name": "Basai (area)",
+    "score": 0.1816,
+    "flooded": 0
+   },
+   {
+    "id": "L018",
+    "name": "Sector 31",
+    "score": 0.1816,
+    "flooded": 0
+   },
+   {
+    "id": "L017",
+    "name": "Sector 30",
+    "score": 0.1816,
+    "flooded": 0
+   },
+   {
+    "id": "L015",
+    "name": "Sector 10",
+    "score": 0.1816,
+    "flooded": 0
+   },
+   {
+    "id": "L010",
+    "name": "Sector 9",
+    "score": 0.1816,
+    "flooded": 1
+   },
+   {
+    "id": "L007",
+    "name": "Bus Adda / Old Bus Stand area",
+    "score": 0.1816,
+    "flooded": 1
+   },
+   {
+    "id": "L037",
+    "name": "Kadipur",
+    "score": 0.1816,
+    "flooded": 1
+   },
+   {
+    "id": "L034",
+    "name": "Greenwood City",
+    "score": 0.1816,
+    "flooded": 0
+   },
+   {
+    "id": "L030",
+    "name": "DLF Phase 3 underpass",
+    "score": 0.1816,
+    "flooded": 0
+   },
+   {
+    "id": "L032",
+    "name": "Dundahera",
+    "score": 0.1816,
+    "flooded": 1
+   },
+   {
+    "id": "L026",
+    "name": "Bajghera",
+    "score": 0.1816,
+    "flooded": 1
+   },
+   {
+    "id": "L042",
+    "name": "Palam Vihar",
+    "score": 0.1816,
+    "flooded": 0
+   },
+   {
+    "id": "L040",
+    "name": "Malibu Town",
+    "score": 0.1816,
+    "flooded": 0
+   },
+   {
+    "id": "L043",
+    "name": "Palam Vihar underpass",
+    "score": 0.1816,
+    "flooded": 0
+   },
+   {
+    "id": "L045",
+    "name": "Rosewood City",
+    "score": 0.1816,
+    "flooded": 0
+   },
+   {
+    "id": "L044",
+    "name": "Police Line",
+    "score": 0.1816,
+    "flooded": 0
+   },
+   {
+    "id": "L046",
+    "name": "Sadar Bazaar",
+    "score": 0.1816,
+    "flooded": 0
+   },
+   {
+    "id": "L049",
+    "name": "Sector 10A",
+    "score": 0.1816,
+    "flooded": 0
+   },
+   {
+    "id": "L050",
+    "name": "Sector 12",
+    "score": 0.1816,
+    "flooded": 0
+   },
+   {
+    "id": "L051",
+    "name": "Sector 13",
+    "score": 0.1816,
+    "flooded": 0
+   },
+   {
+    "id": "L052",
+    "name": "Sector 15",
+    "score": 0.1816,
+    "flooded": 0
+   },
+   {
+    "id": "L041",
+    "name": "Near Gurugram MLA office",
+    "score": 0.1816,
+    "flooded": 0
+   },
+   {
+    "id": "L053",
+    "name": "Sector 15 Part 2",
+    "score": 0.1816,
+    "flooded": 0
+   },
+   {
+    "id": "L054",
+    "name": "Sector 17",
+    "score": 0.1816,
+    "flooded": 0
+   },
+   {
+    "id": "L056",
+    "name": "Sector 23",
+    "score": 0.1816,
+    "flooded": 0
+   },
+   {
+    "id": "L055",
+    "name": "Sector 22",
+    "score": 0.1816,
+    "flooded": 0
+   },
+   {
+    "id": "L058",
+    "name": "Sector 39",
+    "score": 0.1816,
+    "flooded": 0
+   },
+   {
+    "id": "L059",
+    "name": "Sector 4",
+    "score": 0.1816,
+    "flooded": 0
+   },
+   {
+    "id": "L060",
+    "name": "Sector 4-5 underpass",
+    "score": 0.1816,
+    "flooded": 0
+   },
+   {
+    "id": "L057",
+    "name": "Sector 29",
+    "score": 0.1816,
+    "flooded": 0
+   },
+   {
+    "id": "L061",
+    "name": "Sector 48",
+    "score": 0.1816,
+    "flooded": 0
+   },
+   {
+    "id": "L062",
+    "name": "Sector 51",
+    "score": 0.1816,
+    "flooded": 0
+   },
+   {
+    "id": "L064",
+    "name": "Sector 56 Road",
+    "score": 0.1816,
+    "flooded": 0
+   },
+   {
+    "id": "L063",
+    "name": "Sector 52A",
+    "score": 0.1816,
+    "flooded": 0
+   },
+   {
+    "id": "L065",
+    "name": "Sikanderpur Metro station",
+    "score": 0.1816,
+    "flooded": 0
+   },
+   {
+    "id": "L066",
+    "name": "South City-1",
+    "score": 0.1816,
+    "flooded": 0
+   },
+   {
+    "id": "L067",
+    "name": "Suncity Township underpass",
+    "score": 0.1816,
+    "flooded": 0
+   },
+   {
+    "id": "L068",
+    "name": "Surat Nagar",
+    "score": 0.1816,
+    "flooded": 1
+   }
+  ],
+  "E10": [
+   {
+    "id": "L001",
+    "name": "NH-48 Delhi-Gurugram corridor",
+    "score": 0.3278,
+    "flooded": 0
+   },
+   {
+    "id": "L002",
+    "name": "Narsinghpur (NH-48 stretch)",
+    "score": 0.3278,
+    "flooded": 1
+   },
+   {
+    "id": "L003",
+    "name": "Sohna Road",
+    "score": 0.3278,
+    "flooded": 1
+   },
+   {
+    "id": "L004",
+    "name": "Rajiv Chowk",
+    "score": 0.3278,
+    "flooded": 0
+   },
+   {
+    "id": "L005",
+    "name": "Sheetla Mata Road",
+    "score": 0.3278,
+    "flooded": 0
+   },
+   {
+    "id": "L006",
+    "name": "Subhash Chowk",
+    "score": 0.3278,
+    "flooded": 0
+   },
+   {
+    "id": "L008",
+    "name": "Hero Honda Chowk",
+    "score": 0.3278,
+    "flooded": 0
+   },
+   {
+    "id": "L009",
+    "name": "IFFCO Chowk",
+    "score": 0.3278,
+    "flooded": 0
+   },
+   {
+    "id": "L011",
+    "name": "Basai Chowk",
+    "score": 0.3278,
+    "flooded": 0
+   },
+   {
+    "id": "L013",
+    "name": "Khandsa Chowk",
+    "score": 0.3278,
+    "flooded": 0
+   },
+   {
+    "id": "L012",
+    "name": "Golf Course Extension Road",
+    "score": 0.3278,
+    "flooded": 0
+   },
+   {
+    "id": "L014",
+    "name": "Old Delhi-Gurugram Road",
+    "score": 0.3278,
+    "flooded": 0
+   },
+   {
+    "id": "L025",
+    "name": "Ardee City to Sector 52 road",
+    "score": 0.3278,
+    "flooded": 1
+   },
+   {
+    "id": "L031",
+    "name": "Dhanwapur Road",
+    "score": 0.3278,
+    "flooded": 0
+   },
+   {
+    "id": "L033",
+    "name": "Dwarka Expressway service lane near Sector 104",
+    "score": 0.3278,
+    "flooded": 0
+   },
+   {
+    "id": "L036",
+    "name": "Jharsa to Sector 30/40 stretch",
+    "score": 0.3278,
+    "flooded": 0
+   },
+   {
+    "id": "L035",
+    "name": "Himgiri Chowk",
+    "score": 0.3278,
+    "flooded": 0
+   },
+   {
+    "id": "L024",
+    "name": "Aggarwal Dharmshala Chowk",
+    "score": 0.3278,
+    "flooded": 0
+   },
+   {
+    "id": "L048",
+    "name": "Sanjay Gram Road",
+    "score": 0.3278,
+    "flooded": 0
+   },
+   {
+    "id": "L039",
+    "name": "MG Road",
+    "score": 0.3278,
+    "flooded": 0
+   },
+   {
+    "id": "L038",
+    "name": "Kanhai Chowk",
+    "score": 0.3278,
+    "flooded": 0
+   },
+   {
+    "id": "L047",
+    "name": "Sadar Red Light",
+    "score": 0.3278,
+    "flooded": 0
+   },
+   {
+    "id": "L069",
+    "name": "Tulip Chowk, Sector 69",
+    "score": 0.3278,
+    "flooded": 1
+   },
+   {
+    "id": "L019",
+    "name": "Sector 40",
+    "score": 0.1803,
+    "flooded": 0
+   },
+   {
+    "id": "L020",
+    "name": "Sector 45",
+    "score": 0.1803,
+    "flooded": 1
+   },
+   {
+    "id": "L021",
+    "name": "Sector 47",
+    "score": 0.1803,
+    "flooded": 0
+   },
+   {
+    "id": "L016",
+    "name": "Sector 14",
+    "score": 0.1803,
+    "flooded": 1
+   },
+   {
+    "id": "L023",
+    "name": "Udyog Vihar",
+    "score": 0.1803,
+    "flooded": 0
+   },
+   {
+    "id": "L022",
+    "name": "Sector 5",
+    "score": 0.1803,
+    "flooded": 1
+   },
+   {
+    "id": "L029",
+    "name": "DLF Phase 3 V Block",
+    "score": 0.1803,
+    "flooded": 1
+   },
+   {
+    "id": "L028",
+    "name": "DLF Phase 1 underpass",
+    "score": 0.1803,
+    "flooded": 0
+   },
+   {
+    "id": "L027",
+    "name": "Basai (area)",
+    "score": 0.1803,
+    "flooded": 0
+   },
+   {
+    "id": "L018",
+    "name": "Sector 31",
+    "score": 0.1803,
+    "flooded": 0
+   },
+   {
+    "id": "L017",
+    "name": "Sector 30",
+    "score": 0.1803,
+    "flooded": 0
+   },
+   {
+    "id": "L015",
+    "name": "Sector 10",
+    "score": 0.1803,
+    "flooded": 1
+   },
+   {
+    "id": "L010",
+    "name": "Sector 9",
+    "score": 0.1803,
+    "flooded": 1
+   },
+   {
+    "id": "L007",
+    "name": "Bus Adda / Old Bus Stand area",
+    "score": 0.1803,
+    "flooded": 0
+   },
+   {
+    "id": "L037",
+    "name": "Kadipur",
+    "score": 0.1803,
+    "flooded": 0
+   },
+   {
+    "id": "L034",
+    "name": "Greenwood City",
+    "score": 0.1803,
+    "flooded": 0
+   },
+   {
+    "id": "L030",
+    "name": "DLF Phase 3 underpass",
+    "score": 0.1803,
+    "flooded": 0
+   },
+   {
+    "id": "L032",
+    "name": "Dundahera",
+    "score": 0.1803,
+    "flooded": 0
+   },
+   {
+    "id": "L026",
+    "name": "Bajghera",
+    "score": 0.1803,
+    "flooded": 0
+   },
+   {
+    "id": "L042",
+    "name": "Palam Vihar",
+    "score": 0.1803,
+    "flooded": 0
+   },
+   {
+    "id": "L040",
+    "name": "Malibu Town",
+    "score": 0.1803,
+    "flooded": 0
+   },
+   {
+    "id": "L043",
+    "name": "Palam Vihar underpass",
+    "score": 0.1803,
+    "flooded": 0
+   },
+   {
+    "id": "L045",
+    "name": "Rosewood City",
+    "score": 0.1803,
+    "flooded": 0
+   },
+   {
+    "id": "L044",
+    "name": "Police Line",
+    "score": 0.1803,
+    "flooded": 0
+   },
+   {
+    "id": "L046",
+    "name": "Sadar Bazaar",
+    "score": 0.1803,
+    "flooded": 0
+   },
+   {
+    "id": "L049",
+    "name": "Sector 10A",
+    "score": 0.1803,
+    "flooded": 0
+   },
+   {
+    "id": "L050",
+    "name": "Sector 12",
+    "score": 0.1803,
+    "flooded": 0
+   },
+   {
+    "id": "L051",
+    "name": "Sector 13",
+    "score": 0.1803,
+    "flooded": 0
+   },
+   {
+    "id": "L052",
+    "name": "Sector 15",
+    "score": 0.1803,
+    "flooded": 0
+   },
+   {
+    "id": "L041",
+    "name": "Near Gurugram MLA office",
+    "score": 0.1803,
+    "flooded": 0
+   },
+   {
+    "id": "L053",
+    "name": "Sector 15 Part 2",
+    "score": 0.1803,
+    "flooded": 0
+   },
+   {
+    "id": "L054",
+    "name": "Sector 17",
+    "score": 0.1803,
+    "flooded": 0
+   },
+   {
+    "id": "L056",
+    "name": "Sector 23",
+    "score": 0.1803,
+    "flooded": 0
+   },
+   {
+    "id": "L055",
+    "name": "Sector 22",
+    "score": 0.1803,
+    "flooded": 0
+   },
+   {
+    "id": "L058",
+    "name": "Sector 39",
+    "score": 0.1803,
+    "flooded": 0
+   },
+   {
+    "id": "L059",
+    "name": "Sector 4",
+    "score": 0.1803,
+    "flooded": 0
+   },
+   {
+    "id": "L060",
+    "name": "Sector 4-5 underpass",
+    "score": 0.1803,
+    "flooded": 0
+   },
+   {
+    "id": "L057",
+    "name": "Sector 29",
+    "score": 0.1803,
+    "flooded": 0
+   },
+   {
+    "id": "L061",
+    "name": "Sector 48",
+    "score": 0.1803,
+    "flooded": 0
+   },
+   {
+    "id": "L062",
+    "name": "Sector 51",
+    "score": 0.1803,
+    "flooded": 0
+   },
+   {
+    "id": "L064",
+    "name": "Sector 56 Road",
+    "score": 0.1803,
+    "flooded": 0
+   },
+   {
+    "id": "L063",
+    "name": "Sector 52A",
+    "score": 0.1803,
+    "flooded": 1
+   },
+   {
+    "id": "L065",
+    "name": "Sikanderpur Metro station",
+    "score": 0.1803,
+    "flooded": 0
+   },
+   {
+    "id": "L066",
+    "name": "South City-1",
+    "score": 0.1803,
+    "flooded": 1
+   },
+   {
+    "id": "L067",
+    "name": "Suncity Township underpass",
+    "score": 0.1803,
+    "flooded": 0
+   },
+   {
+    "id": "L068",
+    "name": "Surat Nagar",
+    "score": 0.1803,
+    "flooded": 0
+   }
+  ],
+  "E11": [
+   {
+    "id": "L001",
+    "name": "NH-48 Delhi-Gurugram corridor",
+    "score": 0.1962,
+    "flooded": 1
+   },
+   {
+    "id": "L002",
+    "name": "Narsinghpur (NH-48 stretch)",
+    "score": 0.1962,
+    "flooded": 0
+   },
+   {
+    "id": "L003",
+    "name": "Sohna Road",
+    "score": 0.1962,
+    "flooded": 0
+   },
+   {
+    "id": "L004",
+    "name": "Rajiv Chowk",
+    "score": 0.1962,
+    "flooded": 0
+   },
+   {
+    "id": "L005",
+    "name": "Sheetla Mata Road",
+    "score": 0.1962,
+    "flooded": 0
+   },
+   {
+    "id": "L006",
+    "name": "Subhash Chowk",
+    "score": 0.1962,
+    "flooded": 1
+   },
+   {
+    "id": "L008",
+    "name": "Hero Honda Chowk",
+    "score": 0.1962,
+    "flooded": 0
+   },
+   {
+    "id": "L009",
+    "name": "IFFCO Chowk",
+    "score": 0.1962,
+    "flooded": 1
+   },
+   {
+    "id": "L011",
+    "name": "Basai Chowk",
+    "score": 0.1962,
+    "flooded": 0
+   },
+   {
+    "id": "L013",
+    "name": "Khandsa Chowk",
+    "score": 0.1962,
+    "flooded": 0
+   },
+   {
+    "id": "L012",
+    "name": "Golf Course Extension Road",
+    "score": 0.1962,
+    "flooded": 0
+   },
+   {
+    "id": "L014",
+    "name": "Old Delhi-Gurugram Road",
+    "score": 0.1962,
+    "flooded": 0
+   },
+   {
+    "id": "L025",
+    "name": "Ardee City to Sector 52 road",
+    "score": 0.1962,
+    "flooded": 0
+   },
+   {
+    "id": "L031",
+    "name": "Dhanwapur Road",
+    "score": 0.1962,
+    "flooded": 0
+   },
+   {
+    "id": "L033",
+    "name": "Dwarka Expressway service lane near Sector 104",
+    "score": 0.1962,
+    "flooded": 0
+   },
+   {
+    "id": "L036",
+    "name": "Jharsa to Sector 30/40 stretch",
+    "score": 0.1962,
+    "flooded": 0
+   },
+   {
+    "id": "L035",
+    "name": "Himgiri Chowk",
+    "score": 0.1962,
+    "flooded": 0
+   },
+   {
+    "id": "L024",
+    "name": "Aggarwal Dharmshala Chowk",
+    "score": 0.1962,
+    "flooded": 0
+   },
+   {
+    "id": "L048",
+    "name": "Sanjay Gram Road",
+    "score": 0.1962,
+    "flooded": 0
+   },
+   {
+    "id": "L039",
+    "name": "MG Road",
+    "score": 0.1962,
+    "flooded": 0
+   },
+   {
+    "id": "L038",
+    "name": "Kanhai Chowk",
+    "score": 0.1962,
+    "flooded": 0
+   },
+   {
+    "id": "L047",
+    "name": "Sadar Red Light",
+    "score": 0.1962,
+    "flooded": 0
+   },
+   {
+    "id": "L069",
+    "name": "Tulip Chowk, Sector 69",
+    "score": 0.1962,
+    "flooded": 0
+   },
+   {
+    "id": "L019",
+    "name": "Sector 40",
+    "score": 0.0992,
+    "flooded": 0
+   },
+   {
+    "id": "L020",
+    "name": "Sector 45",
+    "score": 0.0992,
+    "flooded": 0
+   },
+   {
+    "id": "L021",
+    "name": "Sector 47",
+    "score": 0.0992,
+    "flooded": 0
+   },
+   {
+    "id": "L016",
+    "name": "Sector 14",
+    "score": 0.0992,
+    "flooded": 0
+   },
+   {
+    "id": "L023",
+    "name": "Udyog Vihar",
+    "score": 0.0992,
+    "flooded": 0
+   },
+   {
+    "id": "L022",
+    "name": "Sector 5",
+    "score": 0.0992,
+    "flooded": 0
+   },
+   {
+    "id": "L029",
+    "name": "DLF Phase 3 V Block",
+    "score": 0.0992,
+    "flooded": 0
+   },
+   {
+    "id": "L028",
+    "name": "DLF Phase 1 underpass",
+    "score": 0.0992,
+    "flooded": 0
+   },
+   {
+    "id": "L027",
+    "name": "Basai (area)",
+    "score": 0.0992,
+    "flooded": 0
+   },
+   {
+    "id": "L018",
+    "name": "Sector 31",
+    "score": 0.0992,
+    "flooded": 0
+   },
+   {
+    "id": "L017",
+    "name": "Sector 30",
+    "score": 0.0992,
+    "flooded": 0
+   },
+   {
+    "id": "L015",
+    "name": "Sector 10",
+    "score": 0.0992,
+    "flooded": 0
+   },
+   {
+    "id": "L010",
+    "name": "Sector 9",
+    "score": 0.0992,
+    "flooded": 0
+   },
+   {
+    "id": "L007",
+    "name": "Bus Adda / Old Bus Stand area",
+    "score": 0.0992,
+    "flooded": 0
+   },
+   {
+    "id": "L037",
+    "name": "Kadipur",
+    "score": 0.0992,
+    "flooded": 0
+   },
+   {
+    "id": "L034",
+    "name": "Greenwood City",
+    "score": 0.0992,
+    "flooded": 0
+   },
+   {
+    "id": "L030",
+    "name": "DLF Phase 3 underpass",
+    "score": 0.0992,
+    "flooded": 0
+   },
+   {
+    "id": "L032",
+    "name": "Dundahera",
+    "score": 0.0992,
+    "flooded": 0
+   },
+   {
+    "id": "L026",
+    "name": "Bajghera",
+    "score": 0.0992,
+    "flooded": 0
+   },
+   {
+    "id": "L042",
+    "name": "Palam Vihar",
+    "score": 0.0992,
+    "flooded": 0
+   },
+   {
+    "id": "L040",
+    "name": "Malibu Town",
+    "score": 0.0992,
+    "flooded": 0
+   },
+   {
+    "id": "L043",
+    "name": "Palam Vihar underpass",
+    "score": 0.0992,
+    "flooded": 0
+   },
+   {
+    "id": "L045",
+    "name": "Rosewood City",
+    "score": 0.0992,
+    "flooded": 0
+   },
+   {
+    "id": "L044",
+    "name": "Police Line",
+    "score": 0.0992,
+    "flooded": 0
+   },
+   {
+    "id": "L046",
+    "name": "Sadar Bazaar",
+    "score": 0.0992,
+    "flooded": 0
+   },
+   {
+    "id": "L049",
+    "name": "Sector 10A",
+    "score": 0.0992,
+    "flooded": 0
+   },
+   {
+    "id": "L050",
+    "name": "Sector 12",
+    "score": 0.0992,
+    "flooded": 0
+   },
+   {
+    "id": "L051",
+    "name": "Sector 13",
+    "score": 0.0992,
+    "flooded": 0
+   },
+   {
+    "id": "L052",
+    "name": "Sector 15",
+    "score": 0.0992,
+    "flooded": 0
+   },
+   {
+    "id": "L041",
+    "name": "Near Gurugram MLA office",
+    "score": 0.0992,
+    "flooded": 0
+   },
+   {
+    "id": "L053",
+    "name": "Sector 15 Part 2",
+    "score": 0.0992,
+    "flooded": 0
+   },
+   {
+    "id": "L054",
+    "name": "Sector 17",
+    "score": 0.0992,
+    "flooded": 0
+   },
+   {
+    "id": "L056",
+    "name": "Sector 23",
+    "score": 0.0992,
+    "flooded": 0
+   },
+   {
+    "id": "L055",
+    "name": "Sector 22",
+    "score": 0.0992,
+    "flooded": 0
+   },
+   {
+    "id": "L058",
+    "name": "Sector 39",
+    "score": 0.0992,
+    "flooded": 0
+   },
+   {
+    "id": "L059",
+    "name": "Sector 4",
+    "score": 0.0992,
+    "flooded": 0
+   },
+   {
+    "id": "L060",
+    "name": "Sector 4-5 underpass",
+    "score": 0.0992,
+    "flooded": 0
+   },
+   {
+    "id": "L057",
+    "name": "Sector 29",
+    "score": 0.0992,
+    "flooded": 0
+   },
+   {
+    "id": "L061",
+    "name": "Sector 48",
+    "score": 0.0992,
+    "flooded": 0
+   },
+   {
+    "id": "L062",
+    "name": "Sector 51",
+    "score": 0.0992,
+    "flooded": 0
+   },
+   {
+    "id": "L064",
+    "name": "Sector 56 Road",
+    "score": 0.0992,
+    "flooded": 0
+   },
+   {
+    "id": "L063",
+    "name": "Sector 52A",
+    "score": 0.0992,
+    "flooded": 0
+   },
+   {
+    "id": "L065",
+    "name": "Sikanderpur Metro station",
+    "score": 0.0992,
+    "flooded": 0
+   },
+   {
+    "id": "L066",
+    "name": "South City-1",
+    "score": 0.0992,
+    "flooded": 0
+   },
+   {
+    "id": "L067",
+    "name": "Suncity Township underpass",
+    "score": 0.0992,
+    "flooded": 0
+   },
+   {
+    "id": "L068",
+    "name": "Surat Nagar",
+    "score": 0.0992,
+    "flooded": 0
+   }
+  ]
+ }
+}
