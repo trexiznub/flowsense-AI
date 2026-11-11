@@ -70,3 +70,4 @@ pipeline/                  label builder, geocoding, rainfall and terrain featur
 
 ## Website or app?
 For the competition and for MCG/traffic-police users, a website is the right choice: nothing to install, one shareable link, free hosting. For residents, the citizen layer should reach people by SMS and IVR as well, since many do not use smartphones. A website can be added to a phone home screen later (PWA). A native app only becomes worthwhile once there is a live data feed and push-notification need.
+gg
